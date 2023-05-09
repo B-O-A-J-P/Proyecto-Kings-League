@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="temporada"/>
+  
+    <xs:complexType name="temporada">
+      <xs:sequence>
+        <xs:element name="split" type="Tiposplit" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="Tiposplit">
+      <xs:sequence>
+        <xs:element name="playoffs" type="Tipoplayoffs" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="Tipoplayoffs">
+      <xs:sequence>
+        <xs:element name="partido" type="Tipopartido" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>    
+      
+    <xs:complexType name="Tipopartido">
+      <xs:sequence>
+        <xs:element name="equipo" type="Tipoequipo" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element name="fecha" type="xs:string"/>
+        <xs:element name="ubicacion" type="xs:string"/>
+        <xs:element name="fase" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+    
+    
+        <xs:complexType name="Tipoequipo">
+      <xs:sequence>
+        <xs:element name="nombre" type="xs:string"/>
+        <xs:element name="logo" type="xs:string"/>
+        <xs:element name="numero_goles" type="xs:integer"/>
+        <xs:element name="resultado" type="Tiporesultado"/>
+      </xs:sequence>
+    </xs:complexType>
+    
+    
+        <xs:simpleType name="Tiporesultado">
+      <xs:restriction base="xs:string">
+        <xs:length value="1"/>
+        <xs:pattern value="[vd]"/>
+      </xs:restriction>
+    </xs:simpleType>
+    
+</xs:schema>

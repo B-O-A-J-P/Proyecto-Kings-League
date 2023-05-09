@@ -1,9 +1,14 @@
 package com.boajp.modelo;
 
+import jakarta.persistence.Inheritance;
+import jakarta.persistence.InheritanceType;
+
+@Inheritance(strategy = InheritanceType.JOINED)
+
 public class Persona {
-    private String nombre;
-    private String apellido;
-    private String dni;
+    protected String nombre;
+    protected String apellido;
+    protected String dni;
 
     public String getNombre() {
         return nombre;

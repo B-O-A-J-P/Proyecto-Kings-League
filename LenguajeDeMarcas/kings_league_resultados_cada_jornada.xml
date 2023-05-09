@@ -1,0 +1,1059 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE split SYSTEM "kings_league_resultados_cada_jornada.dtd">
+<split id="s1" xmlns:xs = "http://www.w3.org/2001/XMLSchema-instance"
+    xs:noNamespaceSchemaLocation = "kings_league_resultados_cada_jornada.xsd">
+<jornada id="j1">
+<partido id="a1">
+<fecha_partido></fecha_partido>
+<equipo id="aa1">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+
+<equipo id="aa2">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+</partido>
+
+<partido id="a2">
+<fecha_partido></fecha_partido>
+<equipo id="aa3">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+
+<equipo id="aa4">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+</partido>
+
+<partido id="a3">
+<fecha_partido></fecha_partido>
+<equipo id="aa5">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+
+<equipo id="aa6">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+</partido>
+
+
+<partido id="a4">
+<fecha_partido></fecha_partido>
+<equipo id="aa7">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+
+<equipo id="aa8">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+</partido>
+
+<partido id="a5">
+<fecha_partido></fecha_partido>
+<equipo id="aa9">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+
+<equipo id="aa10">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+</partido>
+
+<partido id="a6">
+<fecha_partido></fecha_partido>
+<equipo id="aa11">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+
+<equipo id="aa12">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+</partido>
+
+
+</jornada>
+
+<jornada id="j2">
+<partido id="b1">
+<fecha_partido></fecha_partido>
+<equipo id="bb1">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+
+<equipo id="bb2">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+</partido>
+
+<partido id="b2">
+<fecha_partido></fecha_partido>
+<equipo id="bb3">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+
+<equipo id="bb4">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+</partido>
+
+<partido id="b3">
+<fecha_partido></fecha_partido>
+<equipo id="bb5">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+
+<equipo id="bb6">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+</partido>
+
+<partido id="b4">
+<fecha_partido></fecha_partido>
+<equipo id="bb7">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+
+<equipo id="bb8">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+</partido>
+
+<partido id="b5">
+<fecha_partido></fecha_partido>
+<equipo id="bb9">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+
+<equipo id="bb10">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+</partido>
+
+<partido id="b6">
+<fecha_partido></fecha_partido>
+<equipo id="bb11">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+
+<equipo id="bb12">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+</partido>
+
+
+</jornada>
+
+<jornada id="j3">
+<partido id="c1">
+<fecha_partido></fecha_partido>
+<equipo id="cc1">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+
+<equipo id="cc2">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+</partido>
+
+<partido id="c2">
+<fecha_partido></fecha_partido>
+<equipo id="cc3">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+
+<equipo id="cc4">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+</partido>
+
+<partido id="c3">
+<fecha_partido></fecha_partido>
+<equipo id="cc5">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+
+<equipo id="cc6">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+</partido>
+
+<partido id="c4">
+<fecha_partido></fecha_partido>
+<equipo id="cc7">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+
+<equipo id="cc8">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+</partido>
+
+<partido id="c5">
+<fecha_partido></fecha_partido>
+<equipo id="cc9">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+
+<equipo id="cc10">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+</partido>
+
+<partido id="c6">
+<fecha_partido></fecha_partido>
+<equipo id="cc11">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+
+<equipo id="cc12">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+</partido>
+
+</jornada>
+
+<jornada id="j4">
+<partido id="d1">
+<fecha_partido></fecha_partido>
+<equipo id="dd1">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+
+<equipo id="dd2">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+</partido>
+
+<partido id="d2">
+<fecha_partido></fecha_partido>
+<equipo id="dd3">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+
+<equipo id="dd4">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+</partido>
+
+<partido id="d3">
+<fecha_partido></fecha_partido>
+<equipo id="dd5">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+
+<equipo id="dd6">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+</partido>
+
+<partido id="d4">
+<fecha_partido></fecha_partido>
+<equipo id="dd7">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+
+<equipo id="dd8">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+</partido>
+
+<partido id="d5">
+<fecha_partido></fecha_partido>
+<equipo id="dd9">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+
+<equipo id="dd10">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+</partido>
+
+<partido id="d6">
+<fecha_partido></fecha_partido>
+<equipo id="dd11">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+
+<equipo id="dd12">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+</partido>
+
+</jornada>
+
+<jornada id="j5">
+<partido id="f1">
+<fecha_partido></fecha_partido>
+<equipo id="ff1">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+
+<equipo id="ff2">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+</partido>
+
+<partido id="f2">
+<fecha_partido></fecha_partido>
+<equipo id="ff3">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+
+<equipo id="ff4">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+</partido>
+
+<partido id="f3">
+<fecha_partido></fecha_partido>
+<equipo id="ff5">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+
+<equipo id="ff6">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+</partido>
+
+<partido id="f4">
+<fecha_partido></fecha_partido>
+<equipo id="ff7">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+
+<equipo id="ff8">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+</partido>
+
+<partido id="f5">
+<fecha_partido></fecha_partido>
+<equipo id="ff9">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+
+<equipo id="ff10">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+</partido>
+
+<partido id="f6">
+<fecha_partido></fecha_partido>
+<equipo id="ff11">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+
+<equipo id="ff12">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+</partido>
+
+</jornada>
+
+<jornada id="j6">
+<partido id="g1">
+<fecha_partido></fecha_partido>
+<equipo id="gg1">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+
+<equipo id="gg2">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+</partido>
+
+<partido id="g2">
+<fecha_partido></fecha_partido>
+<equipo id="gg3">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+
+<equipo id="gg4">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+</partido>
+
+<partido id="g3">
+<fecha_partido></fecha_partido>
+<equipo id="gg5">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+
+<equipo id="gg6">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+</partido>
+
+<partido id="g4">
+<fecha_partido></fecha_partido>
+<equipo id="gg7">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+
+<equipo id="gg8">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+</partido>
+
+<partido id="g5">
+<fecha_partido></fecha_partido>
+<equipo id="gg9">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+
+<equipo id="gg10">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+</partido>
+
+<partido id="g6">
+<fecha_partido></fecha_partido>
+<equipo id="gg11">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+
+<equipo id="gg12">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+</partido>
+
+</jornada>
+
+<jornada id="j7">
+<partido id="h1">
+<fecha_partido></fecha_partido>
+<equipo id="hh1">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+
+<equipo id="hh2">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+</partido>
+
+<partido id="h2">
+<fecha_partido></fecha_partido>
+<equipo id="hh3">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+
+<equipo id="hh4">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+</partido>
+
+<partido id="h3">
+<fecha_partido></fecha_partido>
+<equipo id="hh5">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+
+<equipo id="hh6">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+</partido>
+
+<partido id="h4">
+<fecha_partido></fecha_partido>
+<equipo id="hh7">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+
+<equipo id="hh8">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+</partido>
+
+<partido id="h5">
+<fecha_partido></fecha_partido>
+<equipo id="hh9">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+
+<equipo id="h10">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+</partido>
+
+<partido id="h6">
+<fecha_partido></fecha_partido>
+<equipo id="hh11">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+
+<equipo id="hh12">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+</partido>
+
+</jornada>
+
+<jornada id="j8">
+<partido id="i1">
+<fecha_partido></fecha_partido>
+<equipo id="ii1">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+
+<equipo id="ii2">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+</partido>
+
+<partido id="i2">
+<fecha_partido></fecha_partido>
+<equipo id="ii3">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+
+<equipo id="ii4">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+</partido>
+
+<partido id="i3">
+<fecha_partido></fecha_partido>
+<equipo id="ii5">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+
+<equipo id="ii6">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+</partido>
+
+<partido id="i4">
+<fecha_partido></fecha_partido>
+<equipo id="ii7">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+
+<equipo id="ii8">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+</partido>
+
+<partido id="i5">
+<fecha_partido></fecha_partido>
+<equipo id="ii9">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+
+<equipo id="ii10">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+</partido>
+
+<partido id="i6">
+<fecha_partido></fecha_partido>
+<equipo id="ii11">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+
+<equipo id="ii12">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+</partido>
+
+</jornada>
+
+<jornada id ="j9">
+<partido id="k1">
+<fecha_partido></fecha_partido>
+<equipo id="kk1">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+
+<equipo id="kk2">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+</partido>
+
+<partido id="k2">
+<fecha_partido></fecha_partido>
+<equipo id="kk3">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+
+<equipo id="kk4">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+</partido>
+
+<partido id="k3">
+<fecha_partido></fecha_partido>
+<equipo id="kk5">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+
+<equipo id="kk6">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+</partido>
+
+<partido id="k4">
+<fecha_partido></fecha_partido>
+<equipo id="kk7">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+
+<equipo id="kk8">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+</partido>
+
+<partido id="k5">
+<fecha_partido></fecha_partido>
+<equipo id="kk9">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+
+<equipo id="kk10">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+</partido>
+
+<partido id="k6">
+<fecha_partido></fecha_partido>
+<equipo id="kk11">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+
+<equipo id="kk12">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+</partido>
+
+</jornada>
+
+<jornada id="j10">
+
+<partido id="l1">
+<fecha_partido></fecha_partido>
+<equipo id="ll1">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+
+<equipo id="ll2">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+</partido>
+
+<partido id="l2">
+<fecha_partido></fecha_partido>
+<equipo id="ll3">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+
+<equipo id="ll4">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+</partido>
+
+<partido id="l3">
+<fecha_partido></fecha_partido>
+<equipo id="ll5">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+
+<equipo id="ll6">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+</partido>
+
+<partido id="l4">
+<fecha_partido></fecha_partido>
+<equipo id="ll7">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+
+<equipo id="ll8">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+</partido>
+
+<partido id="l5">
+<fecha_partido></fecha_partido>
+<equipo id="ll9">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+
+<equipo id="ll10">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+</partido>
+
+<partido id="l6">
+<fecha_partido></fecha_partido>
+<equipo id="ll11">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+
+<equipo id="ll12">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+</partido>
+
+</jornada>
+
+</split>

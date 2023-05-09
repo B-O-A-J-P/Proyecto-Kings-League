@@ -7,7 +7,7 @@ import java.util.Collection;
 @Entity
 @Table(name = "AGENDAS", schema = "HR")
 public class AgendasEntidad {
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    //@GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name = "COD_AGENDA")
     private int codAgenda;
@@ -17,10 +17,7 @@ public class AgendasEntidad {
     @Basic
     @Column(name = "TELEFONO")
     private String telefono;
-    @OneToMany(mappedBy = "agenda")
-    private Collection<JugadorEntidad> jugadoresByCodAgenda;
-    @OneToMany(mappedBy = "agenda")
-    private Collection<MiembroEntidad> miembrosByCodAgenda;
+
 
     public int getCodAgenda() {
         return codAgenda;
@@ -68,19 +65,5 @@ public class AgendasEntidad {
         return result;
     }
 
-    public Collection<JugadorEntidad> getJugadoresByCodAgenda() {
-        return jugadoresByCodAgenda;
-    }
 
-    public void setJugadoresByCodAgenda(Collection<JugadorEntidad> jugadoresByCodAgenda) {
-        this.jugadoresByCodAgenda = jugadoresByCodAgenda;
-    }
-
-    public Collection<MiembroEntidad> getMiembrosByCodAgenda() {
-        return miembrosByCodAgenda;
-    }
-
-    public void setMiembrosByCodAgenda(Collection<MiembroEntidad> miembrosByCodAgenda) {
-        this.miembrosByCodAgenda = miembrosByCodAgenda;
-    }
 }

@@ -7,19 +7,10 @@ import java.util.Collection;
 @Entity
 @Table(name = "MIEMBROS", schema = "HR")
 public class MiembroEntidad extends Persona{
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    //@GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name = "COD_MIEMBRO")
     private short codMiembro;
-    @Basic
-    @Column(name = "DNI")
-    private String dni;
-    @Basic
-    @Column(name = "NOMBRE")
-    private String nombre;
-    @Basic
-    @Column(name = "APELLIDO")
-    private String apellido;
     @OneToMany(mappedBy = "miembro")
     private Collection<ContratoEquipoMiembroEntidad> contratos;
     @ManyToOne

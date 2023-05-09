@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE temporada SYSTEM "kings_league_clasificacion.dtd">
+<temporada id ="a1" xmlns:xs = "http://www.w3.org/2001/XMLSchema-instance"
+    xs:noNamespaceSchemaLocation = "kings_league_clasificacion.xsd">
+<split id="b1">
+<clasificacion>
+<fecha_fin></fecha_fin>
+
+<equipo id="eq1">
+<nombre></nombre>
+<logo></logo>
+<puntos></puntos>
+<suma_goles></suma_goles>
+</equipo>
+
+<equipo id="eq2">
+<nombre></nombre>
+<logo></logo>
+<puntos></puntos>
+<suma_goles></suma_goles>
+</equipo>
+
+<equipo id="eq3">
+<nombre></nombre>
+<logo></logo>
+<puntos></puntos>
+<suma_goles></suma_goles>
+</equipo>
+
+<equipo id="eq4">
+<nombre></nombre>
+<logo></logo>
+<puntos></puntos>
+<suma_goles></suma_goles>
+</equipo>
+
+<equipo id="eq5">
+<nombre></nombre>
+<logo></logo>
+<puntos></puntos>
+<suma_goles></suma_goles>
+</equipo>
+
+<equipo id="eq6">
+<nombre></nombre>
+<logo></logo>
+<puntos></puntos>
+<suma_goles></suma_goles>
+</equipo>
+
+<equipo id="eq7">
+<nombre></nombre>
+<logo></logo>
+<puntos></puntos>
+<suma_goles></suma_goles>
+</equipo>
+
+<equipo id="eq8">
+<nombre></nombre>
+<logo></logo>
+<puntos></puntos>
+<suma_goles></suma_goles>
+</equipo>
+
+<equipo id="eq9">
+<nombre></nombre>
+<logo></logo>
+<puntos></puntos>
+<suma_goles></suma_goles>
+</equipo>
+
+<equipo id="eq10">
+<nombre></nombre>
+<logo></logo>
+<puntos></puntos>
+<suma_goles></suma_goles>
+</equipo>
+
+<equipo id="eq11">
+<nombre></nombre>
+<logo></logo>
+<puntos></puntos>
+<suma_goles></suma_goles>
+</equipo>
+
+<equipo id="eq12">
+<nombre></nombre>
+<logo></logo>
+<puntos></puntos>
+<suma_goles></suma_goles>
+</equipo>
+
+
+</clasificacion>
+</split>
+</temporada>

@@ -20,6 +20,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="2PTNxiaauOlDQdnUtkQOQGTaFIc" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -32,13 +35,17 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "/home/pirate/github_repositories/Kings-League-Personal/Programación/kings_league",
+    "last_opened_file_path": "/Users/1gdaw01/Desktop/kings_league2/finalProyectoKings/Programacion/kings_league",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
     "vue.rearranger.settings.migration": "true"
   },
@@ -50,8 +57,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="ImportMappingsDialog.RecentPackages">
-      <recent name="com.boajp.modelo" />
       <recent name="" />
+      <recent name="com.boajp.modelo" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -69,6 +76,8 @@
       <workItem from="1683484944125" duration="564000" />
       <workItem from="1683485560697" duration="51000" />
       <workItem from="1683487047161" duration="48000" />
+      <workItem from="1683538701534" duration="3886000" />
+      <workItem from="1683613368144" duration="8018000" />
     </task>
     <task id="LOCAL-00001" summary="Modelo medio terminado.">
       <created>1683484889624</created>

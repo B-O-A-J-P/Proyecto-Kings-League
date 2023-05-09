@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="split"/>
+  
+    <xs:complexType name="split">
+      <xs:sequence>
+        <xs:element name="jornada" type="jjornada" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="jjornada">
+      <xs:sequence>
+        <xs:element name="partido" type="ppartido" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="ppartido">
+      <xs:sequence>
+        <xs:element name="equipo" type="eequipo" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element name="fecha_partido" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="eequipo">
+      <xs:sequence>
+        <xs:element name="nombre" type="xs:string"/>
+        <xs:element name="logo" type="xs:string"/>
+        <xs:element name="numero_goles" type="xs:integer"/>
+        <xs:element name="resultado" type="rresultado"/>
+      </xs:sequence>
+    </xs:complexType>
+    
+    
+    <xs:simpleType name="rresultado">
+      <xs:restriction base="xs:string">
+        <xs:length value="1"/>
+        <xs:pattern value="[vd]"/>
+      </xs:restriction>
+    </xs:simpleType>
+    
+
+</xs:schema>
+

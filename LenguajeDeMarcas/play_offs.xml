@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE temporada SYSTEM "play_offs.dtd">
+<temporada id="t1" xmlns:xs = "http://www.w3.org/2001/XMLSchema-instance"
+    xs:noNamespaceSchemaLocation = "play_offs.xsd">
+<split id="s1">
+<playoffs>
+
+<partido id="a1">
+<fecha></fecha>
+<ubicacion></ubicacion>
+<fase></fase>
+<equipo id="aa1">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+
+<equipo id="aa8">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+</partido>
+
+
+<partido id="a2">
+<fecha></fecha>
+<ubicacion></ubicacion>
+<fase></fase>
+<equipo id="aa2">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+
+<equipo id="aa7">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+</partido>
+
+
+
+<partido id="a3">
+<fecha></fecha>
+<ubicacion></ubicacion>
+<fase></fase>
+<equipo id="aa3">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+
+<equipo id="aa6">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+</partido>
+
+<partido id="a4">
+<fecha></fecha>
+<ubicacion></ubicacion>
+<fase></fase>
+<equipo id="aa4">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+
+<equipo id="aa5">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+</partido>
+
+
+<partido id="b1">
+<fecha></fecha>
+<ubicacion></ubicacion>
+<fase></fase>
+<equipo id="bb1">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+
+<equipo id="bb2">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+</partido>
+
+
+<partido id="b2">
+<fecha></fecha>
+<ubicacion></ubicacion>
+<fase></fase>
+<equipo id="bb3">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+
+<equipo id="bb4">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+</partido>
+
+<partido id="f1">
+
+<fecha></fecha>
+<ubicacion></ubicacion>
+<fase></fase>
+<equipo id="ff1">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+
+<equipo id="ff2">
+<nombre></nombre>
+<logo></logo>
+<numero_goles></numero_goles>
+<resultado></resultado>
+</equipo>
+</partido>
+
+</playoffs>
+</split>
+</temporada>

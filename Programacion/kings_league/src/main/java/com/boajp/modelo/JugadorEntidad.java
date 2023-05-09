@@ -7,19 +7,11 @@ import java.util.Collection;
 @Entity
 @Table(name = "JUGADORES", schema = "HR")
 public class JugadorEntidad extends Persona{
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    //@GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name = "COD_JUGADOR")
     private int codJugador;
-    @Basic
-    @Column(name = "DNI")
-    private String dni;
-    @Basic
-    @Column(name = "NOMBRE")
-    private String nombre;
-    @Basic
-    @Column(name = "APELLIDO")
-    private String apellido;
+
     @Basic
     @Column(name = "PIE")
     private String pie;
@@ -42,29 +34,6 @@ public class JugadorEntidad extends Persona{
         this.codJugador = codJugador;
     }
 
-    public String getDni() {
-        return dni;
-    }
-
-    public void setDni(String dni) {
-        this.dni = dni;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getApellido() {
-        return apellido;
-    }
-
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
-    }
 
     public String getPie() {
         return pie;

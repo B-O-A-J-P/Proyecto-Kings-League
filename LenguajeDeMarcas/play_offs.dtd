@@ -1,0 +1,17 @@
+<!ELEMENT temporada (split)>
+<!ELEMENT split (playoffs)>
+<!ELEMENT playoffs (partido+)>
+<!ELEMENT partido (fecha,ubicacion,fase,equipo+)>
+<!ELEMENT equipo (nombre,logo,numero_goles,resultado)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT logo (#PCDATA)>
+<!ELEMENT numero_goles (#PCDATA)>
+<!ELEMENT resultado (#PCDATA)>
+<!ELEMENT fecha (#PCDATA)>
+<!ELEMENT ubicacion (#PCDATA)>
+<!ELEMENT fase (#PCDATA)>
+
+<!ATTLIST temporada id  ID #REQUIRED>
+<!ATTLIST split id ID #REQUIRED>
+<!ATTLIST partido id ID #REQUIRED>
+<!ATTLIST equipo id  ID #REQUIRED>
