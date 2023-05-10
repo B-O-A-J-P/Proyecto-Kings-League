@@ -32,7 +32,7 @@ public class calendario {
     public calendario(){
         String[] columnas = {"Equipo Local","Logo Local","Hora","Logo Visitante", "Equipo Visitante"};
 
-        
+
         model = new DefaultTableModel(columnas, 0);
         table = new JTable(model);
 
