@@ -36,8 +36,6 @@ public class clasificacion {
 
             NodeList nodeList = doc.getElementsByTagName("equipo");
 
-            ArrayList<EquipoEntidad> equipos = new ArrayList<>();
-
 
             for (int i = 0; i < nodeList.getLength(); i++) {
                 Element equipo = (Element) nodeList.item(i);
