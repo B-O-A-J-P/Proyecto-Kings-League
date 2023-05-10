@@ -3,6 +3,9 @@ package com.boajp.repositorios;
 import com.boajp.modelo.TemporadaEntidad;
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class TemporadaRepositorio {
 
     private final EntityManagerFactory entityManagerFactory;
@@ -61,13 +64,14 @@ public class TemporadaRepositorio {
         }
     }
 
-    public void buscarTodasTemporadas() throws Exception{
-        transaction = entityManager.getTransaction();
+    public List<TemporadaEntidad> buscarTodasTemporadas() throws Exception {
         try {
-            Query temporadas = entityManager.createNativeQuery("SELECT COUNT(*) FROM temporadas");
-            //Todo
+            String jpql = "SELECT t FROM TemporadaEntidad t";
+            TypedQuery<TemporadaEntidad> query = entityManager.createQuery(jpql, TemporadaEntidad.class);
+            return query.getResultList();
         } catch (Exception exception) {
-            throw new Exception("Error al intentar extraer temporadas");
+            throw new Exception("Error al intentar extraer temporadas.", exception);
         }
     }
+
 }

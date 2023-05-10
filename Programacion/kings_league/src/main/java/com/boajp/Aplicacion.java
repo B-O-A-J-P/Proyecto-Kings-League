@@ -1,25 +1,27 @@
 package com.boajp;
 
 
+import com.boajp.modelo.TemporadaEntidad;
+import com.boajp.repositorios.TemporadaRepositorio;
 import com.boajp.vista.vLoginRegistro;
 
 import javax.swing.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Aplicacion {
 
-    private static JFrame vIL;
     static public void main(String... args) {
-        crearVentanaLoginRegistro();
+        List<TemporadaEntidad> lista = new ArrayList<>();
+        TemporadaRepositorio temporadaRepositorio = new TemporadaRepositorio();
+        try {
+            lista = temporadaRepositorio.buscarTodasTemporadas();
+        } catch (Exception exception) {
+
+        }
+
+        System.out.println(lista.get(0));
+
     }
 
-    public static void crearVentanaLoginRegistro(){
-        vIL = new JFrame("vLoginRegistro");
-        vIL.setContentPane(new vLoginRegistro().getpPrincipal());
-        vIL.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        vIL.pack();
-        vIL.setVisible(true);
-
-        vIL.setLocationRelativeTo(null);
-        vIL.setSize(500,400);
-    }
 }
