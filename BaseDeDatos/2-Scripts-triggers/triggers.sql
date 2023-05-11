@@ -1,4 +1,6 @@
+
 /*
+
 drop trigger min_equipos;
 drop trigger min_jugadores;
 drop trigger max_jugadores_draft;
@@ -10,7 +12,9 @@ drop trigger equipo_duplicado;
 drop trigger trigger_temporadas_ano;
 drop trigger triger_splits_fec_ini;
 drop trigger triger_jornadas_fec;
+
 */
+
 --------------------------------------------------------------------------------
 
 create or replace trigger min_equipos
@@ -27,6 +31,7 @@ begin
     end if;
 end;
 /
+
 --------------------------------------------------------------------------------
 
 create or replace trigger min_jugadores
@@ -76,6 +81,7 @@ begin
     
 end max_jugadores_draft;
 /
+
 --------------------------------------------------------------------------------
 
 create or replace trigger max_jugadores_wild_card
@@ -98,6 +104,7 @@ begin
     
 end max_jugadores_wild_card;
 /
+
 --------------------------------------------------------------------------------
 
 CREATE OR REPLACE TRIGGER max_presupuesto_equipo
@@ -142,6 +149,7 @@ BEGIN
     END IF;
 END check_contrato_jugador;
 /
+
 --------------------------------------------------------------------------------
 
 create or replace trigger control_miembros
@@ -158,7 +166,7 @@ begin
     
     if v_numero_de_miembros >= 1
     then
-        raise_application_error(-20001, 'No puede haber mas de un miembro con la misma función');
+        raise_application_error(-20001, 'No puede haber mas de un miembro con la misma funciÃ³n');
     end if;
     
 end control_miembros;
@@ -186,7 +194,7 @@ BEFORE INSERT OR UPDATE ON temporadas
 FOR EACH ROW
 BEGIN
   IF :NEW.ano < EXTRACT(YEAR FROM SYSDATE) THEN
-    RAISE_APPLICATION_ERROR(-20001, 'El a�o tiene que ser igual o superior al a�o actual.');
+    RAISE_APPLICATION_ERROR(-20001, 'El año tiene que ser igual o superior al año actual.');
   END IF;
 END trigger_temporadas_ano;
 /
@@ -201,6 +209,7 @@ BEGIN
   END IF;
 END triger_splits_fec_ini;
 /
+
 --------------------------------------------------------------------------------
 
 CREATE OR REPLACE TRIGGER triger_jornadas_fec

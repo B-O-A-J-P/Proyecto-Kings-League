@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE temporada SYSTEM "kings_league_clasificacion.dtd">
+<temporada id ="a1" xmlns:xs = "http://www.w3.org/2001/XMLSchema-instance"
+ xs:noNamespaceSchemaLocation = "clasificacion.xsd">
+<split id="b1">
+<clasificacion fecha_fin="2023-05-08">
+
+<equipo id="eq1">
+<nombre>Real Madrid</nombre>
+<logo>https://example.com/logos/real_madrid.png</logo>
+<puntos>75</puntos>
+<suma_goles>80</suma_goles>
+</equipo>
+<equipo id="eq2">
+<nombre>Barcelona</nombre>
+<logo>https://example.com/logos/barcelona.png</logo>
+<puntos>70</puntos>
+<suma_goles>75</suma_goles>
+</equipo>
+<equipo id="eq3">
+<nombre>Atletico de Madrid</nombre>
+<logo>https://example.com/logos/atletico.png</logo>
+<puntos>65</puntos>
+<suma_goles>70</suma_goles>
+</equipo>
+<equipo id="eq4">
+<nombre>Sevilla</nombre>
+<logo>https://example.com/logos/sevilla.png</logo>
+<puntos>60</puntos>
+<suma_goles>65</suma_goles>
+</equipo>
+<equipo id="eq5">
+<nombre>Real Sociedad</nombre>
+<logo>https://example.com/logos/real_sociedad.png</logo>
+<puntos>55</puntos>
+<suma_goles>60</suma_goles>
+</equipo>
+<equipo id="eq6">
+<nombre>Villarreal</nombre>
+<logo>https://example.com/logos/villarreal.png</logo>
+<puntos>50</puntos>
+<suma_goles>55</suma_goles>
+</equipo>
+<equipo id="eq7">
+<nombre>Real Betis</nombre>
+<logo>https://example.com/logos/real_betis.png</logo>
+<puntos>45</puntos>
+<suma_goles>50</suma_goles>
+</equipo>
+<equipo id="eq8">
+<nombre>Valencia</nombre>
+<logo>https://example.com/logos/valencia.png</logo>
+<puntos>40</puntos>
+<suma_goles>45</suma_goles>
+</equipo>
+<equipo id="eq9">
+<nombre>Athletic Club</nombre>
+<logo>https://example.com/logos/athletic.png</logo>
+<puntos>35</puntos>
+<suma_goles>40</suma_goles>
+</equipo>
+<equipo id="eq10">
+<nombre>Celta de Vigo</nombre>
+<logo>https://example.com/logos/celta.png</logo>
+<puntos>30</puntos>
+<suma_goles>35</suma_goles>
+</equipo>
+<equipo id="eq11">
+<nombre>Getafe</nombre>
+<logo>https://example.com/logos/getafe.png</logo>
+<puntos>25</puntos>
+<suma_goles>30</suma_goles>
+</equipo>
+<equipo id="eq12">
+<nombre>Granada</nombre>
+<logo>https://example.com/logos/granada.png</logo>
+<puntos>20</puntos>
+<suma_goles>25</suma_goles>
+</equipo>
+</clasificacion>
+</split>
+</temporada>

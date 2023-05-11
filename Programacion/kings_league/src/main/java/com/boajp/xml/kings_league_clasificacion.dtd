@@ -1,0 +1,13 @@
+<!ELEMENT temporada (split)>
+<!ELEMENT split  (clasificacion)>
+<!ELEMENT clasificacion (equipo+)>
+<!ELEMENT equipo (nombre,logo,puntos,suma_goles) >
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT logo (#PCDATA)>
+<!ELEMENT puntos (#PCDATA)>
+<!ELEMENT suma_goles (#PCDATA)>
+
+
+<!ATTLIST temporada id  ID #REQUIRED>
+<!ATTLIST split id ID #REQUIRED>
+<!ATTLIST equipo id  ID #REQUIRED>

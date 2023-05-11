@@ -7,8 +7,8 @@ import java.util.Collection;
 @Entity
 @Table(name = "JUGADORES", schema = "HR")
 public class JugadorEntidad extends Persona{
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "COD_JUGADOR")
     private int codJugador;
 
@@ -21,7 +21,7 @@ public class JugadorEntidad extends Persona{
     @OneToMany(mappedBy = "jugador")
     private Collection<ContratoEquipoJugadorEntidad> contratos;
     @ManyToOne
-    @JoinColumn(name = "COD_AGENDA", referencedColumnName = "COD_AGENDA", nullable = false)
+    @JoinColumn(name = "COD_AGENDA", referencedColumnName = "COD_AGENDA")
     private AgendaEntidad agenda;
     @OneToMany(mappedBy = "temporada")
     private Collection<RegistroJugadorEntidad> registrosDeTemporadas;
@@ -30,7 +30,7 @@ public class JugadorEntidad extends Persona{
     public JugadorEntidad() {
     }
 
-    public JugadorEntidad(String nombre, String apellido, String dni, String pie, Byte altura, Collection<ContratoEquipoJugadorEntidad> contratos, AgendaEntidad agenda, Collection<RegistroJugadorEntidad> registrosDeTemporadas) {
+    public JugadorEntidad(String nombre, String apellido, String dni, String pie, Byte altura) {
         super(nombre, apellido, dni);
         this.pie = pie;
         this.altura = altura;

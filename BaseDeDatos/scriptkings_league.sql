@@ -29,15 +29,6 @@
 @\%USERPROFILE%\Documents\Proyecto-Kings-League\BaseDeDatos\5-Paquete\cabecera.sql
 @\%USERPROFILE%\Documents\Proyecto-Kings-League\BaseDeDatos\5-Paquete\cuerpo.sql
 
-
-
-
-
-
-
-
-
-
 --MAC
 --ejecutar tabla 1
 @"$HOME/Documents/Proyecto-Kings-League/BaseDeDatos/1-Scripts_tablas_y_otros_objetos/tablas.sql"

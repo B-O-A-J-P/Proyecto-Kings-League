@@ -4,32 +4,68 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49855d76-e22d-40b0-a0b1-120c95f2f71b" name="Changes" comment="Modelo medio terminado." />
+    <list default="true" id="fb9fa772-05c5-436f-bbb1-284d59c89118" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/kings_league.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/boajp/Aplicacion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/boajp/Aplicacion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/boajp/modelo/ContratoEquipoMiembroEntidad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/boajp/modelo/ContratoEquipoMiembroEntidad.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/boajp/modelo/JugadorEntidad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/boajp/modelo/JugadorEntidad.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/boajp/repositorios/JugadorRepositorio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/boajp/repositorios/JugadorRepositorio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/boajp/Aplicacion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/boajp/Aplicacion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/boajp/modelo/ContratoEquipoMiembroEntidad.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/boajp/modelo/ContratoEquipoMiembroEntidad.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/boajp/modelo/JugadorEntidad.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/boajp/modelo/JugadorEntidad.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/boajp/repositorios/BaseDeDatos.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/boajp/repositorios/SplitRepositorio.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/boajp/repositorios/SplitRepositorio.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/boajp/vista/BarraHerramientas.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/boajp/vista/BarraMenu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/boajp/vista/MainFrame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/boajp/vista/TablaClasificacion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/boajp/vista/calendario.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/boajp/vista/clasificacion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/boajp/vista/vLoginRegistro$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/boajp/vista/vLoginRegistro$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/boajp/vista/vLoginRegistro$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/boajp/vista/vLoginRegistro.class" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
   </component>
-  <component name="ProjectId" id="2PTNxiaauOlDQdnUtkQOQGTaFIc" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="2PbGvnCAiR45k0Fbkg1xmrMAVuI" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
     &quot;DatabaseDriversLRU&quot;: [
@@ -37,59 +73,21 @@
     ]
   }
 }</component>
-  <component name="RecentsManager">
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="" />
-    </key>
-    <key name="ImportMappingsDialog.RecentPackages">
-      <recent name="" />
-      <recent name="com.boajp.modelo" />
-    </key>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="49855d76-e22d-40b0-a0b1-120c95f2f71b" name="Changes" comment="" />
-      <created>1683477360251</created>
+      <changelist id="fb9fa772-05c5-436f-bbb1-284d59c89118" name="Changes" comment="" />
+      <created>1683718600185</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1683477360251</updated>
-      <workItem from="1683477361524" duration="471000" />
-      <workItem from="1683477993825" duration="2112000" />
-      <workItem from="1683480592311" duration="755000" />
-      <workItem from="1683483441781" duration="1469000" />
-      <workItem from="1683484944125" duration="564000" />
-      <workItem from="1683485560697" duration="51000" />
-      <workItem from="1683487047161" duration="48000" />
-      <workItem from="1683538701534" duration="3886000" />
-      <workItem from="1683613368144" duration="5356000" />
-      <workItem from="1683621935550" duration="46000" />
-      <workItem from="1683622002310" duration="824000" />
-
+      <updated>1683718600185</updated>
+      <workItem from="1683718601471" duration="32000" />
+      <workItem from="1683718635589" duration="879000" />
+      <workItem from="1683732985917" duration="2000" />
     </task>
-    <task id="LOCAL-00001" summary="Modelo medio terminado.">
-      <created>1683484889624</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1683484889625</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <ignored-roots>
-      <path value="$PROJECT_DIR$/../.." />
-      <path value="$PROJECT_DIR$" />
-    </ignored-roots>
-    <MESSAGE value="Modelo medio terminado." />
-    <option name="LAST_COMMIT_MESSAGE" value="Modelo medio terminado." />
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
   </component>
 </project>

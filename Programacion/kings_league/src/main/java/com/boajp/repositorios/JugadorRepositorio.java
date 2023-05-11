@@ -25,7 +25,7 @@ public class JugadorRepositorio {
             transaction.commit();
         } catch (Exception e) {
             transaction.rollback();
-            throw new Exception("Error al intentar insertar el jugador");
+            throw e;
         }
     }
 
