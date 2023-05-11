@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+<<<<<<< HEAD
+    <list default="true" id="73ce9052-8b2a-477a-bc42-fdff390fe8f2" name="Changes" comment="" />
+=======
+    <list default="true" id="49855d76-e22d-40b0-a0b1-120c95f2f71b" name="Changes" comment="Modelo medio terminado." />
+>>>>>>> main
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+<<<<<<< HEAD
+    <option name="RECENT_GIT_ROOT_PATH" value="$USER_HOME$" />
+=======
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+>>>>>>> main
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+<<<<<<< HEAD
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2PYz39cS1qmyXuAdsmEvkQbFZEx" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+=======
+  <component name="ProjectId" id="2PTNxiaauOlDQdnUtkQOQGTaFIc" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+>>>>>>> main
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+<<<<<<< HEAD
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/1gdaw01/Downloads/kings_league 2",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.1150748",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "oracle"
+    ]
+  }
+}]]></component>
+  <component name="RunManager" selected="Application.EquipoLista">
+    <configuration name="Aplicacion" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.boajp.Aplicacion" />
+      <module name="kings_league" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.boajp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Calendario" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.boajp.vista.Calendario" />
+      <module name="kings_league" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.boajp.vista.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Clasificacion" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.boajp.vista.Clasificacion" />
+      <module name="kings_league" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.boajp.vista.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EquipoLista" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.boajp.vista.vistaEquipo.EquipoLista" />
+      <module name="kings_league" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.boajp.vista.vistaEquipo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.EquipoLista" />
+        <item itemvalue="Application.Calendario" />
+        <item itemvalue="Application.Clasificacion" />
+        <item itemvalue="Application.Aplicacion" />
+      </list>
+    </recent_temporary>
+=======
+
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;oracle&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+    <key name="ImportMappingsDialog.RecentPackages">
+      <recent name="" />
+      <recent name="com.boajp.modelo" />
+    </key>
+>>>>>>> main
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+<<<<<<< HEAD
+      <changelist id="73ce9052-8b2a-477a-bc42-fdff390fe8f2" name="Changes" comment="" />
+      <created>1683648600320</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1683648600320</updated>
+      <workItem from="1683648601984" duration="6867000" />
+      <workItem from="1683699984876" duration="17560000" />
+      <workItem from="1683722147979" duration="852000" />
+      <workItem from="1683732027130" duration="8401000" />
+      <workItem from="1683786076495" duration="674000" />
+    </task>
+=======
+      <changelist id="49855d76-e22d-40b0-a0b1-120c95f2f71b" name="Changes" comment="" />
+      <created>1683477360251</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1683477360251</updated>
+      <workItem from="1683477361524" duration="471000" />
+      <workItem from="1683477993825" duration="2112000" />
+      <workItem from="1683480592311" duration="755000" />
+      <workItem from="1683483441781" duration="1469000" />
+      <workItem from="1683484944125" duration="564000" />
+      <workItem from="1683485560697" duration="51000" />
+      <workItem from="1683487047161" duration="48000" />
+      <workItem from="1683538701534" duration="3886000" />
+      <workItem from="1683613368144" duration="5356000" />
+      <workItem from="1683621935550" duration="46000" />
+      <workItem from="1683622002310" duration="824000" />
+
+    </task>
+    <task id="LOCAL-00001" summary="Modelo medio terminado.">
+      <created>1683484889624</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1683484889625</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+>>>>>>> main
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+<<<<<<< HEAD
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/boajp/vista/Calendario.java</url>
+          <line>120</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/boajp/vista/vistaEquipo/EquipoLista.java</url>
+          <line>13</line>
+          <properties class="com.boajp.vista.vistaEquipo.EquipoLista" method="&lt;init&gt;">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="com.sun.org.apache.xerces.internal.dom.DeferredElementImpl" memberName="ownerNode" />
+      </pinned-members>
+    </pin-to-top-manager>
+=======
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/../.." />
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
+    <MESSAGE value="Modelo medio terminado." />
+    <option name="LAST_COMMIT_MESSAGE" value="Modelo medio terminado." />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+>>>>>>> main
+  </component>
+</project>

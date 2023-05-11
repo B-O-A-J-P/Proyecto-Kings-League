@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd"
+             version="3.0">
+    <persistence-unit name="default">
+
+        <class>com.boajp.modelo.AgendaEntidad</class>
+        <class>com.boajp.modelo.ClasificacionEntidad</class>
+        <class>com.boajp.modelo.ContratoEquipoJugadorEntidad</class>
+        <class>com.boajp.modelo.ContratoEquipoMiembroEntidad</class>
+        <class>com.boajp.modelo.DraftEntidad</class>
+        <class>com.boajp.modelo.EquipoEntidad</class>
+        <class>com.boajp.modelo.InformacionPartidoEntidad</class>
+        <class>com.boajp.modelo.JornadaEntidad</class>
+        <class>com.boajp.modelo.JugadorEntidad</class>
+        <class>com.boajp.modelo.MiembroEntidad</class>
+        <class>com.boajp.modelo.PartidoEntidad</class>
+        <class>com.boajp.modelo.RegistroEquipoEntidad</class>
+        <class>com.boajp.modelo.RegistroJugadorEntidad</class>
+        <class>com.boajp.modelo.SplitEntidad</class>
+        <class>com.boajp.modelo.TemporadaEntidad</class>
+        <properties>
+            <property name="toplink.jdbc.url" value="jdbc:oracle:thin:@//localhost:1521/freepdb1"/>
+            <property name="toplink.jdbc.driver" value="oracle.jdbc.OracleDriver"/>
+            <property name="toplink.jdbc.user" value="hr"/>
+            <property name="toplink.jdbc.password" value="oracle"/>
+            <property name="hibernate.connection.url" value="jdbc:oracle:thin:@//localhost:1521/freepdb1"/>
+            <property name="hibernate.connection.driver_class" value="oracle.jdbc.OracleDriver"/>
+            <property name="hibernate.connection.username" value="hr"/>
+            <property name="hibernate.connection.password" value="oracle"/>
+            <property name="openjpa.ConnectionURL" value="jdbc:oracle:thin:@//localhost:1521/freepdb1"/>
+            <property name="openjpa.ConnectionDriverName" value="oracle.jdbc.OracleDriver"/>
+            <property name="openjpa.ConnectionUserName" value="hr"/>
+            <property name="openjpa.ConnectionPassword" value="oracle"/>
+            <property name="eclipselink.jdbc.url" value="jdbc:oracle:thin:@//localhost:1521/freepdb1"/>
+            <property name="eclipselink.jdbc.driver" value="oracle.jdbc.OracleDriver"/>
+            <property name="eclipselink.jdbc.user" value="hr"/>
+            <property name="eclipselink.jdbc.password" value="oracle"/>
+        </properties>
+    </persistence-unit>
+</persistence>
