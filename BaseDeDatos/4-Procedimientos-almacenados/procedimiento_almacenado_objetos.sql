@@ -23,31 +23,7 @@ BEGIN
     LEFT JOIN staffs_equipos s ON e.cod_equipo = s.cod_equipo;
     
 END informe_equipos_temporada;
-
-----------------------------------------------------------------------
-
-create view presidentes_equipos
-as
-select m.cod_miembro, m.nombre, m.apellido, m.dni, cm.fecha_entrada, cm.fecha_salida, cm.cod_equipo
-from miembros m, contratos_equipo_miembro cm
-where m.cod_miembro = cm.cod_miembro
-and fecha_entrada = (select max(fecha_entrada) from contratos_equipo_miembro where cm.cod_equipo = cod_equipo and funcion = 'p');
-
-create view entrenadores_equipos
-as
-select m.cod_miembro, m.nombre, m.apellido, m.dni, cm.fecha_entrada, cm.fecha_salida, cm.cod_equipo
-from miembros m, contratos_equipo_miembro cm
-where m.cod_miembro = cm.cod_miembro
-and fecha_entrada = (select max(fecha_entrada) from contratos_equipo_miembro where cm.cod_equipo = cod_equipo and funcion = 'e');
-
-create view staffs_equipos
-as
-select m.cod_miembro, m.nombre, m.apellido, m.dni, cm.fecha_entrada, cm.fecha_salida, cm.cod_equipo
-from miembros m, contratos_equipo_miembro cm
-where m.cod_miembro = cm.cod_miembro
-and fecha_entrada = (select max(fecha_entrada) from contratos_equipo_miembro where cm.cod_equipo = cod_equipo and funcion = 's');
-
-----------------------------------------------------------------------
+/
 
 --informe de jugador
 CREATE OR REPLACE PROCEDURE informe_jugador_ultima_temporada

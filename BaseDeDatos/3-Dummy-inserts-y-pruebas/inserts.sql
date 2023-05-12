@@ -98,10 +98,10 @@ INSERT INTO contratos_equipo_jugador (cod_equipo, cod_jugador, salario, clausula
 
 
 INSERT INTO miembros (dni, nombre, apellido, cod_agenda)
-VALUES ('12345678A', 'Juan', 'Pérez', 1);
+VALUES ('12345678A', 'Juan', 'Perez', 1);
 
 INSERT INTO miembros (dni, nombre, apellido, cod_agenda)
-VALUES ('23456789B', 'María', 'González', 0);
+VALUES ('23456789B', 'Maria', 'Gonzalez', 0);
 
 INSERT INTO contratos_equipo_miembro (cod_equipo, cod_miembro, funcion, fecha_entrada)
 VALUES (0, 0, 'p', TO_DATE('01/01/2022', 'DD/MM/YYYY'));

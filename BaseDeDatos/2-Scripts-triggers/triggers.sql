@@ -22,7 +22,7 @@ begin
     
     if v_numero_equipos < 12
     then 
-        raise_application_error(-20001, 'Tiene que haber un mínimo de 12 equipos para poder iniciar el split.');
+        raise_application_error(-20001, 'Tiene que haber un minimo de 12 equipos para poder iniciar el split.');
     end if;
 end;
 
@@ -42,7 +42,7 @@ begin
     
     if (v_numero_jugadores < 8)
     then
-        raise_application_error(-20001, 'El equipo tiene que tener mínimo 8 jugadores.');
+        raise_application_error(-20001, 'El equipo tiene que tener minimo 8 jugadores.');
     end if;
     
 end;
@@ -157,7 +157,7 @@ begin
     
     if v_numero_de_miembros >= 1
     then
-        raise_application_error(-20001, 'No puede haber más de un miembro con la misma función');
+        raise_application_error(-20001, 'No puede haber mas de un miembro con la misma función');
     end if;
     
 end control_miembros;
@@ -185,7 +185,7 @@ BEFORE INSERT OR UPDATE ON temporadas
 FOR EACH ROW
 BEGIN
   IF :NEW.ano < EXTRACT(YEAR FROM SYSDATE) THEN
-    RAISE_APPLICATION_ERROR(-20001, 'El año tiene que ser igual o superior al año actual.');
+    RAISE_APPLICATION_ERROR(-20001, 'El a�o tiene que ser igual o superior al a�o actual.');
   END IF;
 END;
 

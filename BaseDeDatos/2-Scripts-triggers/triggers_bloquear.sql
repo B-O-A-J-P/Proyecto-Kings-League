@@ -3,7 +3,7 @@ before insert or update on splits
 for each row
 declare
 begin
-    raise_application_error(-20001, 'No se pueden modifcar splits antes o después de generar el calendario');
+    raise_application_error(-20001, 'No se pueden modifcar splits antes o despues de generar el calendario');
 end;
 /
 
@@ -15,7 +15,7 @@ before insert or update on splits
 for each row
 declare
 begin
-    raise_application_error(-20001, 'No se pueden modifcar jornadas antes o después de generar el calendario');
+    raise_application_error(-20001, 'No se pueden modifcar jornadas antes o despues de generar el calendario');
 end;
 
 alter trigger bloquear_jornadas disable;
@@ -25,12 +25,12 @@ before insert or update on splits
 for each row
 declare
 begin
-    raise_application_error(-20001, 'No se pueden modifcar partidos antes o después de generar el calendario');
+    raise_application_error(-20001, 'No se pueden modifcar partidos antes o despues de generar el calendario');
 end;
 
 alter trigger bloquear_partidos disable;
 
--- Los triggers están desactivo por defecto. Se activaran cuando se genere el calendario mediante el procedimiento
+-- Los triggers estan desactivo por defecto. Se activaran cuando se genere el calendario mediante el procedimiento
 -- si se desea modificar durante lo jornada, solo se podra desactivar utilizando un procedimiento del paquete calendario
 --
 
@@ -38,7 +38,7 @@ create or replace trigger bloquear_equipos
 before insert or update on equipos
 for each row
     begin
-        raise_application_error(-20001, 'No se pueden modifcar los equipos antes o después de generar el calendario');
+        raise_application_error(-20001, 'No se pueden modifcar los equipos antes o despues de generar el calendario');
     end;
     
     
@@ -46,5 +46,5 @@ create or replace trigger bloquear_contratos_jugador
 before insert or update on contratos_equipo_jugador
 for each row
     begin
-        raise_application_error(-20001, 'No se pueden modifcar los contratos antes o después de generar el calendario');
+        raise_application_error(-20001, 'No se pueden modifcar los contratos antes o despues de generar el calendario');
 end;
