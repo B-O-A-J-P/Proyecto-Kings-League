@@ -26,4 +26,6 @@ public class CartaEquipo {
     public void setJlNombre(JLabel jlNombre) {
         this.jlNombre = jlNombre;
     }
+
+
 }

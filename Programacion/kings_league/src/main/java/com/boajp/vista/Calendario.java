@@ -45,6 +45,11 @@ public class Calendario {
                 NodeList jornadaList = splitElement.getElementsByTagName("jornada");
 
 
+            Color azul = new Color(36,147,187);
+
+
+
+
             // Recorrer la lista de jornadas y crear un JTable para cada una
             for (int i = 0; i < jornadaList.getLength(); i++) {
                 //obtener el elemento correspondiente a la jornada actual
@@ -55,6 +60,8 @@ public class Calendario {
 
                 // Crear el JLabel con el texto "Jornada" y el número y fecha de la jornada
                 JLabel label = new JLabel("Jornada " + (i+1) + " - " + fechaJornada);
+                label.setForeground(azul);;
+                label.setFont(new Font("DialogInput",Font.BOLD,16));
                 pCalendario.add(label);
 
                 // Crear un JTable para mostrar los partidos de la jornada
@@ -94,7 +101,6 @@ public class Calendario {
                 // Agregar el JTable al JPanel
                 pCalendario.add(label);
                 pCalendario.add(tabla);
-
 
             }
 

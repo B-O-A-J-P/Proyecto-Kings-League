@@ -5,34 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fb9fa772-05c5-436f-bbb1-284d59c89118" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/kings_league.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/boajp/Aplicacion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/boajp/Aplicacion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/boajp/modelo/ContratoEquipoMiembroEntidad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/boajp/modelo/ContratoEquipoMiembroEntidad.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/boajp/modelo/JugadorEntidad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/boajp/modelo/JugadorEntidad.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/boajp/repositorios/JugadorRepositorio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/boajp/repositorios/JugadorRepositorio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/boajp/Aplicacion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/boajp/Aplicacion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/boajp/modelo/ContratoEquipoMiembroEntidad.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/boajp/modelo/ContratoEquipoMiembroEntidad.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/boajp/modelo/JugadorEntidad.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/boajp/modelo/JugadorEntidad.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/boajp/repositorios/BaseDeDatos.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/boajp/repositorios/SplitRepositorio.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/boajp/repositorios/SplitRepositorio.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/boajp/vista/BarraHerramientas.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/boajp/vista/BarraMenu.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/boajp/vista/MainFrame.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/boajp/vista/TablaClasificacion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/boajp/vista/calendario.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/boajp/vista/clasificacion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/boajp/vista/vLoginRegistro$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/boajp/vista/vLoginRegistro$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/boajp/vista/vLoginRegistro$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/boajp/vista/vLoginRegistro.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/boajp/modelo/EquipoEntidad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/boajp/modelo/EquipoEntidad.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/boajp/vista/Calendario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/boajp/vista/Calendario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/boajp/vista/vistaEquipo/CartaEquipo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/boajp/vista/vistaEquipo/CartaEquipo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/boajp/vista/vistaEquipo/EquipoLista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/boajp/vista/vistaEquipo/EquipoLista.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/boajp/modelo/EquipoEntidad.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/boajp/modelo/EquipoEntidad.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/intellij/uiDesigner/core/GridConstraints.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/intellij/uiDesigner/core/GridConstraints.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +23,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -55,24 +40,91 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/1gdaw01/Documents/git_repositorios/Proyecto-Kings-League/Programacion/kings_league",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.14392678",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;oracle&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "oracle"
     ]
   }
-}</component>
+}]]></component>
+  <component name="RunManager" selected="Application.EquipoLista">
+    <configuration name="Aplicacion" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.boajp.Aplicacion" />
+      <module name="kings_league" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.boajp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Calendario" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.boajp.vista.Calendario" />
+      <module name="kings_league" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.boajp.vista.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Clasificacion" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.boajp.vista.Clasificacion" />
+      <module name="kings_league" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.boajp.vista.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EquipoLista" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.boajp.vista.vistaEquipo.EquipoLista" />
+      <module name="kings_league" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.boajp.vista.vistaEquipo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.EquipoLista" />
+        <item itemvalue="Application.Calendario" />
+        <item itemvalue="Application.Clasificacion" />
+        <item itemvalue="Application.Aplicacion" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -84,6 +136,7 @@
       <workItem from="1683718601471" duration="32000" />
       <workItem from="1683718635589" duration="879000" />
       <workItem from="1683732985917" duration="2000" />
+      <workItem from="1683787873193" duration="10897000" />
     </task>
     <servers />
   </component>
