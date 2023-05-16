@@ -70,4 +70,5 @@ public class EquipoRepositorio {
     public EquipoEntidad seleccionarEquipoPorId(int id) {
         return em.find(EquipoEntidad.class, id);
     }
+
 }

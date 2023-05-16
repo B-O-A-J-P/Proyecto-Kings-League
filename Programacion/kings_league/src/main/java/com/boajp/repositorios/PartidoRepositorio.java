@@ -1,5 +1,6 @@
 package com.boajp.repositorios;
 
+import com.boajp.modelo.JornadaEntidad;
 import com.boajp.modelo.PartidoEntidad;
 import jakarta.persistence.*;
 
@@ -61,13 +62,13 @@ public class PartidoRepositorio {
         }
     }
 
-    public List<PartidoEntidad> seleccionarPartidosPorJornada (){
-
-        Query qPartidoJornada = em.createNativeQuery ("SELECT cod_jornada, cod_partido, cod_equipo1, " +
-                "cod_equipo2, hora, fase FROM partidos GROUP BY cod_jornada, cod_partido\n" +
-                "ORDER BY cod_jornada ASC, cod_partido ASC;");
+    public List<PartidoEntidad> seleccionarPartidosPorJornada(JornadaEntidad jornada) {
+        Query qPartidoJornada = em.createQuery("SELECT p FROM PartidoEntidad p WHERE p.jornada = :jornada ORDER BY p.hora ASC");
+        qPartidoJornada.setParameter("jornada", jornada);
         List<PartidoEntidad> partidos = qPartidoJornada.getResultList();
         return partidos;
     }
+
+
 
 }

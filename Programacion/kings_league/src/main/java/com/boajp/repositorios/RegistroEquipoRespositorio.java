@@ -61,12 +61,12 @@ public class RegistroEquipoRespositorio {
         }
     }
 
-    public List<RegistroEquipoEntidad> seleccionarTodosLosEquiposParticipantes (){
-
-        Query qEquiposParticipantes = em.createNativeQuery ("SELECT DISTINCT cod_equipo FROM equipos_participantes");
-        List<RegistroEquipoEntidad> equipos_participantes = qEquiposParticipantes.getResultList();
-        return equipos_participantes;
+    public List<RegistroEquipoEntidad> seleccionarTodosLosEquiposParticipantes() {
+        Query qEquiposParticipantes = em.createQuery("SELECT re FROM RegistroEquipoEntidad re WHERE re.temporada.codTemporada = (SELECT MAX(re2.temporada.codTemporada) FROM RegistroEquipoEntidad re2)");
+        List<RegistroEquipoEntidad> equiposParticipantes = qEquiposParticipantes.getResultList();
+        return equiposParticipantes;
     }
+
 
     public List<RegistroEquipoEntidad> seleccionarCantidadEquiposParticipantes(){
         Query qNroEquiposParticipantes = em.createNativeQuery ("SELECT COUNT(DISTINCT cod_equipo) FROM equipos_participantes ");
