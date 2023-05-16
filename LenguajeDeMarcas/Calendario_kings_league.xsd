@@ -1,16 +1,16 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
-  <xs:element name="temporada"/>
+  <xs:element name="temporada" type="Tipotemporada" minOccurs="0" maxOccurs="unbounded"/>
   
-    <xs:complexType name="temporada">
+    <xs:complexType name="Tipotemporada">
       <xs:sequence>
-        <xs:element name="split" type="Tiposplit" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element name="split" type="Tiposplit" minOccurs="2" maxOccurs="2"/>
       </xs:sequence>
     </xs:complexType>
     
     <xs:complexType name="Tiposplit">
       <xs:sequence>
-        <xs:element name="jornada" type="Tipojornada" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element name="jornada" type="Tipojornada" minOccurs="0" maxOccurs="13"/>
         <xs:element name="hora_inicio" type="xs:string"/>
         <xs:element name="hora_fin" type="xs:string"/>
       </xs:sequence>
@@ -18,15 +18,15 @@
     
     <xs:complexType name="Tipojornada">
       <xs:sequence>
-        <xs:element name="partido" type="Tipopartido" minOccurs="0" maxOccurs="unbounded"/>
-        <xs:element name="fecha" type="xs:string"/>
+        <xs:element name="partido" type="Tipopartido" minOccurs="1" maxOccurs="6"/>
+        <xs:element name="fecha" type="xs:date"/>
       </xs:sequence>
     </xs:complexType>    
       
     <xs:complexType name="Tipopartido">
       <xs:sequence>
-        <xs:element name="equipo" type="Tipoequipo" minOccurs="0" maxOccurs="unbounded"/>
-        <xs:element name="hora" type="xs:string"/>
+        <xs:element name="equipo" type="Tipoequipo" minOccurs="2" maxOccurs="2"/>
+        <xs:element name="hora" type="xs:date"/>
       </xs:sequence>
     </xs:complexType>
     

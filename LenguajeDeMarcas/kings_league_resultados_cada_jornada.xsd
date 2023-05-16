@@ -1,23 +1,23 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
-  <xs:element name="split"/>
+  <xs:element name="split" />
   
     <xs:complexType name="split">
       <xs:sequence>
-        <xs:element name="jornada" type="jjornada" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element name="jornada" type="jjornada" minOccurs="0" maxOccurs="11"/>
       </xs:sequence>
     </xs:complexType>
     
     <xs:complexType name="jjornada">
       <xs:sequence>
-        <xs:element name="partido" type="ppartido" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element name="partido" type="ppartido" minOccurs="0" maxOccurs="6"/>
       </xs:sequence>
     </xs:complexType>
     
     <xs:complexType name="ppartido">
       <xs:sequence>
-        <xs:element name="equipo" type="eequipo" minOccurs="0" maxOccurs="unbounded"/>
-        <xs:element name="fecha_partido" type="xs:string"/>
+        <xs:element name="equipo" type="eequipo" minOccurs="2" maxOccurs="2"/>
+        <xs:element name="fecha_partido" type="xs:date"/>
       </xs:sequence>
     </xs:complexType>
     
