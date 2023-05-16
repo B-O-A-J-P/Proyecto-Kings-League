@@ -7,6 +7,8 @@ import com.boajp.vista.formulario.Formulario;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 public class Ventana extends JFrame {
@@ -17,6 +19,9 @@ public class Ventana extends JFrame {
     private BarraDeNavegacion barraDeNavegacion;
     private JScrollPane scrollPane;
     private JPanel panelCuerpo;
+    private static Ventana ventana;
+
+
 
     public Ventana() {
         setBackground(EstilosDeVistas.COLOR_DE_FONDO);
@@ -37,6 +42,13 @@ public class Ventana extends JFrame {
         add(scrollPane, BorderLayout.CENTER);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
+        barraDeNavegacion.getItemNav(5).addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                ventana.mostrarFormulario();
+            }
+        });
     }
 
     public void mostrarFormulario() {
@@ -122,5 +134,6 @@ public class Ventana extends JFrame {
         //ventana.mostrarFormulario();
         //ventana.mostrarPanelDeJugadores(jugadores);
     }
+
 }
 

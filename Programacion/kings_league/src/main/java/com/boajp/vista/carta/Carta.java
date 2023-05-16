@@ -60,3 +60,4 @@ public class Carta extends CartaAbstracta {
         frame.setVisible(true);
     }
 }
+

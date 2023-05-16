@@ -68,6 +68,9 @@ public class BarraDeNavegacion extends JPanel{
         }
     }
 
+    public JButton getItemNav(int n){
+        return botones[n];
+    }
     public JButton[] getBotones() {
         return botones;
     }
