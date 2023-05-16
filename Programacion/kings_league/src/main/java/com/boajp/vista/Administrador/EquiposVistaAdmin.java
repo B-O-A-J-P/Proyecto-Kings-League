@@ -4,9 +4,7 @@ import javax.swing.*;
 
 public class EquiposVistaAdmin {
     private JPanel panel1;
-    private JTextField textField1;
-    private JTextField textField2;
-    private JTextField textField3;
-    private JTextField textField4;
+    private JTextField tfNombre;
+    private JTextField tfLogo;
     private JButton eliminarButton;
 }

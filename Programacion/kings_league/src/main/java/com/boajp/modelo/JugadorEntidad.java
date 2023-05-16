@@ -39,6 +39,9 @@ public class JugadorEntidad extends Persona{
         this.registrosDeTemporadas = registrosDeTemporadas;
     }
 
+    public JugadorEntidad(int codJugador, String dni, String nombre, String apellido, String pie, int altura) {
+    }
+
     public int getCodJugador() {
         return codJugador;
     }

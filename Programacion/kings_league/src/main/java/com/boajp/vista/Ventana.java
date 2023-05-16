@@ -1,7 +1,7 @@
 package com.boajp.vista;
 
 import com.boajp.modelo.JugadorEntidad;
-import com.boajp.utilidades.EstilosDeVistas;
+import com.boajp.utilidades.*;
 import com.boajp.vista.carta.*;
 import com.boajp.vista.formulario.Formulario;
 
@@ -49,7 +49,7 @@ public class Ventana extends JFrame {
         panelCuerpo.repaint();
     }
 
-    public void mostrarPanelDeInicio(ArrayList<CartaAbstracta> cartas, ArrayList<CartaAbstracta> cartasEquipos){
+    public void mostrarPanelDeInicio(ArrayList<CartaAbstracta> cartas, ArrayList<CartaAbstracta> cartasEquipos) {
         panelCuerpo.removeAll();
         PanelDeInicio panelDeInicio = new PanelDeInicio(cartas, cartasEquipos, scrollPane);
         panelCuerpo.add(panelDeInicio, CUERPO);
@@ -94,8 +94,8 @@ public class Ventana extends JFrame {
         //Clasificación
         Cabecera cabeceraClasificacion = new Cabecera("Clasificación");
         Object[][] filas = new Object[2][3];
-        for(int x = 0; x < filas.length; x++) {
-            filas[x] = new Object[]{x+1, "Equipo " + x, x+10};
+        for (int x = 0; x < filas.length; x++) {
+            filas[x] = new Object[]{x + 1, "Equipo " + x, x + 10};
         }
         ClasificacionTabla clasificacionTabla = new ClasificacionTabla(filas, new String[]{"Posición", "Equipo", "Puntos"});
         Carta clasificacion = new Carta(cabeceraClasificacion, clasificacionTabla);
@@ -118,9 +118,9 @@ public class Ventana extends JFrame {
             cartasEquipos.add(new EquipoCarta("Equipo uno dos tres", Color.LIGHT_GRAY, Color.GRAY));
         }
         Ventana ventana = new Ventana();
-        //ventana.mostrarPanelDeInicio(cartas, cartasEquipos);
+        ventana.mostrarPanelDeInicio(cartas, cartasEquipos);
         //ventana.mostrarFormulario();
-        ventana.mostrarPanelDeJugadores(jugadores);
+        //ventana.mostrarPanelDeJugadores(jugadores);
     }
 }
 

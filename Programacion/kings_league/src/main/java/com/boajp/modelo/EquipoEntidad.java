@@ -34,6 +34,9 @@ public class EquipoEntidad {
     @OneToMany(mappedBy = "equipo")
     private Collection<RegistroEquipoEntidad> registrosTemporadas;
 
+    public EquipoEntidad(int codEquipo, String nombre, String logo, double presupuesto) {
+    }
+
     public int getCodEquipo() {
         return codEquipo;
     }

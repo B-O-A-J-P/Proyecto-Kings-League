@@ -1,7 +1,7 @@
 package com.boajp.vista;
 
 import com.boajp.modelo.JugadorEntidad;
-import com.boajp.utilidades.EstilosDeVistas;
+import com.boajp.utilidades.*;
 import com.boajp.vista.carta.CartaAbstracta;
 import com.boajp.vista.carta.CartaJugador;
 import com.boajp.vista.carta.GridDeCartas;

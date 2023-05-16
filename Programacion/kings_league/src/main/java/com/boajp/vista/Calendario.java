@@ -1,6 +1,6 @@
 package com.boajp.vista;
 
-import com.boajp.utilidades.EstilosDeVistas;
+import com.boajp.utilidades.*;
 import com.boajp.vista.carta.CalendarioTabla;
 import com.boajp.vista.carta.CuerpoAbstracto;
 

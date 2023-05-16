@@ -1,6 +1,6 @@
 package com.boajp.vista.formulario;
 
-import com.boajp.utilidades.EstilosDeVistas;
+import com.boajp.utilidades.*;
 
 import javax.swing.*;
 import java.awt.*;
