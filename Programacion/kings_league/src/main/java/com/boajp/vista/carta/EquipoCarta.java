@@ -7,7 +7,7 @@ import java.awt.event.MouseEvent;
 
 public class EquipoCarta extends CartaAbstracta {
     private final JLabel LB_NOMBRE;
-    public int anchura = 390;
+    public int anchura = 380;
     public int altura = 140;
 
     public EquipoCarta(String nombre) {

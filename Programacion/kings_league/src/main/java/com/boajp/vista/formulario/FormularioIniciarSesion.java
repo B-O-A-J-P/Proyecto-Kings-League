@@ -4,6 +4,7 @@ import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
 
+import com.boajp.utilidades.EstilosDeVistas;
 import com.boajp.vista.componentes.BotonBoajp;
 import org.apache.batik.swing.JSVGCanvas;
 
@@ -17,9 +18,8 @@ public class FormularioIniciarSesion extends JPanel {
     private final BotonBoajp btRegistrarse;
 
     public FormularioIniciarSesion() {
+        setBackground(EstilosDeVistas.COLOR_DE_FONDO);
         setLayout(new GridBagLayout());
-        setBackground(null);
-        setOpaque(false);
         GridBagConstraints gbc = new GridBagConstraints();
 
 
@@ -52,7 +52,7 @@ public class FormularioIniciarSesion extends JPanel {
         // Imagen
         gbc.gridx = 0;
         gbc.gridy = 0;
-        gbc.gridwidth = 2;
+        gbc.gridwidth = 3;
         gbc.anchor = GridBagConstraints.CENTER;
         gbc.fill = GridBagConstraints.HORIZONTAL;
         gbc.insets = new Insets(0, 0, 0, 0);

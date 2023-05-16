@@ -66,6 +66,13 @@ public class EquipoEntidad {
         this.presupuesto = presupuesto;
     }
 
+    public EquipoEntidad() {
+    }
+
+    public EquipoEntidad(String nombre) {
+        this.nombre = nombre;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

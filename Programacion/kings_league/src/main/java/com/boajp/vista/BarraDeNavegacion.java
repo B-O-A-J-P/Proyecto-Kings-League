@@ -1,5 +1,7 @@
 package com.boajp.vista;
 
+import com.boajp.utilidades.EstilosDeVistas;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -12,7 +14,7 @@ public class BarraDeNavegacion extends JPanel{
     private JButton[] botones;
 
     public BarraDeNavegacion() {
-        setBackground(new Color(255, 105, 0));
+        setBackground(EstilosDeVistas.COLOR_DE_FONDO);
         setLayout(new FlowLayout(FlowLayout.LEFT,10, 60));
         calendarioboton = new JButton("<html><u>Calendario</u></html");
         clasificacionBoton = new JButton("Clasificación");

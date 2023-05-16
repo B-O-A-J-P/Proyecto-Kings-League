@@ -45,8 +45,8 @@ public class Carta extends CartaAbstracta {
 
         frame.setLayout(new FlowLayout());
         Cabecera cabecera = new Cabecera("Jornada 3", "23 de Febrero de 2023");
-        JLabel[][] list = new JLabel[12][3];
-        for (int x = 0; x < 12; x++) {
+        JLabel[][] list = new JLabel[6][3];
+        for (int x = 0; x < list.length; x++) {
             list[x] = new JLabel[]{new JLabel("Equipo uno"), new JLabel("vs"), new JLabel("Equipod dos")};
 
         }

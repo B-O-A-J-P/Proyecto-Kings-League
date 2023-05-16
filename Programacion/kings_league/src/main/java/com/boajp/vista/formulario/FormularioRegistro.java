@@ -1,5 +1,6 @@
 package com.boajp.vista.formulario;
 
+import com.boajp.utilidades.EstilosDeVistas;
 import com.boajp.vista.componentes.BotonBoajp;
 
 import javax.swing.*;
@@ -15,11 +16,11 @@ public class FormularioRegistro extends JPanel {
     private final JPasswordField tfContrasena;
     private final BotonBoajp btRegistrar;
     private final BotonBoajp btCancelar;
-    private final Color colorDeFondo = new Color(255, 105, 0);
+
 
     public FormularioRegistro() {
+        setBackground(EstilosDeVistas.COLOR_DE_FONDO);
         setLayout(new GridBagLayout());
-        setBackground(colorDeFondo);
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.insets = new Insets(0, 0, 0, 0);
 
@@ -74,6 +75,7 @@ public class FormularioRegistro extends JPanel {
         add(tfContrasena, gbc);
 
         btRegistrar = new BotonBoajp("Registrase", new Color(0, 175, 0), new Color(0, 155, 0), new Color(0, 155, 0));;
+        btRegistrar.setForeground(Color.WHITE);
         gbc.gridx = 0;
         gbc.gridy = 6;
         gbc.anchor = GridBagConstraints.CENTER;

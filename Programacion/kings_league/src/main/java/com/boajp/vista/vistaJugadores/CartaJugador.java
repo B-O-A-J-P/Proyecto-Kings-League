@@ -1,4 +1,4 @@
-package com.boajp.vista.VistaJugadores;
+package com.boajp.vista.vistaJugadores;
 
 import javax.swing.*;
 import java.awt.*;
