@@ -1,5 +1,7 @@
 package com.boajp.vista.carta;
 
+import com.boajp.utilidades.EstilosDeVistas;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ComponentAdapter;
@@ -11,7 +13,7 @@ public class GridDeCartas extends JPanel {
 
     public GridDeCartas(ArrayList<CartaAbstracta> cartas, JScrollPane scrollPane) {
         CARTAS = cartas;
-        setOpaque(false);
+        setBackground(EstilosDeVistas.COLOR_DE_FONDO);
 
         scrollPane.addComponentListener(new ComponentAdapter() {
             @Override
@@ -25,8 +27,8 @@ public class GridDeCartas extends JPanel {
         removeAll();
         setLayout(new GridBagLayout());
         int columnas = Math.max( (int) (viewPort / (CARTAS.get(0).getAnchura() * 1.1)), 1);
-        if (columnas > CARTAS.size()) {
-            columnas = CARTAS.size();
+        if (columnas >= CARTAS.size()) {
+            columnas = CARTAS.size() ;
         }
 
         int indiceFila = 0;

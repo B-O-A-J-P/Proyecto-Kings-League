@@ -2,11 +2,10 @@ package com.boajp.vista;
 
 import com.boajp.modelo.EquipoEntidad;
 import com.boajp.modelo.Persona;
-import com.boajp.utilidades.*;
-import com.boajp.vista.carta.CartaAbstracta;
+import com.boajp.utilidades.EstilosDeVistas;
+import com.boajp.vista.carta.*;
 import com.boajp.vista.carta.CartaMiembro;
-import com.boajp.vista.carta.EquipoCarta;
-import com.boajp.vista.carta.GridDeCartas;
+import com.boajp.vista.componentes.*;
 
 import javax.swing.*;
 import java.awt.*;
@@ -17,24 +16,17 @@ public class PanelEquipos extends JPanel {
     private ArrayList<EquipoEntidad> equipoEntidads;
     private ArrayList<CartaAbstracta> cartasEquipos;
     private ArrayList<CartaAbstracta> cartasMiembros;
+    private JPanel panelDeMiembros;
+    private JScrollPane scrollPane;
+    private GridBagConstraints constraintsMiembros = new GridBagConstraints(0, 0, 1, 1, 1, 0, GridBagConstraints.CENTER, GridBagConstraints.BOTH, new Insets(0, 0, 0, 0), 0, 0);
+    private GridBagConstraints constraintsEquipos = new GridBagConstraints(0, 1, 1, 1, 1, 1, GridBagConstraints.CENTER, GridBagConstraints.BOTH, new Insets(0, 0, 0, 0), 0, 0);
     public PanelEquipos(ArrayList<EquipoEntidad> equipos, JScrollPane scrollPane) {
         setBackground(EstilosDeVistas.COLOR_DE_FONDO);
         setLayout(new GridBagLayout());
+        this.scrollPane = scrollPane;
         this.equipoEntidads = equipos;
 
-        GridBagConstraints constraintsMiembros = new GridBagConstraints(0, 0, 1, 1, 1, 0, GridBagConstraints.CENTER, GridBagConstraints.BOTH, new Insets(0, 0, 0, 0), 0, 0);
-        GridBagConstraints constraintsEquipos = new GridBagConstraints(0, 1, 1, 1, 1, 1, GridBagConstraints.CENTER, GridBagConstraints.BOTH, new Insets(0, 0, 0, 0), 0, 0);
-
-        generarMiembrosDummy();
-        vistaMiembros = new JPanel(new FlowLayout());
-        for (CartaAbstracta carta: cartasMiembros) {
-            vistaMiembros.add(carta);
-        }
-        vistaMiembros.setBackground(EstilosDeVistas.COLOR_DE_FONDO);
-        JScrollPane scrollPane1 = new JScrollPane(vistaMiembros);
-        scrollPane1.setMaximumSize(new Dimension(scrollPane.getViewport().getWidth(), -1));
-        scrollPane1.setBorder(BorderFactory.createEmptyBorder());
-        add(scrollPane1, constraintsMiembros);
+        iniciarPanelMiembros();
 
         cartasEquipos = new ArrayList<>();
         for ( EquipoEntidad equipo : equipos ) {
@@ -43,6 +35,34 @@ public class PanelEquipos extends JPanel {
 
         GridDeCartas gridDeEquipos = new GridDeCartas(cartasEquipos, scrollPane);
         add(gridDeEquipos, constraintsEquipos);
+    }
+
+    public void iniciarPanelMiembros() {
+        panelDeMiembros = new JPanel(new BorderLayout());
+        generarMiembrosDummy();
+
+        GridBagConstraints gridBagConstraints = new GridBagConstraints(0,0, 1, 1, 0, 0, GridBagConstraints.CENTER, GridBagConstraints.NONE, new Insets(0, 20, 0, 20) , 0, 0);
+
+        JPanel panelBotonIzquierdo = new JPanel(new GridBagLayout());
+        panelBotonIzquierdo.setBackground(EstilosDeVistas.COLOR_DE_FONDO);
+        JButton botonIzquierdo = new BotonCircular("<", 50);
+        panelBotonIzquierdo.add(botonIzquierdo, gridBagConstraints);
+        JPanel panelBotonDerecho = new JPanel(new GridBagLayout());
+        panelBotonDerecho.setBackground(EstilosDeVistas.COLOR_DE_FONDO);
+        JButton botonDerecho = new BotonCircular(">", 50);
+        panelBotonDerecho.add(botonDerecho, gridBagConstraints);
+
+        GridDeDraft gridDeDraft = new GridDeDraft(cartasMiembros, scrollPane);
+        gridDeDraft.anadirBotonAnterior(botonIzquierdo);
+        gridDeDraft.anadirBotonSiguiente(botonDerecho);
+
+
+        panelDeMiembros.setBackground(EstilosDeVistas.COLOR_DE_FONDO);
+        panelDeMiembros.add(panelBotonDerecho, BorderLayout.EAST);
+        panelDeMiembros.add(panelBotonIzquierdo, BorderLayout.WEST);
+        panelDeMiembros.add(gridDeDraft, BorderLayout.CENTER);
+
+        add(panelDeMiembros, constraintsMiembros);
     }
 
     public void getMiembrosDeEquipo() {
