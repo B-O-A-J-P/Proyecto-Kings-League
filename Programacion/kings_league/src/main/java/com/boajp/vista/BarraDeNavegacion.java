@@ -12,6 +12,7 @@ public class BarraDeNavegacion extends JPanel{
     private JButton contratosBoton;
     private JButton calendarioboton;
     private JButton[] botones;
+    private JButton inicioboton;
 
     public BarraDeNavegacion() {
         setBackground(EstilosDeVistas.COLOR_DE_FONDO);
@@ -21,12 +22,14 @@ public class BarraDeNavegacion extends JPanel{
         equiposBoton = new JButton("Equipos");
         jugadoresBoton = new JButton("Jugadores");
         contratosBoton = new JButton("Contratos");
-        botones = new JButton[5];
+        inicioboton = new JButton("Inicio Sesión");
+        botones = new JButton[6];
         botones[0] = clasificacionBoton;
         botones[1] = equiposBoton;
         botones[2] = jugadoresBoton;
         botones[3] = contratosBoton;
         botones[4] = calendarioboton;
+        botones[5] = inicioboton;
         ajustarBotones();
 
         aplicarEstilo();
@@ -36,6 +39,7 @@ public class BarraDeNavegacion extends JPanel{
         add(equiposBoton);
         add(jugadoresBoton);
         add(contratosBoton);
+        add(inicioboton);
     }
 
     private Dimension encontrarBotonMasGrande() {
