@@ -20,11 +20,6 @@ public class PanelDeCrudControlador {
         return panelDeCrud;
     }
 
-    public PanelDeCrud getPanelCrudEquipos(){
-        CrudControlador controlador = new EquiposControlador(panelDeCrud);
-        return panelDeCrud;
-    }
-
     public PanelDeCrud getPanelDeCrudJugadores() {
         new JugadoresControlador(panelDeCrud);
         return panelDeCrud;

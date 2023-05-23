@@ -77,29 +77,4 @@ public class EquiposServicio {
         return cartasMiembros;
     }
 
-    public String[][] getFilas() throws Exception{
-        List<EquipoEntidad> equipoEntidadList = equipoRepositorio.buscarEquipoParticipantes();
-        String[][] filas = new String[equipoEntidadList.size()][equipoEntidadList.get(0).getAtributos().length];
-        for ( int x = 0; x< equipoEntidadList.size();x++){
-            filas[x] = equipoEntidadList.get(x).toArray();
-        }
-        return filas;
-    }
-
-    public String[] getColumnas(){
-        return new EquipoEntidad().getAtributos();
-    }
-
-    public EquipoEntidad getEquipo(int codigo)throws Exception{
-        return equipoRepositorio.buscarEquipo(codigo);
-    }
-
-    public void crearEquipo(String nombre, byte[] logo){
-
-    }
-
-    public void modificarEquipo(EquipoEntidad equipo)throws Exception{
-        equipoRepositorio.modificar(equipo);
-    }
-
 }
