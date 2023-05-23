@@ -49,8 +49,8 @@ CREATE TABLE jornadas(
 CREATE TABLE equipos(
     cod_equipo NUMBER(6, 0) GENERATED ALWAYS AS IDENTITY INCREMENT BY 1 START WITH 0 MINVALUE 0 NOCYCLE NOT NULL ENABLE,
     nombre VARCHAR2(50) NOT NULL,
-    logo BLOB NOT NULL, 
-    presupuesto NUMBER(12, 2) DEFAULT 200000000,
+    logo BLOB, 
+    presupuesto NUMBER(12, 2) default 200000000,
     CONSTRAINT equ_cod_pk PRIMARY KEY (cod_equipo)
 );
 
