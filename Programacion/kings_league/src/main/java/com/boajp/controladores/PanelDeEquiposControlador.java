@@ -18,6 +18,7 @@ public class PanelDeEquiposControlador {
                     equiposServicio.crearCartasDeEquipos(),
                     equiposServicio.crearCartasDeMiembros(),
                     Controlador.VENTANA.getScrollPane());
+
         } catch (Exception exception) {
             new PanelDeError(exception.getMessage());
         }

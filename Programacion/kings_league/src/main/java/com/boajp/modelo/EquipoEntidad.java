@@ -34,27 +34,6 @@ public class EquipoEntidad {
     @OneToMany(mappedBy = "equipo")
     private Collection<RegistroEquipoEntidad> registrosTemporadas;
 
-    public EquipoEntidad() {
-    }
-
-    public EquipoEntidad(String nombre, long presupuesto) {
-        this.nombre = nombre;
-        this.presupuesto = presupuesto;
-    }
-
-    public String[] getAtributos() {
-        return new String[]{"Códigod de equipo", "Nombre", "Presupuesto"};
-    }
-
-    public String[] toArray() {
-        return new String[]{
-                String.valueOf(codEquipo),
-                nombre,
-                String.valueOf(presupuesto)
-        };
-    }
-
-
     public int getCodEquipo() {
         return codEquipo;
     }
@@ -75,6 +54,10 @@ public class EquipoEntidad {
         return logo;
     }
 
+    public String getLogoString() {
+        return logo.toString();
+    }
+
     public void setLogo(byte[] logo) {
         this.logo = logo;
     }
@@ -87,6 +70,12 @@ public class EquipoEntidad {
         this.presupuesto = presupuesto;
     }
 
+    public EquipoEntidad() {
+    }
+
+    public EquipoEntidad(String nombre) {
+        this.nombre = nombre;
+    }
 
     @Override
     public boolean equals(Object o) {
@@ -110,6 +99,19 @@ public class EquipoEntidad {
         result = 31 * result + Arrays.hashCode(logo);
         result = 31 * result + (int) (presupuesto ^ (presupuesto >>> 32));
         return result;
+    }
+
+    public String[] toArray(){
+        return new String[]{
+                String.valueOf(codEquipo),
+                getNombre(),
+                String.valueOf(getLogo()),
+                String.valueOf(presupuesto)};
+
+    }
+
+    public String[] getAtributos(){
+        return new String[]{"Codigo de equipo", "Nombre", "Logo", "Presupuesto"};
     }
 
     public Collection<ClasificacionEntidad> getClasificaciones() {

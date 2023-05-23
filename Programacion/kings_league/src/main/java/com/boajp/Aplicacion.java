@@ -5,6 +5,7 @@ import com.boajp.controladores.Controlador;
 
 
 public class Aplicacion {
+
     private static Controlador controlador;
 
     static public void main(String... args) {
