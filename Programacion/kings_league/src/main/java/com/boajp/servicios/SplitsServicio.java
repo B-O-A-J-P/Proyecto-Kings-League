@@ -23,6 +23,10 @@ public class SplitsServicio {
         splitRepositorio.modificar(splitEntidad);
     }
 
+    public SplitEntidad buscarSplit(int codigo) throws Exception{
+        return splitRepositorio.buscarSplit(codigo);
+    }
+
     public String[][] getFilasSplits() throws Exception{
         List<SplitEntidad> splits = splitRepositorio.buscarSplits();
         String[][] filas = new String[splits.size()][splits.get(0).getAtributos().length];

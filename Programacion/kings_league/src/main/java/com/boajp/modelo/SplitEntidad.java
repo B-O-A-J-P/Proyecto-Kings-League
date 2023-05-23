@@ -49,12 +49,12 @@ public class SplitEntidad {
         this.temporada = temporada;
     }
 
-    public String[] toArray() {
-        return new String[] {String.valueOf(codSplit), nombre, getFechaInicioString(), getFechaFinString()};
+    public String[] getAtributos() {
+        return new String[] {"Código de temporada", "Código de split", "Periodo", "Fecha de inicio", "Fecha fin"};
     }
 
-    public String[] getAtributos() {
-        return new String[] {"Código de split", "Nombre", "Fecha de inicio", "Fecha fin"};
+    public String[] toArray() {
+        return new String[] {String.valueOf(temporada.getCodTemporada()), String.valueOf(codSplit), nombre, getFechaInicioString(), getFechaFinString()};
     }
 
     public String getFechaInicioString() {
