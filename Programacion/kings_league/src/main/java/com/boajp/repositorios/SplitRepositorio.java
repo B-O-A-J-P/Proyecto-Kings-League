@@ -91,6 +91,20 @@ public class SplitRepositorio {
         }
     }
 
+    public SplitEntidad buscarSplit(int codigo) throws Exception {
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        try {
+            String jpql = "SELECT s FROM SplitEntidad s WHERE s.codSplit = :codigo";
+            TypedQuery<SplitEntidad> query = entityManager.createQuery(jpql, SplitEntidad.class);
+            query.setParameter("codigo", codigo);
+            return query.getSingleResult();
+        } catch (Exception exception) {
+            throw new Exception("Error al intentar extraer temporadas.", exception);
+        } finally {
+            entityManager.close();
+        }
+    }
+
     public List<SplitEntidad> buscarSplits() throws Exception {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         try {

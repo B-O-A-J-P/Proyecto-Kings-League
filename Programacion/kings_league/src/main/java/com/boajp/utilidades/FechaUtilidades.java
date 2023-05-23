@@ -16,4 +16,9 @@ public class FechaUtilidades {
         return fechaHora.format(formatter);
     }
 
+    public static LocalDate stringToFecha(String fecha) {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        return LocalDate.parse(fecha, formatter);
+    }
+
 }
