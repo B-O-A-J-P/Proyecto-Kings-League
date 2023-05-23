@@ -9,10 +9,8 @@ public class Aplicacion {
     private static Controlador controlador;
 
     static public void main(String... args) {
-
         controlador = new Controlador();
-        controlador.mostrarPanelDeInicio();
-
+        Controlador.mostrarPanelDeInicio();
     }
 
     public static Controlador getVentanaControlador() {
