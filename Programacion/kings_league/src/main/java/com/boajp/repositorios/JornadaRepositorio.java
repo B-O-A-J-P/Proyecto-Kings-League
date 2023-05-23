@@ -69,9 +69,23 @@ public class JornadaRepositorio {
     public List<JornadaEntidad> buscarTodasJornadas() throws Exception {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         try {
-            String jpql = "SELECT j FROM JornadaEntidad j";
+            String jpql = "SELECT j FROM JornadaEntidad j JOIN FETCH j.split";
             TypedQuery<JornadaEntidad> query = entityManager.createQuery(jpql, JornadaEntidad.class);
             return query.getResultList();
+        } catch (Exception exception) {
+            throw new Exception("Error al intentar extraer jornadas.", exception);
+        } finally {
+            entityManager.close();
+        }
+    }
+
+    public JornadaEntidad buscarJornada(int codigo) throws Exception {
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        try {
+            String jpql = "SELECT j FROM JornadaEntidad j JOIN FETCH j.split WHERE j.codJornada = :codigo";
+            TypedQuery<JornadaEntidad> query = entityManager.createQuery(jpql, JornadaEntidad.class);
+            query.setParameter("codigo", codigo);
+            return query.getSingleResult();
         } catch (Exception exception) {
             throw new Exception("Error al intentar extraer jornadas.", exception);
         } finally {

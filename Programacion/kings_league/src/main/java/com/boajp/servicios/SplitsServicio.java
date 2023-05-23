@@ -36,6 +36,15 @@ public class SplitsServicio {
         return filas;
     }
 
+    public String[] getCodigos() throws Exception {
+        List<SplitEntidad> lista = splitRepositorio.buscarSplits();
+        String[] codigos = new String[lista.size()];
+        for ( int x = 0; x < lista.size(); x++ ) {
+            codigos[x] = String.valueOf(lista.get(x).getCodSplit());
+        }
+        return codigos;
+    }
+
     public String[] getColumnas() {
         return new SplitEntidad().getAtributos();
     }

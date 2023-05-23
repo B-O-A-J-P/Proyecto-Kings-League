@@ -13,6 +13,22 @@ public class JornadasServicio {
         jornadaRepositorio = new JornadaRepositorio();
     }
 
+    public JornadaEntidad buscarJornada(int codigo) throws Exception{
+        return jornadaRepositorio.buscarJornada(codigo);
+    }
+
+    public void insertarJornada(JornadaEntidad jornadaEntidad) throws Exception{
+        jornadaRepositorio.insertar(jornadaEntidad);
+    }
+
+    public void eliminarJornada(JornadaEntidad jornadaEntidad) throws Exception {
+        jornadaRepositorio.eliminar(jornadaEntidad);
+    }
+
+    public void modificarJornada(JornadaEntidad jornadaEntidad) throws Exception {
+        jornadaRepositorio.modificar(jornadaEntidad);
+    }
+
     public List<JornadaEntidad> getTodasJornadas() throws Exception{
         return jornadaRepositorio.buscarTodasJornadas();
     }
