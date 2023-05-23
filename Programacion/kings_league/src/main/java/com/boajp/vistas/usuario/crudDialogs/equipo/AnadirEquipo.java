@@ -8,7 +8,6 @@ public class AnadirEquipo extends JDialog {
     private JButton bAceptar;
     private JButton bCancelar;
     private JTextField tfNombre;
-    private JTextField tfLogo;
 
     public AnadirEquipo() {
         setContentPane(contentPane);
@@ -55,10 +54,18 @@ public class AnadirEquipo extends JDialog {
         dispose();
     }
 
-    @Override
-    public JPanel getContentPane() {
-        return contentPane;
+    public void setbAceptar(JButton bAceptar) {
+        this.bAceptar = bAceptar;
     }
+
+    public void setbCancelar(JButton bCancelar) {
+        this.bCancelar = bCancelar;
+    }
+
+    public void setTfNombre(JTextField tfNombre) {
+        this.tfNombre = tfNombre;
+    }
+
 
     public JButton getbAceptar() {
         return bAceptar;
@@ -72,8 +79,4 @@ public class AnadirEquipo extends JDialog {
         return tfNombre.getText();
     }
 
-    public byte[] getTfLogo() {
-        byte[] logo = tfLogo.getText().getBytes();
-        return logo;
-    }
 }

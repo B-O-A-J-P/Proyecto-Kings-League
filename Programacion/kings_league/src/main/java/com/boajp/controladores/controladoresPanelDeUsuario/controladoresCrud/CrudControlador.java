@@ -1,7 +1,7 @@
 package com.boajp.controladores.controladoresPanelDeUsuario.controladoresCrud;
 
 public interface CrudControlador {
-    void anadirListenerAceptar();
+    void anadirListenerInsertar();
     void anadirListenerModificar();
     void anadirListenerEliminar();
 }

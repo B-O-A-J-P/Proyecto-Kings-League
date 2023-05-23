@@ -23,7 +23,7 @@ public class ClasificacionesControlador implements CrudControlador{
     }
 
     @Override
-    public void anadirListenerAceptar() {
+    public void anadirListenerInsertar() {
 
     }
 

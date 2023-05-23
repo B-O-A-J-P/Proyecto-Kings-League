@@ -23,7 +23,7 @@ public class ContratosEquiposMiembrosControlador implements CrudControlador{
     }
 
     @Override
-    public void anadirListenerAceptar() {
+    public void anadirListenerInsertar() {
 
     }
 

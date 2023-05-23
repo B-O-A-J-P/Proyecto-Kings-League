@@ -1,18 +1,11 @@
 package com.boajp.controladores.controladoresPanelDeUsuario.controladoresCrud;
 
 import com.boajp.modelo.EquipoEntidad;
-import com.boajp.modelo.SplitEntidad;
-import com.boajp.modelo.TemporadaEntidad;
 import com.boajp.servicios.EquiposServicio;
-import com.boajp.servicios.TemporadasServicio;
 import com.boajp.vistas.componentes.PanelDeError;
 import com.boajp.vistas.usuario.PanelDeCrud;
 import com.boajp.vistas.usuario.crudDialogs.equipo.AnadirEquipo;
 import com.boajp.vistas.usuario.crudDialogs.equipo.ModificarEquipo;
-import com.boajp.vistas.usuario.crudDialogs.split.AnadirSplitDialog;
-import com.boajp.vistas.usuario.crudDialogs.temporada.AnadirTemporadaDialog;
-import com.boajp.vistas.usuario.crudDialogs.temporada.ModificarTemporadaDialog;
-import jakarta.persistence.PersistenceException;
 
 import javax.swing.*;
 
@@ -32,20 +25,19 @@ public class EquiposControlador implements CrudControlador{
             new PanelDeError(exception.getMessage());
         }
         this.panelDeCrud = panelDeCrud;
-        anadirListenerAceptar();
+        anadirListenerInsertar();
         anadirListenerModificar();
         anadirListenerEliminar();
     }
 
 
-    public void anadirListenerAceptar()  {
+    public void anadirListenerInsertar()  {
         panelDeCrud.getCrearBoton().addActionListener( e -> {
             AnadirEquipo dialog = new AnadirEquipo();
             dialog.getbAceptar().addActionListener( x -> {
                 try {
                     equiposServicio.crearEquipo(
-                            dialog.getTfNombre(),
-                            dialog.getTfLogo()
+                            dialog.getTfNombre()
                     );
                     JOptionPane.showMessageDialog(null, "Se ha registado el equipo.");
                     panelDeCrud.actualizarModelo(equiposServicio.getFilas(), equiposServicio.getColumnas());
@@ -72,7 +64,7 @@ public class EquiposControlador implements CrudControlador{
                 }
                 var dialog = new ModificarEquipo(
                         equipo.getNombre(),
-                        equipo.getLogoString()
+                        String.valueOf(equipo.getPresupuesto())
                 );
                 dialog.getbModificar().addActionListener( x -> {
                     if (x.getActionCommand().equalsIgnoreCase("bloqueado")) {
@@ -91,8 +83,6 @@ public class EquiposControlador implements CrudControlador{
                 EquipoEntidad finalEquipo = equipo;
                 dialog.getbAceptar().addActionListener(x -> {
                     finalEquipo.setNombre(dialog.getTfNombre().getText());
-                    byte [] logo = dialog.getTfLogo().getText().getBytes();
-                    finalEquipo.setLogo(logo);
                     try {
                         equiposServicio.modificarEquipo(finalEquipo);
                         panelDeCrud.actualizarModelo(

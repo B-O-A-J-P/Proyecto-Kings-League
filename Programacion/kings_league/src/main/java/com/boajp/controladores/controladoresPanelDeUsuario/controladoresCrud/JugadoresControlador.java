@@ -22,13 +22,13 @@ public class JugadoresControlador implements CrudControlador{
             new PanelDeError(exception.getMessage());
         }
         this.panelDeCrud = panelDeCrud;
-        anadirListenerAceptar();
+        anadirListenerInsertar();
         anadirListenerModificar();
         anadirListenerEliminar();
     }
 
     @Override
-    public void anadirListenerAceptar() {
+    public void anadirListenerInsertar() {
         panelDeCrud.getCrearBoton().addActionListener( e -> {
             AnadirJugador dialog = new AnadirJugador();
                 dialog.getButtonOK().addActionListener(x -> {

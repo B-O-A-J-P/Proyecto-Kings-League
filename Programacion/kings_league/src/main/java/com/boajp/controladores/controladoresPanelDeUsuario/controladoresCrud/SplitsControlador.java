@@ -32,12 +32,12 @@ public class SplitsControlador implements CrudControlador{
             new PanelDeError(exception.getMessage());
         }
         this.panelDeCrud = panelDeCrud;
-        anadirListenerAceptar();
+        anadirListenerInsertar();
         anadirListenerModificar();
         anadirListenerEliminar();
     }
     @Override
-    public void anadirListenerAceptar() {
+    public void anadirListenerInsertar() {
         panelDeCrud.getCrearBoton().addActionListener( e -> {
             try {
                 var dialog = new AnadirSplitDialog(temporadasServicio.getCodigos());

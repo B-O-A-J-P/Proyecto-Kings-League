@@ -32,13 +32,13 @@ public class JornadasControlador implements CrudControlador{
             new PanelDeError(exception.getMessage());
         }
         this.panelDeCrud = panelDeCrud;
-        anadirListenerAceptar();
+        anadirListenerInsertar();
         anadirListenerEliminar();
         anadirListenerModificar();
     }
 
     @Override
-    public void anadirListenerAceptar() {
+    public void anadirListenerInsertar() {
         panelDeCrud.getCrearBoton().addActionListener( e -> {
             AnadirJornadaDialog dialog = new AnadirJornadaDialog();
             try {

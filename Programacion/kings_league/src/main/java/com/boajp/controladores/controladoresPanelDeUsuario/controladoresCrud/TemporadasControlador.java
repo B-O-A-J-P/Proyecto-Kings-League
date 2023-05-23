@@ -24,12 +24,12 @@ public class TemporadasControlador implements CrudControlador{
             new PanelDeError(exception.getMessage());
         }
         this.panelDeCrud = panelDeCrud;
-        anadirListenerAceptar();
+        anadirListenerInsertar();
         anadirListenerModificar();
         anadirListenerEliminar();
     }
 
-    public void anadirListenerAceptar()  {
+    public void anadirListenerInsertar()  {
         panelDeCrud.getCrearBoton().addActionListener( e -> {
             AnadirTemporadaDialog dialog = new AnadirTemporadaDialog();
             dialog.getButtonOK().addActionListener( x -> {
