@@ -65,7 +65,6 @@ public class SplitsControlador implements CrudControlador{
             } catch (Exception exception) {
                 new PanelDeError(exception.getMessage());
             }
-
         });
     }
 
