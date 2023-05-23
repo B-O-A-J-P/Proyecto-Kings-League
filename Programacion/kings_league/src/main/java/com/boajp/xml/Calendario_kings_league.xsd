@@ -8,35 +8,61 @@
       </xs:sequence>
     </xs:complexType>
     
-    <xs:complexType name="Tiposplit">
+        <xs:complexType name="Tiposplit">
       <xs:sequence>
-        <xs:element name="jornada" type="Tipojornada" minOccurs="0" maxOccurs="unbounded"/>
-        <xs:element name="hora_inicio" type="xs:string"/>
-        <xs:element name="hora_fin" type="xs:string"/>
+        <xs:element name="split_xml" type="Tiposplit_xml" minOccurs="0" maxOccurs="unbounded"/>
       </xs:sequence>
     </xs:complexType>
     
-    <xs:complexType name="Tipojornada">
+    <xs:complexType name="Tiposplit_xml">
       <xs:sequence>
+        <xs:element name="fecha_inicio" type="xs:string"/>
+        <xs:element name="fecha_fin" type="xs:string"/>
+        <xs:element name="jornada" type="Tipojornada" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+    
+      <xs:complexType name="Tipojornada">
+      <xs:sequence>
+        <xs:element name="jornada_xml" type="Tipojornada_xml" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>    
+    
+    
+    <xs:complexType name="Tipojornada_xml">
+      <xs:sequence>
+              <xs:element name="fecha" type="xs:string"/>
         <xs:element name="partido" type="Tipopartido" minOccurs="0" maxOccurs="unbounded"/>
-        <xs:element name="fecha" type="xs:string"/>
       </xs:sequence>
     </xs:complexType>    
       
     <xs:complexType name="Tipopartido">
       <xs:sequence>
-        <xs:element name="equipo" type="Tipoequipo" minOccurs="0" maxOccurs="unbounded"/>
-        <xs:element name="hora" type="xs:string"/>
+ <xs:element name="partido_xml" type="Tipopartido_xml" minOccurs="0" maxOccurs="unbounded"/>
       </xs:sequence>
     </xs:complexType>
     
+     <xs:complexType name="Tipopartido_xml">
+      <xs:sequence>
+              <xs:element name="hora" type="xs:string"/>
+        <xs:element name="equipo_local" type="Tipoequipo_local" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element name="equipo_visitante" type="Tipoequipo_visitante" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+            
     
-        <xs:complexType name="Tipoequipo">
+        <xs:complexType name="Tipoequipo_local">
       <xs:sequence>
         <xs:element name="nombre" type="xs:string"/>
         <xs:element name="logo" type="xs:string"/>
       </xs:sequence>
     </xs:complexType>
     
+            <xs:complexType name="Tipoequipo_visitante">
+      <xs:sequence>
+        <xs:element name="nombre" type="xs:string"/>
+        <xs:element name="logo" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
     
 </xs:schema>

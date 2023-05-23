@@ -37,9 +37,9 @@ public class Calendario {
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = factory.newDocumentBuilder();
 
-            String home = System.getProperty("user.home");
+            //String home = System.getProperty("user.home");
 
-            Document document = builder.parse(new File(home + "/Downloads/CALENDARIO_JORNADAS.xml"));
+            Document document = builder.parse(new File( "src/main/java/com/boajp/xml/CALENDARIO_JORNADAS.xml"));
 
             // Obtener la lista de temporadas, splits y jornadas del documento
             NodeList temporadaList = document.getElementsByTagName("temporada");

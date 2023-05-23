@@ -1,32 +1,68 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
-  <xs:element name="temporada"/>
+  <xs:element name="temporada" type="TemporadaType"/>
+
+  <xs:complexType name="TemporadaType">
+    <xs:sequence>
+      <xs:element name="SPLIT" type="TipoSplit" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+        <xs:attribute name="ID" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="TipoSplit">
+    <xs:sequence>
+      <xs:element name="SPLIT_TIPO" type="SplitTipoType" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+
+  </xs:complexType>
+
+  <xs:complexType name="SplitTipoType">
+    <xs:sequence>
+      <xs:element name="CLASIFICACION" type="TipoClasificacion"/>
+    </xs:sequence>
+        <xs:attribute name="ID" type="xs:string" use="required"/>
+
+  </xs:complexType>
+
+  <xs:complexType name="TipoClasificacion">
+    <xs:sequence>
+      <xs:element name="EQUIPO" type="TipoEquipo" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="fecha_fin" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="TipoEquipo">
+    <xs:sequence>
+      <xs:element name="EQUIPO_TIPO" type="EquipoTipoType" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="EquipoTipoType">
+    <xs:sequence>
+      <xs:element name="NOMBRE" type="xs:string"/>
+      <xs:element name="LOGO" type="LogoType"/>
+      <xs:element name="PUNTOS" type="xs:integer"/>
+      <xs:element name="GOLES" type="StringVacio" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="ID" type="xs:string" use="required"/>
+  </xs:complexType>
   
-    <xs:complexType name="temporada">
-      <xs:sequence>
-        <xs:element name="split" type="Tiposplit" minOccurs="0" maxOccurs="unbounded"/>
-      </xs:sequence>
-    </xs:complexType>
-    
-    <xs:complexType name="Tiposplit">
-      <xs:sequence>
-        <xs:element name="clasificacion" type="Tipoclasificacion" minOccurs="0" maxOccurs="unbounded"/>
-      </xs:sequence>
-    </xs:complexType>
-    
-    <xs:complexType name="Tipoclasificacion">
-      <xs:sequence>
-        <xs:element name="equipo" type="Tipoequipo" minOccurs="0" maxOccurs="unbounded"/>
-      </xs:sequence>
-    </xs:complexType>    
-      
-    <xs:complexType name="Tipoequipo">
-      <xs:sequence>
-        <xs:element name="nombre" type="xs:string"/>
-        <xs:element name="logo" type="xs:string"/>
-        <xs:element name="puntos" type="xs:integer"/>
-        <xs:element name="suma_goles" type="xs:integer"/>
-      </xs:sequence>
-    </xs:complexType>
-    
+  <xs:simpleType name="StringVacio">
+    <xs:union memberTypes="xs:string">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value=""/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+
+  <xs:complexType name="LogoType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="empty" type="xs:string"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
 </xs:schema>

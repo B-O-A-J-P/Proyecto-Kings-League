@@ -1,0 +1,91 @@
+﻿<?xml version="1.0"?>
+<!DOCTYPE temporada SYSTEM "kings_league_clasificacion.dtd">
+
+ <temporada ID="0" xmlns:xs = "http://www.w3.org/2001/XMLSchema-instance"
+    xs:noNamespaceSchemaLocation = "clasificacion.xsd">
+  <SPLIT>
+   <SPLIT_TIPO ID="0">
+    <CLASIFICACION fecha_fin="31/07/24">
+     <EQUIPO>
+      <EQUIPO_TIPO ID="0">
+       <NOMBRE>Equipo 1</NOMBRE>
+       <LOGO empty="blob"/>
+       <PUNTOS>0</PUNTOS>
+       <GOLES/>
+      </EQUIPO_TIPO>
+      <EQUIPO_TIPO ID="1">
+       <NOMBRE>Equipo 2</NOMBRE>
+       <LOGO empty="blob"/>
+       <PUNTOS>0</PUNTOS>
+       <GOLES/>
+      </EQUIPO_TIPO>
+      <EQUIPO_TIPO ID="2">
+       <NOMBRE>Equipo 3</NOMBRE>
+       <LOGO empty="blob"/>
+       <PUNTOS>1</PUNTOS>
+       <GOLES>1</GOLES>
+      </EQUIPO_TIPO>
+      <EQUIPO_TIPO ID="3">
+       <NOMBRE>Equipo 4</NOMBRE>
+       <LOGO empty="blob"/>
+       <PUNTOS>1</PUNTOS>
+       <GOLES>2</GOLES>
+      </EQUIPO_TIPO>
+      <EQUIPO_TIPO ID="4">
+       <NOMBRE>Equipo 5</NOMBRE>
+       <LOGO empty="blob"/>
+       <PUNTOS>1</PUNTOS>
+       <GOLES>0</GOLES>
+      </EQUIPO_TIPO>
+      <EQUIPO_TIPO ID="5">
+       <NOMBRE>Equipo 6</NOMBRE>
+       <LOGO empty="blob"/>
+       <PUNTOS>0</PUNTOS>
+       <GOLES/>
+      </EQUIPO_TIPO>
+      <EQUIPO_TIPO ID="6">
+       <NOMBRE>Equipo 7</NOMBRE>
+       <LOGO empty="blob"/>
+       <PUNTOS>1</PUNTOS>
+       <GOLES>4</GOLES>
+      </EQUIPO_TIPO>
+      <EQUIPO_TIPO ID="7">
+       <NOMBRE>Equipo 8</NOMBRE>
+       <LOGO empty="blob"/>
+       <PUNTOS>1</PUNTOS>
+       <GOLES>3</GOLES>
+      </EQUIPO_TIPO>
+      <EQUIPO_TIPO ID="8">
+       <NOMBRE>Equipo 9</NOMBRE>
+       <LOGO empty="blob"/>
+       <PUNTOS>1</PUNTOS>
+       <GOLES>1</GOLES>
+      </EQUIPO_TIPO>
+      <EQUIPO_TIPO ID="9">
+       <NOMBRE>Equipo 10</NOMBRE>
+       <LOGO empty="blob"/>
+       <PUNTOS>1</PUNTOS>
+       <GOLES>2</GOLES>
+      </EQUIPO_TIPO>
+      <EQUIPO_TIPO ID="10">
+       <NOMBRE>Equipo 11</NOMBRE>
+       <LOGO empty="blob"/>
+       <PUNTOS>0</PUNTOS>
+       <GOLES/>
+      </EQUIPO_TIPO>
+      <EQUIPO_TIPO ID="11">
+       <NOMBRE>Equipo 12</NOMBRE>
+       <LOGO empty="blob"/>
+       <PUNTOS>1</PUNTOS>
+       <GOLES>0</GOLES>
+      </EQUIPO_TIPO>
+     </EQUIPO>
+    </CLASIFICACION>
+   </SPLIT_TIPO>
+   <SPLIT_TIPO ID="1">
+    <CLASIFICACION fecha_fin="31/07/24">
+     <EQUIPO/>
+    </CLASIFICACION>
+   </SPLIT_TIPO>
+  </SPLIT>
+ </temporada>
