@@ -22,6 +22,7 @@ public class PanelUsuarioBarraDeNavegacionControlador {
         anadirListenerRegistrosDeJugadores();
         anadirListenerDraft();
         anadirListenerAgendas();
+        anadirListenerClasificaciones();
     }
     public void anadirlistenerPerfil() {
         barraDeNavegacion.getPerfilBoton().addActionListener( e -> {
@@ -104,6 +105,12 @@ public class PanelUsuarioBarraDeNavegacionControlador {
     public void anadirListenerAgendas() {
         barraDeNavegacion.getAgendasButton().addActionListener( e -> {
             panelUsuarioControlador.mostrarPanelDeCrudAgendas();
+        });
+    }
+
+    public void anadirListenerClasificaciones() {
+        barraDeNavegacion.getClasificacionesButton().addActionListener( e -> {
+            panelUsuarioControlador.mostrarPanelDeCrudClasificaciones();
         });
     }
 

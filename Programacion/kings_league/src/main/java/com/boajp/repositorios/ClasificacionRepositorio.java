@@ -70,19 +70,9 @@ public class ClasificacionRepositorio {
     public List<ClasificacionEntidad> seleccionarTodasLasClasificaciones() throws Exception{
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         try {
-            return entityManager.createQuery("SELECT c FROM ClasificacionEntidad c", ClasificacionEntidad.class)
-                    .getResultList();
-        } catch (Exception exception) {
-            throw new Exception("Error al intentar extraer clasificaciones.", exception);
-        } finally {
-            entityManager.close();
-        }
-    }
-
-    public ClasificacionEntidad seleccionarClasificacionPorId(int id) throws Exception{
-        EntityManager entityManager = entityManagerFactory.createEntityManager();
-        try {
-            return entityManager.find(ClasificacionEntidad.class, id);
+            String sql = "SELECT c FROM ClasificacionEntidad c JOIN FETCH c.equipo JOIN FETCH c.split";
+            TypedQuery<ClasificacionEntidad> resultado = entityManager.createQuery(sql, ClasificacionEntidad.class);
+            return  resultado.getResultList();
         } catch (Exception exception) {
             throw new Exception("Error al intentar extraer clasificaciones.", exception);
         } finally {
