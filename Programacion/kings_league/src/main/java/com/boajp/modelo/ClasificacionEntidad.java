@@ -26,6 +26,22 @@ public class ClasificacionEntidad {
         this.equipo = equipo;
     }
 
+    public String[] getAtributos() {
+        return new String[]{
+          "Código de split",
+          "Código de equipo",
+          "Posición"
+        };
+    }
+
+    public String[] toArray() {
+        return new String[]{
+                String.valueOf(split.getCodSplit()),
+                String.valueOf(equipo.getCodEquipo()),
+                String.valueOf(posicion)
+        };
+    }
+
     public byte getPosicion() {
         return posicion;
     }

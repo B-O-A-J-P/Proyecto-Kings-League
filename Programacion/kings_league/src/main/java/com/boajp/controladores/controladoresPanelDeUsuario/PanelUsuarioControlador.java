@@ -86,7 +86,12 @@ public class PanelUsuarioControlador {
 
     public void mostrarPanelDeCrudAgendas() {
         var controlador = new PanelDeCrudControlador();
-        cambiarPanel(controlador.getPanelDeAgendas().getPanel());
+        cambiarPanel(controlador.getPanelDeCrudAgendas().getPanel());
+    }
+
+    public void mostrarPanelDeCrudClasificaciones() {
+        var controlador = new PanelDeCrudControlador();
+        cambiarPanel(controlador.getPanelDeCrudClasificaciones().getPanel());
     }
 
     public void cambiarPanel(JPanel panel) {

@@ -19,6 +19,22 @@ public class BarraDeNavegacion {
     private JButton registrosDeJugadoresButton;
     private JButton draftButton;
     private JButton agendasButton;
+    private JButton clasificacionesButton;
+    private JScrollPane scrollPane;
+
+    public BarraDeNavegacion() {
+        scrollPane.getVerticalScrollBar().setUnitIncrement(40);
+        scrollPane.getVerticalScrollBar().setBlockIncrement(40);
+    }
+
+
+    public JButton getClasificacionesButton() {
+        return clasificacionesButton;
+    }
+
+    public void setClasificacionesButton(JButton clasificacionesButton) {
+        this.clasificacionesButton = clasificacionesButton;
+    }
 
     public JButton getAgendasButton() {
         return agendasButton;
@@ -100,9 +116,7 @@ public class BarraDeNavegacion {
         this.jornadasBoton = jornadasBoton;
     }
 
-    public BarraDeNavegacion() {
-        panel.setBackground(Color.RED);
-    }
+
 
     public JButton getJugadorBoton() {
         return jugadoresBoton;

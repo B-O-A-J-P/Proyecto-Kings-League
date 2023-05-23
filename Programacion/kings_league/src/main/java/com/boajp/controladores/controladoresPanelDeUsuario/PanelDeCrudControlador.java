@@ -70,8 +70,13 @@ public class PanelDeCrudControlador {
         return panelDeCrud;
     }
 
-    public PanelDeCrud getPanelDeAgendas() {
+    public PanelDeCrud getPanelDeCrudAgendas() {
         new AgendaCrontrolador(panelDeCrud);
+        return panelDeCrud;
+    }
+
+    public PanelDeCrud getPanelDeCrudClasificaciones() {
+        new ClasificacionesControlador(panelDeCrud);
         return panelDeCrud;
     }
 
