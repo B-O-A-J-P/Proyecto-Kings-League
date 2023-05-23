@@ -34,13 +34,6 @@ public class PanelUsuarioControlador {
         cambiarPanel(controlador.getPanelDeCrudSplit().getPanel());
     }
 
-    public void mostrarCrudEquipos(){
-        var controlador = new PanelDeCrudControlador();
-        cambiarPanel(controlador.getPanelCrudEquipos().getPanel());
-    }
-
-
-
     public void mostrarPanelDeCrudJugadores() {
         var controlador = new PanelDeCrudControlador();
         cambiarPanel(controlador.getPanelDeCrudJugadores().getPanel());

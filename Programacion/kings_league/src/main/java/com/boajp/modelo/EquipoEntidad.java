@@ -75,10 +75,6 @@ public class EquipoEntidad {
         return logo;
     }
 
-    public String getLogoString() {
-        return logo.toString();
-    }
-
     public void setLogo(byte[] logo) {
         this.logo = logo;
     }
@@ -114,19 +110,6 @@ public class EquipoEntidad {
         result = 31 * result + Arrays.hashCode(logo);
         result = 31 * result + (int) (presupuesto ^ (presupuesto >>> 32));
         return result;
-    }
-
-    public String[] toArray(){
-        return new String[]{
-                String.valueOf(codEquipo),
-                getNombre(),
-                String.valueOf(getLogo()),
-                String.valueOf(presupuesto)};
-
-        }
-
-    public String[] getAtributos(){
-        return new String[]{"Codigo de equipo", "Nombre", "Logo", "Presupuesto"};
     }
 
     public Collection<ClasificacionEntidad> getClasificaciones() {
