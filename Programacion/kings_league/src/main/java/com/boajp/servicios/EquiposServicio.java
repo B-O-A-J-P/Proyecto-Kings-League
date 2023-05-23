@@ -23,19 +23,6 @@ public class EquiposServicio {
         contratoEquipoMiembroRepositorio = new ContratoEquipoMiembroRepositorio();
     }
 
-    public String[] getColumnas() {
-        return new EquipoEntidad().getAtributos();
-    }
-
-    public String[][] getFilas() throws Exception{
-        List<EquipoEntidad> lista = equipoRepositorio.seleccionarTodosLosEquipos();
-        String[][] filas = new String[lista.size()][lista.get(0).getAtributos().length];
-        for( int x = 0; x < filas.length; x++ ) {
-            filas[x] = lista.get(x).toArray();
-        }
-        return filas;
-    }
-
     public ArrayList<CartaAbstracta> crearCartasDeEquipos() {
         List<EquipoEntidad> equipoEntidadList = new ArrayList<>();
         try {
@@ -75,6 +62,38 @@ public class EquiposServicio {
             cartasMiembros.add(cartaMiembro);
         }
         return cartasMiembros;
+    }
+
+    public String[][] getFilas() throws Exception{
+        List<EquipoEntidad> equipoEntidadList = equipoRepositorio.buscarEquipoParticipantes();
+        String[][] filas = new String[equipoEntidadList.size()][equipoEntidadList.get(0).getAtributos().length];
+        for ( int x = 0; x< equipoEntidadList.size();x++){
+            filas[x] = equipoEntidadList.get(x).toArray();
+        }
+        return filas;
+    }
+
+    public String[] getColumnas(){
+        return new EquipoEntidad().getAtributos();
+    }
+
+    public EquipoEntidad getEquipo(int codigo)throws Exception{
+        return equipoRepositorio.buscarEquipo(codigo);
+    }
+
+    public void crearEquipo(String nombre, byte[] logo)throws Exception{
+        EquipoEntidad e = new EquipoEntidad();
+        e.setNombre(nombre);
+        e.setLogo(logo);
+        equipoRepositorio.insertar(e);
+    }
+
+    public void modificarEquipo(EquipoEntidad equipo)throws Exception{
+        equipoRepositorio.modificar(equipo);
+    }
+
+    public void eliminarEquipo(int cod) throws Exception {
+        equipoRepositorio.eliminar(cod);
     }
 
 }
