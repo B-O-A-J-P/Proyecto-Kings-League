@@ -13,6 +13,10 @@ public class PartidoServicio {
         partidosRepositorio = new PartidosRepositorio();
     }
 
+    public void insertar(PartidoEntidad partidoEntidad) {
+        partidosRepositorio.insertar(partidoEntidad);
+    }
+
     public List<PartidoEntidad> buscarTodosPartidos() {
         return partidosRepositorio.buscarTodosLosPartidos();
     }

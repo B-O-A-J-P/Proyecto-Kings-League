@@ -95,4 +95,13 @@ public class EquiposServicio {
         equipoRepositorio.eliminar(cod);
     }
 
+    public String[] getCodigos() {
+        List<EquipoEntidad> lista = equipoRepositorio.seleccionarTodosLosEquipos();
+        String[] codigos = new String[lista.size()];
+        for ( int x = 0; x < codigos.length; x++) {
+            codigos[x] = String.valueOf(lista.get(x).getCodEquipo());
+        }
+        return codigos;
+    }
+
 }

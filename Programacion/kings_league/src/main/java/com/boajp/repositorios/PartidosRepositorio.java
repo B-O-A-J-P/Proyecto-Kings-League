@@ -1,5 +1,6 @@
 package com.boajp.repositorios;
 
+import com.boajp.modelo.EquipoEntidad;
 import com.boajp.modelo.JornadaEntidad;
 import com.boajp.modelo.PartidoEntidad;
 import com.boajp.vistas.componentes.PanelDeError;
@@ -15,6 +16,28 @@ public class PartidosRepositorio {
     EntityManagerFactory entityManagerFactory;
     public PartidosRepositorio() {
         entityManagerFactory = AdministradorPersistencia.getEntityManagerFactory();
+    }
+
+    public void insertar(PartidoEntidad partido) {
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        EntityTransaction transaction = entityManager.getTransaction();
+        try {
+            JornadaEntidad jornada = entityManager.find(JornadaEntidad.class, partido.getJornada().getCodJornada());
+            EquipoEntidad equipoUno = entityManager.find(EquipoEntidad.class, partido.getEquipoUno().getCodEquipo());
+            EquipoEntidad equipoDos = entityManager.find(EquipoEntidad.class, partido.getEquipoDos().getCodEquipo());
+            transaction.begin();
+            partido.setJornada(jornada);
+            partido.setEquipoUno(equipoUno);
+            partido.setEquipoDos(equipoDos);
+            entityManager.persist(partido);
+            transaction.commit();
+        } catch (Exception exception) {
+            transaction.rollback();
+            new PanelDeError(exception.getCause().getCause().getCause().getMessage());
+        }
+        finally {
+            entityManager.close();
+        }
     }
 
     public List<PartidoEntidad> buscarPartidosDeJornada(JornadaEntidad jornadaEntidad) {

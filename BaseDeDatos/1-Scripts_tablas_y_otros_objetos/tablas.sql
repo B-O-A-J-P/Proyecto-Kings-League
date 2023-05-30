@@ -201,6 +201,5 @@ CREATE TABLE Cuentas (
     CONSTRAINT cue_cue_pk PRIMARY KEY(cod_cuenta),
     CONSTRAINT cod_perfil FOREIGN KEY(cod_perfil) REFERENCES permisos ON DELETE CASCADE,
     CONSTRAINT cue_usu_uq UNIQUE (usuario),
-    CONSTRAINT cue_con_uq UNIQUE (contrasena),
     CONSTRAINT cue_ema_uq UNIQUE (email)
 );

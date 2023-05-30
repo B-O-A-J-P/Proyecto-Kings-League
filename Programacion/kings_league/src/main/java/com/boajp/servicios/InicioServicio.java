@@ -30,7 +30,7 @@ public class InicioServicio {
         partidosRepositorio = new PartidosRepositorio();
     }
 
-    public CartaAbstracta crearCartaUltimaJornada() throws Exception{
+    public CartaAbstracta crearCartaUltimaJornada() {
         JornadaEntidad jornadaEntidad = null;
 
         try {

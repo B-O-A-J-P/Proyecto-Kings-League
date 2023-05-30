@@ -76,11 +76,12 @@ public class SplitsControlador implements CrudControlador{
                 String[] codigosDeTemporada = temporadasServicio.getCodigos();
                 DefaultTableModel modelo = panelDeCrud.getModelo();
                 JTable tabla = panelDeCrud.getTabla();
+                SplitEntidad split = splitsServicio.buscarSplit(Integer.parseInt((String) modelo.getValueAt(tabla.getSelectedRow(), 1)));
                 ModificarSplitDialog dialog = new ModificarSplitDialog(
-                        (String) modelo.getValueAt(tabla.getSelectedRow(), 2),
-                        (String) modelo.getValueAt(tabla.getSelectedRow(), 3),
-                        (String) modelo.getValueAt(tabla.getSelectedRow(), 4),
-                        (String) modelo.getValueAt(tabla.getSelectedRow(), 0),
+                        split.getNombre(),
+                        FechaUtilidades.fechaToString(split.getFechaInicio()),
+                        FechaUtilidades.fechaToString(split.getFechaFin()),
+                        String.valueOf(split.getCodSplit()),
                         codigosDeTemporada
                 );
 
@@ -99,27 +100,20 @@ public class SplitsControlador implements CrudControlador{
                 });
 
                 dialog.getButtonOK().addActionListener( x -> {
-                    try {
-                        SplitEntidad split = splitsServicio.buscarSplit(Integer.parseInt((String) modelo.getValueAt(tabla.getSelectedRow(), 1)));
-                        TemporadaEntidad temporada = temporadasServicio.getTemporada(Integer.parseInt((String)dialog.getComboBox().getItemAt(dialog.getComboBox().getSelectedIndex())));
-                        split.setTemporada(temporada);
-                        split.setFechaInicio(FechaUtilidades.stringToFecha(dialog.getFechaDeInicioTf().getText()));
-                        split.setFechaFin(FechaUtilidades.stringToFecha(dialog.getFechaFinTf().getText()));
-                        split.setNombre(dialog.getNombreTf().getText());
-                        splitsServicio.modificarSplit(split);
+                    TemporadaEntidad temporada = temporadasServicio.getTemporada(Integer.parseInt((String)dialog.getComboBox().getItemAt(dialog.getComboBox().getSelectedIndex())));
+                    split.setTemporada(temporada);
+                    split.setFechaInicio(FechaUtilidades.stringToFecha(dialog.getFechaDeInicioTf().getText()));
+                    split.setFechaFin(FechaUtilidades.stringToFecha(dialog.getFechaFinTf().getText()));
+                    split.setNombre(dialog.getNombreTf().getText());
+                    splitsServicio.modificarSplit(split);
 
-                        panelDeCrud.actualizarModelo(splitsServicio.getFilasSplits(), splitsServicio.getColumnas());
+                    panelDeCrud.actualizarModelo(splitsServicio.getFilasSplits(), splitsServicio.getColumnas());
 
-                        dialog.getButtonCancel().setActionCommand("bloqueado");
-                        dialog.getButtonCancel().setText("Modificar");
-                        dialog.deshabilitarCampos();
-                        dialog.getButtonOK().setVisible(false);
-                    } catch (PersistenceException ex) {
-                        SQLException sqlException = (SQLException) ex.getCause().getCause().getCause();
-                        new PanelDeError(sqlException.getMessage());
-                    } catch (Exception ex) {
-                        throw new RuntimeException(ex);
-                    }
+                    dialog.getButtonCancel().setActionCommand("bloqueado");
+                    dialog.getButtonCancel().setText("Modificar");
+                    dialog.establecerValoresPorDefecto();
+                    dialog.deshabilitarCampos();
+                    dialog.getButtonOK().setVisible(false);
                 });
 
                 dialog.setVisible(true);

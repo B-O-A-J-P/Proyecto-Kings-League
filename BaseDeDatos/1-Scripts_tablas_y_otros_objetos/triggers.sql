@@ -42,7 +42,7 @@ declare
 begin
  
     select count(*) into v_numero_equipos from registros_equipos
-    where cod_temporada = (select max(cod_temporada) from temporadas);
+    where cod_temporada = :NEW.cod_temporada;
     
     if v_numero_equipos < 12
     then 

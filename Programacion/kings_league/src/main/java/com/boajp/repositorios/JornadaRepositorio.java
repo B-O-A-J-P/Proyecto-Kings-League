@@ -1,6 +1,7 @@
 package com.boajp.repositorios;
 
 import com.boajp.modelo.JornadaEntidad;
+import com.boajp.modelo.SplitEntidad;
 import com.boajp.vistas.componentes.PanelDeError;
 import jakarta.persistence.*;
 
@@ -51,12 +52,13 @@ public class JornadaRepositorio {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         EntityTransaction transaction = entityManager.getTransaction();
         try {
+            SplitEntidad split = entityManager.find(SplitEntidad.class, jornada.getSplit().getCodSplit());
             transaction.begin();
             JornadaEntidad jornadaEncontrada = entityManager.find(JornadaEntidad.class, jornada.getCodJornada());
             jornadaEncontrada.setNumero(jornada.getNumero());
             jornadaEncontrada.setFecha(jornada.getFecha());
             jornadaEncontrada.setUbicacion(jornada.getUbicacion());
-            jornadaEncontrada.setSplit(jornada.getSplit());
+            jornadaEncontrada.setSplit(split);
             jornadaEncontrada.setListaPartidos(jornada.getListaPartidos());
             entityManager.persist(jornadaEncontrada);
             transaction.commit();

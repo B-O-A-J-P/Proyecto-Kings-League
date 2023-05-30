@@ -75,11 +75,12 @@ public class JornadasControlador implements CrudControlador{
             DefaultTableModel modelo = panelDeCrud.getModelo();
             try {
                 String[] codigos = splitsServicio.getCodigos();
+                JornadaEntidad jornada = jornadasServicio.buscarJornada(Integer.parseInt((String)modelo.getValueAt(tabla.getSelectedRow(), 0)));
                 ModificarJornadaDialog dialog = new ModificarJornadaDialog(
-                        (String) modelo.getValueAt(tabla.getSelectedRow(), 4),
-                        (String) modelo.getValueAt(tabla.getSelectedRow(), 1),
-                        (String) modelo.getValueAt(tabla.getSelectedRow(), 2),
-                        (String) modelo.getValueAt(tabla.getSelectedRow(), 3),
+                        String.valueOf(jornada.getCodJornada()),
+                        String.valueOf(jornada.getNumero()),
+                        FechaUtilidades.fechaToString(jornada.getFecha()),
+                        jornada.getUbicacion(),
                         codigos
                 );
 
@@ -99,25 +100,20 @@ public class JornadasControlador implements CrudControlador{
                 });
 
                 dialog.getButtonOK().addActionListener( x -> {
-                    try {
-                        JornadaEntidad jornada = new JornadaEntidad();
-                        SplitEntidad split = splitsServicio.buscarSplit(Integer.parseInt((String)dialog.getComboBox().getSelectedItem()));
-                        jornada.setSplit(split);
-                        jornada.setNumero(Byte.parseByte(dialog.getNumeroTf().getText()));
-                        jornada.setFecha(FechaUtilidades.stringToFecha(dialog.getFechaTf().getText()));
-                        jornada.setUbicacion(dialog.getUbicacionTf().getText());
-                        jornadasServicio.modificarJornada(jornada);
+                    SplitEntidad split = splitsServicio.buscarSplit(Integer.parseInt((String)dialog.getComboBox().getSelectedItem()));
+                    jornada.setSplit(split);
+                    jornada.setNumero(Byte.parseByte(dialog.getNumeroTf().getText()));
+                    jornada.setFecha(FechaUtilidades.stringToFecha(dialog.getFechaTf().getText()));
+                    jornada.setUbicacion(dialog.getUbicacionTf().getText());
+                    jornadasServicio.modificarJornada(jornada);
 
-                        panelDeCrud.actualizarModelo(jornadasServicio.getFilas(), jornadasServicio.getColumnas());
+                    panelDeCrud.actualizarModelo(jornadasServicio.getFilas(), jornadasServicio.getColumnas());
 
-                        dialog.getButtonCancel().setActionCommand("bloqueado");
-                        dialog.desabilitarCampos();
-                        dialog.restablecerValoresPorDefecto();
-                        dialog.getButtonOK().setVisible(false);
-                        dialog.getButtonCancel().setText("Modificar");
-                    } catch (Exception ex) {
-                        new PanelDeError(ex.getMessage());
-                    }
+                    dialog.getButtonCancel().setActionCommand("bloqueado");
+                    dialog.desabilitarCampos();
+                    dialog.establecerValoresPorDefecto();
+                    dialog.getButtonOK().setVisible(false);
+                    dialog.getButtonCancel().setText("Modificar");
                 });
                 dialog.setVisible(true);
             } catch (Exception ex) {

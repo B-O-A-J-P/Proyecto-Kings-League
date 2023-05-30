@@ -53,9 +53,6 @@ public class CuentaRepositorio {
             TypedQuery<CuentaEntidad> resultado = entityManager.createQuery(sql, CuentaEntidad.class);
             resultado.setParameter("usuario", usuario);
             return resultado.getSingleResult();
-        } catch (NoResultException exception) {
-            new PanelDeError(exception.getCause().getCause().getCause().getMessage());
-            return null;
         } catch (Exception exception) {
             throw new UsuarioNoEncontradoExcepcion();
         } finally {

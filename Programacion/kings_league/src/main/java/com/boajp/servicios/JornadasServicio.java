@@ -33,6 +33,15 @@ public class JornadasServicio {
         return jornadaRepositorio.buscarTodasJornadas();
     }
 
+    public String[] getCodigos() {
+        List<JornadaEntidad> lista = jornadaRepositorio.buscarTodasJornadas();
+        String[] codigos = new String[lista.size()];
+        for ( int x = 0; x < codigos.length; x++) {
+            codigos[x] = String.valueOf(lista.get(x).getCodJornada());
+        }
+        return codigos;
+    }
+
     public String[][] getFilas() {
         List<JornadaEntidad> listaDeJornadas = jornadaRepositorio.buscarTodasJornadas();
         String[][] filas = new String[listaDeJornadas.size()][listaDeJornadas.get(0).getAtributos().length];
