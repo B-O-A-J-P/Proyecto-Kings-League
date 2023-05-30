@@ -41,10 +41,10 @@ public class Clasificacion {
             table.setFont(new Font("DialogInput", Font.BOLD, 17));
         }
 
-        String home = System.getProperty("user.home");
+        //String home = System.getProperty("user.home");
 
 
-        File xmlFile = new File(home + "/Downloads/clasificacion.xml");
+        File xmlFile = new File("src/main/java/com/boajp/xml/clasificacion.xml");
 
         try {
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();

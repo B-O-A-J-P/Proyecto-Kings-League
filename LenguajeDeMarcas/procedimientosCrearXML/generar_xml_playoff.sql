@@ -44,7 +44,7 @@ CREATE OR REPLACE TYPE temporada_tipo AS OBJECT (
   "@ID" NUMBER(5),
   split splitlist_tipo
 );
-
+/
 
 DECLARE
   resultado CLOB;

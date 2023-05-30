@@ -1,0 +1,1682 @@
+﻿
+<!DOCTYPE temporada SYSTEM "Calendario_kings_league.dtd">
+
+<temporada ID="0" xmlns:xs = "http://www.w3.org/2001/XMLSchema-instance"
+    xs:noNamespaceSchemaLocation = "Calendario_kings_League.xsd">
+
+  <SPLIT>
+   <SPLITS_XML ID="0">
+    <FECHA_INICIO>01/07/24</FECHA_INICIO>
+    <FECHA_FIN>31/07/24</FECHA_FIN>
+    <JORNADA>
+     <JORNADAS_XML ID="0">
+      <FECHA>01/07/24</FECHA>
+      <PARTIDO>
+       <PARTIDOS_XML ID="0">
+        <HORA>2024-07-01T19:00:00</HORA>
+        <EQUIPO_LOCAL ID="9">
+         <NOMBRE>Equipo 10</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="0">
+         <NOMBRE>Equipo 1</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="1">
+        <HORA>2024-07-01T20:00:00</HORA>
+        <EQUIPO_LOCAL ID="8">
+         <NOMBRE>Equipo 9</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="10">
+         <NOMBRE>Equipo 11</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="2">
+        <HORA>2024-07-01T21:00:00</HORA>
+        <EQUIPO_LOCAL ID="3">
+         <NOMBRE>Equipo 4</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="2">
+         <NOMBRE>Equipo 3</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="3">
+        <HORA>2024-07-01T22:00:00</HORA>
+        <EQUIPO_LOCAL ID="7">
+         <NOMBRE>Equipo 8</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="5">
+         <NOMBRE>Equipo 6</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="4">
+        <HORA>2024-07-01T23:00:00</HORA>
+        <EQUIPO_LOCAL ID="6">
+         <NOMBRE>Equipo 7</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="1">
+         <NOMBRE>Equipo 2</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="5">
+        <HORA>2024-07-02T00:00:00</HORA>
+        <EQUIPO_LOCAL ID="4">
+         <NOMBRE>Equipo 5</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="11">
+         <NOMBRE>Equipo 12</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+      </PARTIDO>
+     </JORNADAS_XML>
+     <JORNADAS_XML ID="1">
+      <FECHA>08/07/24</FECHA>
+      <PARTIDO>
+       <PARTIDOS_XML ID="6">
+        <HORA>2024-07-08T19:00:00</HORA>
+        <EQUIPO_LOCAL ID="2">
+         <NOMBRE>Equipo 3</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="6">
+         <NOMBRE>Equipo 7</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="7">
+        <HORA>2024-07-08T20:00:00</HORA>
+        <EQUIPO_LOCAL ID="11">
+         <NOMBRE>Equipo 12</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="5">
+         <NOMBRE>Equipo 6</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="8">
+        <HORA>2024-07-08T21:00:00</HORA>
+        <EQUIPO_LOCAL ID="0">
+         <NOMBRE>Equipo 1</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="3">
+         <NOMBRE>Equipo 4</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="9">
+        <HORA>2024-07-08T22:00:00</HORA>
+        <EQUIPO_LOCAL ID="9">
+         <NOMBRE>Equipo 10</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="4">
+         <NOMBRE>Equipo 5</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="10">
+        <HORA>2024-07-08T23:00:00</HORA>
+        <EQUIPO_LOCAL ID="10">
+         <NOMBRE>Equipo 11</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="8">
+         <NOMBRE>Equipo 9</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="11">
+        <HORA>2024-07-09T00:00:00</HORA>
+        <EQUIPO_LOCAL ID="7">
+         <NOMBRE>Equipo 8</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="1">
+         <NOMBRE>Equipo 2</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+      </PARTIDO>
+     </JORNADAS_XML>
+     <JORNADAS_XML ID="2">
+      <FECHA>15/07/24</FECHA>
+      <PARTIDO>
+       <PARTIDOS_XML ID="12">
+        <HORA>2024-07-15T19:00:00</HORA>
+        <EQUIPO_LOCAL ID="1">
+         <NOMBRE>Equipo 2</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="4">
+         <NOMBRE>Equipo 5</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="13">
+        <HORA>2024-07-15T20:00:00</HORA>
+        <EQUIPO_LOCAL ID="6">
+         <NOMBRE>Equipo 7</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="0">
+         <NOMBRE>Equipo 1</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="14">
+        <HORA>2024-07-15T21:00:00</HORA>
+        <EQUIPO_LOCAL ID="2">
+         <NOMBRE>Equipo 3</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="3">
+         <NOMBRE>Equipo 4</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="15">
+        <HORA>2024-07-15T22:00:00</HORA>
+        <EQUIPO_LOCAL ID="10">
+         <NOMBRE>Equipo 11</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="11">
+         <NOMBRE>Equipo 12</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="16">
+        <HORA>2024-07-15T23:00:00</HORA>
+        <EQUIPO_LOCAL ID="9">
+         <NOMBRE>Equipo 10</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="7">
+         <NOMBRE>Equipo 8</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="17">
+        <HORA>2024-07-16T00:00:00</HORA>
+        <EQUIPO_LOCAL ID="5">
+         <NOMBRE>Equipo 6</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="8">
+         <NOMBRE>Equipo 9</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+      </PARTIDO>
+     </JORNADAS_XML>
+     <JORNADAS_XML ID="3">
+      <FECHA>22/07/24</FECHA>
+      <PARTIDO>
+       <PARTIDOS_XML ID="18">
+        <HORA>2024-07-22T19:00:00</HORA>
+        <EQUIPO_LOCAL ID="0">
+         <NOMBRE>Equipo 1</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="6">
+         <NOMBRE>Equipo 7</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="19">
+        <HORA>2024-07-22T20:00:00</HORA>
+        <EQUIPO_LOCAL ID="7">
+         <NOMBRE>Equipo 8</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="2">
+         <NOMBRE>Equipo 3</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="20">
+        <HORA>2024-07-22T21:00:00</HORA>
+        <EQUIPO_LOCAL ID="1">
+         <NOMBRE>Equipo 2</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="9">
+         <NOMBRE>Equipo 10</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="21">
+        <HORA>2024-07-22T22:00:00</HORA>
+        <EQUIPO_LOCAL ID="8">
+         <NOMBRE>Equipo 9</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="11">
+         <NOMBRE>Equipo 12</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="22">
+        <HORA>2024-07-22T23:00:00</HORA>
+        <EQUIPO_LOCAL ID="4">
+         <NOMBRE>Equipo 5</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="10">
+         <NOMBRE>Equipo 11</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="23">
+        <HORA>2024-07-23T00:00:00</HORA>
+        <EQUIPO_LOCAL ID="3">
+         <NOMBRE>Equipo 4</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="5">
+         <NOMBRE>Equipo 6</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+      </PARTIDO>
+     </JORNADAS_XML>
+     <JORNADAS_XML ID="4">
+      <FECHA>29/07/24</FECHA>
+      <PARTIDO>
+       <PARTIDOS_XML ID="24">
+        <HORA>2024-07-29T19:00:00</HORA>
+        <EQUIPO_LOCAL ID="10">
+         <NOMBRE>Equipo 11</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="11">
+         <NOMBRE>Equipo 12</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="25">
+        <HORA>2024-07-29T20:00:00</HORA>
+        <EQUIPO_LOCAL ID="7">
+         <NOMBRE>Equipo 8</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="1">
+         <NOMBRE>Equipo 2</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="26">
+        <HORA>2024-07-29T21:00:00</HORA>
+        <EQUIPO_LOCAL ID="2">
+         <NOMBRE>Equipo 3</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="4">
+         <NOMBRE>Equipo 5</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="27">
+        <HORA>2024-07-29T22:00:00</HORA>
+        <EQUIPO_LOCAL ID="9">
+         <NOMBRE>Equipo 10</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="0">
+         <NOMBRE>Equipo 1</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="28">
+        <HORA>2024-07-29T23:00:00</HORA>
+        <EQUIPO_LOCAL ID="6">
+         <NOMBRE>Equipo 7</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="3">
+         <NOMBRE>Equipo 4</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="29">
+        <HORA>2024-07-30T00:00:00</HORA>
+        <EQUIPO_LOCAL ID="8">
+         <NOMBRE>Equipo 9</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="5">
+         <NOMBRE>Equipo 6</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+      </PARTIDO>
+     </JORNADAS_XML>
+     <JORNADAS_XML ID="5">
+      <FECHA>05/08/24</FECHA>
+      <PARTIDO>
+       <PARTIDOS_XML ID="30">
+        <HORA>2024-08-05T19:00:00</HORA>
+        <EQUIPO_LOCAL ID="10">
+         <NOMBRE>Equipo 11</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="5">
+         <NOMBRE>Equipo 6</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="31">
+        <HORA>2024-08-05T20:00:00</HORA>
+        <EQUIPO_LOCAL ID="9">
+         <NOMBRE>Equipo 10</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="1">
+         <NOMBRE>Equipo 2</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="32">
+        <HORA>2024-08-05T21:00:00</HORA>
+        <EQUIPO_LOCAL ID="8">
+         <NOMBRE>Equipo 9</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="3">
+         <NOMBRE>Equipo 4</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="33">
+        <HORA>2024-08-05T22:00:00</HORA>
+        <EQUIPO_LOCAL ID="0">
+         <NOMBRE>Equipo 1</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="4">
+         <NOMBRE>Equipo 5</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="34">
+        <HORA>2024-08-05T23:00:00</HORA>
+        <EQUIPO_LOCAL ID="2">
+         <NOMBRE>Equipo 3</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="7">
+         <NOMBRE>Equipo 8</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="35">
+        <HORA>2024-08-06T00:00:00</HORA>
+        <EQUIPO_LOCAL ID="11">
+         <NOMBRE>Equipo 12</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="6">
+         <NOMBRE>Equipo 7</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+      </PARTIDO>
+     </JORNADAS_XML>
+     <JORNADAS_XML ID="6">
+      <FECHA>12/08/24</FECHA>
+      <PARTIDO>
+       <PARTIDOS_XML ID="36">
+        <HORA>2024-08-12T19:00:00</HORA>
+        <EQUIPO_LOCAL ID="1">
+         <NOMBRE>Equipo 2</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="6">
+         <NOMBRE>Equipo 7</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="37">
+        <HORA>2024-08-12T20:00:00</HORA>
+        <EQUIPO_LOCAL ID="0">
+         <NOMBRE>Equipo 1</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="3">
+         <NOMBRE>Equipo 4</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="38">
+        <HORA>2024-08-12T21:00:00</HORA>
+        <EQUIPO_LOCAL ID="7">
+         <NOMBRE>Equipo 8</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="5">
+         <NOMBRE>Equipo 6</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="39">
+        <HORA>2024-08-12T22:00:00</HORA>
+        <EQUIPO_LOCAL ID="8">
+         <NOMBRE>Equipo 9</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="2">
+         <NOMBRE>Equipo 3</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="40">
+        <HORA>2024-08-12T23:00:00</HORA>
+        <EQUIPO_LOCAL ID="10">
+         <NOMBRE>Equipo 11</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="11">
+         <NOMBRE>Equipo 12</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="41">
+        <HORA>2024-08-13T00:00:00</HORA>
+        <EQUIPO_LOCAL ID="4">
+         <NOMBRE>Equipo 5</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="9">
+         <NOMBRE>Equipo 10</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+      </PARTIDO>
+     </JORNADAS_XML>
+     <JORNADAS_XML ID="7">
+      <FECHA>19/08/24</FECHA>
+      <PARTIDO>
+       <PARTIDOS_XML ID="42">
+        <HORA>2024-08-19T19:00:00</HORA>
+        <EQUIPO_LOCAL ID="0">
+         <NOMBRE>Equipo 1</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="10">
+         <NOMBRE>Equipo 11</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="43">
+        <HORA>2024-08-19T20:00:00</HORA>
+        <EQUIPO_LOCAL ID="2">
+         <NOMBRE>Equipo 3</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="7">
+         <NOMBRE>Equipo 8</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="44">
+        <HORA>2024-08-19T21:00:00</HORA>
+        <EQUIPO_LOCAL ID="5">
+         <NOMBRE>Equipo 6</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="6">
+         <NOMBRE>Equipo 7</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="45">
+        <HORA>2024-08-19T22:00:00</HORA>
+        <EQUIPO_LOCAL ID="11">
+         <NOMBRE>Equipo 12</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="9">
+         <NOMBRE>Equipo 10</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="46">
+        <HORA>2024-08-19T23:00:00</HORA>
+        <EQUIPO_LOCAL ID="3">
+         <NOMBRE>Equipo 4</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="4">
+         <NOMBRE>Equipo 5</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="47">
+        <HORA>2024-08-20T00:00:00</HORA>
+        <EQUIPO_LOCAL ID="8">
+         <NOMBRE>Equipo 9</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="1">
+         <NOMBRE>Equipo 2</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+      </PARTIDO>
+     </JORNADAS_XML>
+     <JORNADAS_XML ID="8">
+      <FECHA>26/08/24</FECHA>
+      <PARTIDO>
+       <PARTIDOS_XML ID="48">
+        <HORA>2024-08-26T19:00:00</HORA>
+        <EQUIPO_LOCAL ID="5">
+         <NOMBRE>Equipo 6</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="2">
+         <NOMBRE>Equipo 3</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="49">
+        <HORA>2024-08-26T20:00:00</HORA>
+        <EQUIPO_LOCAL ID="3">
+         <NOMBRE>Equipo 4</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="7">
+         <NOMBRE>Equipo 8</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="50">
+        <HORA>2024-08-26T21:00:00</HORA>
+        <EQUIPO_LOCAL ID="8">
+         <NOMBRE>Equipo 9</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="9">
+         <NOMBRE>Equipo 10</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="51">
+        <HORA>2024-08-26T22:00:00</HORA>
+        <EQUIPO_LOCAL ID="10">
+         <NOMBRE>Equipo 11</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="4">
+         <NOMBRE>Equipo 5</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="52">
+        <HORA>2024-08-26T23:00:00</HORA>
+        <EQUIPO_LOCAL ID="6">
+         <NOMBRE>Equipo 7</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="11">
+         <NOMBRE>Equipo 12</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="53">
+        <HORA>2024-08-27T00:00:00</HORA>
+        <EQUIPO_LOCAL ID="1">
+         <NOMBRE>Equipo 2</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="0">
+         <NOMBRE>Equipo 1</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+      </PARTIDO>
+     </JORNADAS_XML>
+     <JORNADAS_XML ID="9">
+      <FECHA>02/09/24</FECHA>
+      <PARTIDO>
+       <PARTIDOS_XML ID="54">
+        <HORA>2024-09-02T19:00:00</HORA>
+        <EQUIPO_LOCAL ID="3">
+         <NOMBRE>Equipo 4</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="6">
+         <NOMBRE>Equipo 7</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="55">
+        <HORA>2024-09-02T20:00:00</HORA>
+        <EQUIPO_LOCAL ID="0">
+         <NOMBRE>Equipo 1</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="5">
+         <NOMBRE>Equipo 6</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="56">
+        <HORA>2024-09-02T21:00:00</HORA>
+        <EQUIPO_LOCAL ID="4">
+         <NOMBRE>Equipo 5</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="11">
+         <NOMBRE>Equipo 12</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="57">
+        <HORA>2024-09-02T22:00:00</HORA>
+        <EQUIPO_LOCAL ID="1">
+         <NOMBRE>Equipo 2</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="7">
+         <NOMBRE>Equipo 8</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="58">
+        <HORA>2024-09-02T23:00:00</HORA>
+        <EQUIPO_LOCAL ID="8">
+         <NOMBRE>Equipo 9</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="2">
+         <NOMBRE>Equipo 3</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="59">
+        <HORA>2024-09-03T00:00:00</HORA>
+        <EQUIPO_LOCAL ID="9">
+         <NOMBRE>Equipo 10</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="10">
+         <NOMBRE>Equipo 11</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+      </PARTIDO>
+     </JORNADAS_XML>
+     <JORNADAS_XML ID="10">
+      <FECHA>09/09/24</FECHA>
+      <PARTIDO>
+       <PARTIDOS_XML ID="60">
+        <HORA>2024-09-09T19:00:00</HORA>
+        <EQUIPO_LOCAL ID="10">
+         <NOMBRE>Equipo 11</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="7">
+         <NOMBRE>Equipo 8</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="61">
+        <HORA>2024-09-09T20:00:00</HORA>
+        <EQUIPO_LOCAL ID="9">
+         <NOMBRE>Equipo 10</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="3">
+         <NOMBRE>Equipo 4</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="62">
+        <HORA>2024-09-09T21:00:00</HORA>
+        <EQUIPO_LOCAL ID="1">
+         <NOMBRE>Equipo 2</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="11">
+         <NOMBRE>Equipo 12</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="63">
+        <HORA>2024-09-09T22:00:00</HORA>
+        <EQUIPO_LOCAL ID="4">
+         <NOMBRE>Equipo 5</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="5">
+         <NOMBRE>Equipo 6</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="64">
+        <HORA>2024-09-09T23:00:00</HORA>
+        <EQUIPO_LOCAL ID="2">
+         <NOMBRE>Equipo 3</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="8">
+         <NOMBRE>Equipo 9</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="65">
+        <HORA>2024-09-10T00:00:00</HORA>
+        <EQUIPO_LOCAL ID="6">
+         <NOMBRE>Equipo 7</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="0">
+         <NOMBRE>Equipo 1</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+      </PARTIDO>
+     </JORNADAS_XML>
+     <JORNADAS_XML ID="11">
+      <FECHA>16/09/24</FECHA>
+      <PARTIDO>
+       <PARTIDOS_XML ID="66">
+        <HORA>2024-09-16T12:00:00</HORA>
+        <EQUIPO_LOCAL ID="0">
+         <NOMBRE>Equipo 1</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="7">
+         <NOMBRE>Equipo 8</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="67">
+        <HORA>2024-09-16T13:00:00</HORA>
+        <EQUIPO_LOCAL ID="1">
+         <NOMBRE>Equipo 2</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="6">
+         <NOMBRE>Equipo 7</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="68">
+        <HORA>2024-09-16T14:00:00</HORA>
+        <EQUIPO_LOCAL ID="2">
+         <NOMBRE>Equipo 3</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="5">
+         <NOMBRE>Equipo 6</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="69">
+        <HORA>2024-09-16T15:00:00</HORA>
+        <EQUIPO_LOCAL ID="3">
+         <NOMBRE>Equipo 4</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="4">
+         <NOMBRE>Equipo 5</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+      </PARTIDO>
+     </JORNADAS_XML>
+     <JORNADAS_XML ID="31">
+      <FECHA>23/09/24</FECHA>
+      <PARTIDO>
+       <PARTIDOS_XML ID="146">
+        <HORA>2024-09-23T12:00:00</HORA>
+        <EQUIPO_LOCAL ID="0">
+         <NOMBRE>Equipo 1</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="7">
+         <NOMBRE>Equipo 8</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="147">
+        <HORA>2024-09-23T13:00:00</HORA>
+        <EQUIPO_LOCAL ID="1">
+         <NOMBRE>Equipo 2</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="6">
+         <NOMBRE>Equipo 7</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="148">
+        <HORA>2024-09-23T14:00:00</HORA>
+        <EQUIPO_LOCAL ID="2">
+         <NOMBRE>Equipo 3</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="5">
+         <NOMBRE>Equipo 6</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="149">
+        <HORA>2024-09-23T15:00:00</HORA>
+        <EQUIPO_LOCAL ID="3">
+         <NOMBRE>Equipo 4</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="4">
+         <NOMBRE>Equipo 5</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+      </PARTIDO>
+     </JORNADAS_XML>
+    </JORNADA>
+   </SPLITS_XML>
+   <SPLITS_XML ID="1">
+    <FECHA_INICIO>01/07/24</FECHA_INICIO>
+    <FECHA_FIN>31/07/24</FECHA_FIN>
+    <JORNADA>
+     <JORNADAS_XML ID="20">
+      <FECHA>01/07/24</FECHA>
+      <PARTIDO>
+       <PARTIDOS_XML ID="80">
+        <HORA>2024-07-01T18:00:00</HORA>
+        <EQUIPO_LOCAL ID="3">
+         <NOMBRE>Equipo 4</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="11">
+         <NOMBRE>Equipo 12</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="81">
+        <HORA>2024-07-01T19:00:00</HORA>
+        <EQUIPO_LOCAL ID="0">
+         <NOMBRE>Equipo 1</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="9">
+         <NOMBRE>Equipo 10</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="82">
+        <HORA>2024-07-01T20:00:00</HORA>
+        <EQUIPO_LOCAL ID="5">
+         <NOMBRE>Equipo 6</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="2">
+         <NOMBRE>Equipo 3</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="83">
+        <HORA>2024-07-01T21:00:00</HORA>
+        <EQUIPO_LOCAL ID="10">
+         <NOMBRE>Equipo 11</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="4">
+         <NOMBRE>Equipo 5</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="84">
+        <HORA>2024-07-01T22:00:00</HORA>
+        <EQUIPO_LOCAL ID="8">
+         <NOMBRE>Equipo 9</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="1">
+         <NOMBRE>Equipo 2</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="85">
+        <HORA>2024-07-01T23:00:00</HORA>
+        <EQUIPO_LOCAL ID="6">
+         <NOMBRE>Equipo 7</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="7">
+         <NOMBRE>Equipo 8</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+      </PARTIDO>
+     </JORNADAS_XML>
+     <JORNADAS_XML ID="21">
+      <FECHA>08/07/24</FECHA>
+      <PARTIDO>
+       <PARTIDOS_XML ID="86">
+        <HORA>2024-07-08T18:00:00</HORA>
+        <EQUIPO_LOCAL ID="10">
+         <NOMBRE>Equipo 11</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="3">
+         <NOMBRE>Equipo 4</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="87">
+        <HORA>2024-07-08T19:00:00</HORA>
+        <EQUIPO_LOCAL ID="2">
+         <NOMBRE>Equipo 3</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="11">
+         <NOMBRE>Equipo 12</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="88">
+        <HORA>2024-07-08T20:00:00</HORA>
+        <EQUIPO_LOCAL ID="0">
+         <NOMBRE>Equipo 1</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="8">
+         <NOMBRE>Equipo 9</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="89">
+        <HORA>2024-07-08T21:00:00</HORA>
+        <EQUIPO_LOCAL ID="6">
+         <NOMBRE>Equipo 7</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="9">
+         <NOMBRE>Equipo 10</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="90">
+        <HORA>2024-07-08T22:00:00</HORA>
+        <EQUIPO_LOCAL ID="1">
+         <NOMBRE>Equipo 2</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="7">
+         <NOMBRE>Equipo 8</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="91">
+        <HORA>2024-07-08T23:00:00</HORA>
+        <EQUIPO_LOCAL ID="4">
+         <NOMBRE>Equipo 5</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="5">
+         <NOMBRE>Equipo 6</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+      </PARTIDO>
+     </JORNADAS_XML>
+     <JORNADAS_XML ID="22">
+      <FECHA>15/07/24</FECHA>
+      <PARTIDO>
+       <PARTIDOS_XML ID="92">
+        <HORA>2024-07-15T18:00:00</HORA>
+        <EQUIPO_LOCAL ID="5">
+         <NOMBRE>Equipo 6</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="11">
+         <NOMBRE>Equipo 12</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="93">
+        <HORA>2024-07-15T19:00:00</HORA>
+        <EQUIPO_LOCAL ID="7">
+         <NOMBRE>Equipo 8</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="2">
+         <NOMBRE>Equipo 3</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="94">
+        <HORA>2024-07-15T20:00:00</HORA>
+        <EQUIPO_LOCAL ID="10">
+         <NOMBRE>Equipo 11</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="8">
+         <NOMBRE>Equipo 9</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="95">
+        <HORA>2024-07-15T21:00:00</HORA>
+        <EQUIPO_LOCAL ID="4">
+         <NOMBRE>Equipo 5</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="0">
+         <NOMBRE>Equipo 1</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="96">
+        <HORA>2024-07-15T22:00:00</HORA>
+        <EQUIPO_LOCAL ID="6">
+         <NOMBRE>Equipo 7</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="9">
+         <NOMBRE>Equipo 10</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="97">
+        <HORA>2024-07-15T23:00:00</HORA>
+        <EQUIPO_LOCAL ID="1">
+         <NOMBRE>Equipo 2</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="3">
+         <NOMBRE>Equipo 4</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+      </PARTIDO>
+     </JORNADAS_XML>
+     <JORNADAS_XML ID="23">
+      <FECHA>22/07/24</FECHA>
+      <PARTIDO>
+       <PARTIDOS_XML ID="98">
+        <HORA>2024-07-22T18:00:00</HORA>
+        <EQUIPO_LOCAL ID="7">
+         <NOMBRE>Equipo 8</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="1">
+         <NOMBRE>Equipo 2</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="99">
+        <HORA>2024-07-22T19:00:00</HORA>
+        <EQUIPO_LOCAL ID="4">
+         <NOMBRE>Equipo 5</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="6">
+         <NOMBRE>Equipo 7</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="100">
+        <HORA>2024-07-22T20:00:00</HORA>
+        <EQUIPO_LOCAL ID="5">
+         <NOMBRE>Equipo 6</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="10">
+         <NOMBRE>Equipo 11</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="101">
+        <HORA>2024-07-22T21:00:00</HORA>
+        <EQUIPO_LOCAL ID="8">
+         <NOMBRE>Equipo 9</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="3">
+         <NOMBRE>Equipo 4</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="102">
+        <HORA>2024-07-22T22:00:00</HORA>
+        <EQUIPO_LOCAL ID="9">
+         <NOMBRE>Equipo 10</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="0">
+         <NOMBRE>Equipo 1</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="103">
+        <HORA>2024-07-22T23:00:00</HORA>
+        <EQUIPO_LOCAL ID="2">
+         <NOMBRE>Equipo 3</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="11">
+         <NOMBRE>Equipo 12</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+      </PARTIDO>
+     </JORNADAS_XML>
+     <JORNADAS_XML ID="24">
+      <FECHA>29/07/24</FECHA>
+      <PARTIDO>
+       <PARTIDOS_XML ID="104">
+        <HORA>2024-07-29T18:00:00</HORA>
+        <EQUIPO_LOCAL ID="8">
+         <NOMBRE>Equipo 9</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="4">
+         <NOMBRE>Equipo 5</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="105">
+        <HORA>2024-07-29T19:00:00</HORA>
+        <EQUIPO_LOCAL ID="11">
+         <NOMBRE>Equipo 12</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="7">
+         <NOMBRE>Equipo 8</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="106">
+        <HORA>2024-07-29T20:00:00</HORA>
+        <EQUIPO_LOCAL ID="3">
+         <NOMBRE>Equipo 4</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="9">
+         <NOMBRE>Equipo 10</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="107">
+        <HORA>2024-07-29T21:00:00</HORA>
+        <EQUIPO_LOCAL ID="10">
+         <NOMBRE>Equipo 11</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="0">
+         <NOMBRE>Equipo 1</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="108">
+        <HORA>2024-07-29T22:00:00</HORA>
+        <EQUIPO_LOCAL ID="2">
+         <NOMBRE>Equipo 3</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="6">
+         <NOMBRE>Equipo 7</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="109">
+        <HORA>2024-07-29T23:00:00</HORA>
+        <EQUIPO_LOCAL ID="1">
+         <NOMBRE>Equipo 2</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="5">
+         <NOMBRE>Equipo 6</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+      </PARTIDO>
+     </JORNADAS_XML>
+     <JORNADAS_XML ID="25">
+      <FECHA>05/08/24</FECHA>
+      <PARTIDO>
+       <PARTIDOS_XML ID="110">
+        <HORA>2024-08-05T18:00:00</HORA>
+        <EQUIPO_LOCAL ID="9">
+         <NOMBRE>Equipo 10</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="7">
+         <NOMBRE>Equipo 8</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="111">
+        <HORA>2024-08-05T19:00:00</HORA>
+        <EQUIPO_LOCAL ID="10">
+         <NOMBRE>Equipo 11</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="0">
+         <NOMBRE>Equipo 1</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="112">
+        <HORA>2024-08-05T20:00:00</HORA>
+        <EQUIPO_LOCAL ID="1">
+         <NOMBRE>Equipo 2</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="8">
+         <NOMBRE>Equipo 9</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="113">
+        <HORA>2024-08-05T21:00:00</HORA>
+        <EQUIPO_LOCAL ID="2">
+         <NOMBRE>Equipo 3</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="5">
+         <NOMBRE>Equipo 6</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="114">
+        <HORA>2024-08-05T22:00:00</HORA>
+        <EQUIPO_LOCAL ID="3">
+         <NOMBRE>Equipo 4</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="11">
+         <NOMBRE>Equipo 12</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="115">
+        <HORA>2024-08-05T23:00:00</HORA>
+        <EQUIPO_LOCAL ID="6">
+         <NOMBRE>Equipo 7</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="4">
+         <NOMBRE>Equipo 5</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+      </PARTIDO>
+     </JORNADAS_XML>
+     <JORNADAS_XML ID="26">
+      <FECHA>12/08/24</FECHA>
+      <PARTIDO>
+       <PARTIDOS_XML ID="116">
+        <HORA>2024-08-12T18:00:00</HORA>
+        <EQUIPO_LOCAL ID="2">
+         <NOMBRE>Equipo 3</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="8">
+         <NOMBRE>Equipo 9</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="117">
+        <HORA>2024-08-12T19:00:00</HORA>
+        <EQUIPO_LOCAL ID="10">
+         <NOMBRE>Equipo 11</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="5">
+         <NOMBRE>Equipo 6</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="118">
+        <HORA>2024-08-12T20:00:00</HORA>
+        <EQUIPO_LOCAL ID="0">
+         <NOMBRE>Equipo 1</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="4">
+         <NOMBRE>Equipo 5</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="119">
+        <HORA>2024-08-12T21:00:00</HORA>
+        <EQUIPO_LOCAL ID="3">
+         <NOMBRE>Equipo 4</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="11">
+         <NOMBRE>Equipo 12</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="120">
+        <HORA>2024-08-12T22:00:00</HORA>
+        <EQUIPO_LOCAL ID="9">
+         <NOMBRE>Equipo 10</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="7">
+         <NOMBRE>Equipo 8</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="121">
+        <HORA>2024-08-12T23:00:00</HORA>
+        <EQUIPO_LOCAL ID="1">
+         <NOMBRE>Equipo 2</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="6">
+         <NOMBRE>Equipo 7</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+      </PARTIDO>
+     </JORNADAS_XML>
+     <JORNADAS_XML ID="27">
+      <FECHA>19/08/24</FECHA>
+      <PARTIDO>
+       <PARTIDOS_XML ID="122">
+        <HORA>2024-08-19T18:00:00</HORA>
+        <EQUIPO_LOCAL ID="10">
+         <NOMBRE>Equipo 11</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="11">
+         <NOMBRE>Equipo 12</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="123">
+        <HORA>2024-08-19T19:00:00</HORA>
+        <EQUIPO_LOCAL ID="5">
+         <NOMBRE>Equipo 6</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="1">
+         <NOMBRE>Equipo 2</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="124">
+        <HORA>2024-08-19T20:00:00</HORA>
+        <EQUIPO_LOCAL ID="4">
+         <NOMBRE>Equipo 5</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="3">
+         <NOMBRE>Equipo 4</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="125">
+        <HORA>2024-08-19T21:00:00</HORA>
+        <EQUIPO_LOCAL ID="6">
+         <NOMBRE>Equipo 7</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="9">
+         <NOMBRE>Equipo 10</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="126">
+        <HORA>2024-08-19T22:00:00</HORA>
+        <EQUIPO_LOCAL ID="0">
+         <NOMBRE>Equipo 1</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="8">
+         <NOMBRE>Equipo 9</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="127">
+        <HORA>2024-08-19T23:00:00</HORA>
+        <EQUIPO_LOCAL ID="2">
+         <NOMBRE>Equipo 3</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="7">
+         <NOMBRE>Equipo 8</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+      </PARTIDO>
+     </JORNADAS_XML>
+     <JORNADAS_XML ID="28">
+      <FECHA>26/08/24</FECHA>
+      <PARTIDO>
+       <PARTIDOS_XML ID="128">
+        <HORA>2024-08-26T18:00:00</HORA>
+        <EQUIPO_LOCAL ID="10">
+         <NOMBRE>Equipo 11</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="3">
+         <NOMBRE>Equipo 4</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="129">
+        <HORA>2024-08-26T19:00:00</HORA>
+        <EQUIPO_LOCAL ID="0">
+         <NOMBRE>Equipo 1</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="7">
+         <NOMBRE>Equipo 8</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="130">
+        <HORA>2024-08-26T20:00:00</HORA>
+        <EQUIPO_LOCAL ID="11">
+         <NOMBRE>Equipo 12</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="6">
+         <NOMBRE>Equipo 7</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="131">
+        <HORA>2024-08-26T21:00:00</HORA>
+        <EQUIPO_LOCAL ID="5">
+         <NOMBRE>Equipo 6</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="4">
+         <NOMBRE>Equipo 5</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="132">
+        <HORA>2024-08-26T22:00:00</HORA>
+        <EQUIPO_LOCAL ID="8">
+         <NOMBRE>Equipo 9</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="1">
+         <NOMBRE>Equipo 2</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="133">
+        <HORA>2024-08-26T23:00:00</HORA>
+        <EQUIPO_LOCAL ID="9">
+         <NOMBRE>Equipo 10</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="2">
+         <NOMBRE>Equipo 3</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+      </PARTIDO>
+     </JORNADAS_XML>
+     <JORNADAS_XML ID="29">
+      <FECHA>02/09/24</FECHA>
+      <PARTIDO>
+       <PARTIDOS_XML ID="134">
+        <HORA>2024-09-02T18:00:00</HORA>
+        <EQUIPO_LOCAL ID="7">
+         <NOMBRE>Equipo 8</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="8">
+         <NOMBRE>Equipo 9</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="135">
+        <HORA>2024-09-02T19:00:00</HORA>
+        <EQUIPO_LOCAL ID="4">
+         <NOMBRE>Equipo 5</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="0">
+         <NOMBRE>Equipo 1</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="136">
+        <HORA>2024-09-02T20:00:00</HORA>
+        <EQUIPO_LOCAL ID="2">
+         <NOMBRE>Equipo 3</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="5">
+         <NOMBRE>Equipo 6</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="137">
+        <HORA>2024-09-02T21:00:00</HORA>
+        <EQUIPO_LOCAL ID="10">
+         <NOMBRE>Equipo 11</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="1">
+         <NOMBRE>Equipo 2</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="138">
+        <HORA>2024-09-02T22:00:00</HORA>
+        <EQUIPO_LOCAL ID="11">
+         <NOMBRE>Equipo 12</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="9">
+         <NOMBRE>Equipo 10</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="139">
+        <HORA>2024-09-02T23:00:00</HORA>
+        <EQUIPO_LOCAL ID="3">
+         <NOMBRE>Equipo 4</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="6">
+         <NOMBRE>Equipo 7</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+      </PARTIDO>
+     </JORNADAS_XML>
+     <JORNADAS_XML ID="30">
+      <FECHA>09/09/24</FECHA>
+      <PARTIDO>
+       <PARTIDOS_XML ID="140">
+        <HORA>2024-09-09T18:00:00</HORA>
+        <EQUIPO_LOCAL ID="8">
+         <NOMBRE>Equipo 9</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="6">
+         <NOMBRE>Equipo 7</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="141">
+        <HORA>2024-09-09T19:00:00</HORA>
+        <EQUIPO_LOCAL ID="5">
+         <NOMBRE>Equipo 6</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="4">
+         <NOMBRE>Equipo 5</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="142">
+        <HORA>2024-09-09T20:00:00</HORA>
+        <EQUIPO_LOCAL ID="11">
+         <NOMBRE>Equipo 12</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="10">
+         <NOMBRE>Equipo 11</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="143">
+        <HORA>2024-09-09T21:00:00</HORA>
+        <EQUIPO_LOCAL ID="2">
+         <NOMBRE>Equipo 3</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="9">
+         <NOMBRE>Equipo 10</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="144">
+        <HORA>2024-09-09T22:00:00</HORA>
+        <EQUIPO_LOCAL ID="0">
+         <NOMBRE>Equipo 1</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="7">
+         <NOMBRE>Equipo 8</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+       <PARTIDOS_XML ID="145">
+        <HORA>2024-09-09T23:00:00</HORA>
+        <EQUIPO_LOCAL ID="1">
+         <NOMBRE>Equipo 2</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_LOCAL>
+        <EQUIPO_VISITANTE ID="3">
+         <NOMBRE>Equipo 4</NOMBRE>
+         <LOGO empty="blob"/>
+        </EQUIPO_VISITANTE>
+       </PARTIDOS_XML>
+      </PARTIDO>
+     </JORNADAS_XML>
+    </JORNADA>
+   </SPLITS_XML>
+  </SPLIT>
+ </temporada>
+
