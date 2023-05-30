@@ -1,8 +1,10 @@
 package com.boajp.repositorios;
 
 import com.boajp.modelo.ContratoEquipoJugadorEntidad;
+import com.boajp.vistas.componentes.PanelDeError;
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ContratoEquipoJugadorRepositorio {
@@ -14,7 +16,7 @@ public class ContratoEquipoJugadorRepositorio {
         entityManagerFactory = AdministradorPersistencia.getEntityManagerFactory();
     }
 
-    public void insertar (ContratoEquipoJugadorEntidad contratojugador) throws Exception {
+    public void insertar (ContratoEquipoJugadorEntidad contratojugador) {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         EntityTransaction transaction = entityManager.getTransaction ();
         try {
@@ -23,13 +25,13 @@ public class ContratoEquipoJugadorRepositorio {
             transaction.commit();
         }catch (Exception exception){
             transaction.rollback();
-            throw new Exception("Error al intentar insertar el contrato del jugador");
+            new PanelDeError(exception.getCause().getCause().getCause().getMessage());
         } finally {
             entityManagerFactory.close();
         }
     }
 
-    public void eliminar (ContratoEquipoJugadorEntidad contratojugador) throws Exception {
+    public void eliminar (ContratoEquipoJugadorEntidad contratojugador) {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         EntityTransaction transaction = entityManager.getTransaction ();
         try {
@@ -39,13 +41,13 @@ public class ContratoEquipoJugadorRepositorio {
             transaction.commit();
         }catch (Exception exception){
             transaction.rollback();
-            throw new Exception("Error al intentar eliminar el contrato del jugador");
+            new PanelDeError(exception.getCause().getCause().getCause().getMessage());
         } finally {
             entityManager.close();
         }
     }
 
-    public void modificar (ContratoEquipoJugadorEntidad contratojugador) throws Exception {
+    public void modificar (ContratoEquipoJugadorEntidad contratojugador) {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         EntityTransaction transaction = entityManager.getTransaction();
         try {
@@ -60,27 +62,28 @@ public class ContratoEquipoJugadorRepositorio {
             entityManager.persist(c);
         } catch (Exception exception) {
             transaction.rollback();
-            throw new Exception("Error al intentar modificar el contrato del jugador");
+            new PanelDeError(exception.getCause().getCause().getCause().getMessage());
         } finally {
             entityManager.close();
         }
     }
 
 
-    public  List<ContratoEquipoJugadorEntidad> seleccionarTodosLosContratosDeJugador() throws Exception{
+    public List<ContratoEquipoJugadorEntidad> seleccionarTodosLosContratosDeJugador() {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         try {
             String sql = "SELECT cej FROM ContratoEquipoJugadorEntidad cej JOIN FETCH cej.equipo JOIN FETCH cej.jugador";
             TypedQuery<ContratoEquipoJugadorEntidad> resultado = entityManager.createQuery(sql, ContratoEquipoJugadorEntidad.class);
             return resultado.getResultList();
         } catch (Exception exception) {
-            throw new Exception("Error al intentar extraer contratos de jugadores");
+            new PanelDeError(exception.getCause().getCause().getCause().getMessage());
         } finally {
             entityManager.close();
         }
+        return new ArrayList<>();
     }
 
-    public List<ContratoEquipoJugadorEntidad> seleccionarSalarioPorEquipo() throws Exception{
+    public List<ContratoEquipoJugadorEntidad> seleccionarSalarioPorEquipo() {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         try {
             Query qNroCont_equi = entityManager.createNativeQuery("SELECT cod_equipo, SUM(salario) as salario_total_del_equipo\n" +
@@ -89,13 +92,14 @@ public class ContratoEquipoJugadorRepositorio {
             List<ContratoEquipoJugadorEntidad> contratosjugador = qNroCont_equi.getResultList();
             return contratosjugador;
         }catch (Exception exception) {
-            throw new Exception("Error al intentar extraer contratos de jugadores");
+            new PanelDeError(exception.getCause().getCause().getCause().getMessage());
         } finally {
             entityManager.close();
         }
+        return new ArrayList<>();
     }
 
-    public List<ContratoEquipoJugadorEntidad> buscarContratosVigentes() throws Exception{
+    public List<ContratoEquipoJugadorEntidad> buscarContratosVigentes() {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         try {
             String sql = "SELECT ce FROM ContratoEquipoJugadorEntidad ce " +
@@ -107,10 +111,11 @@ public class ContratoEquipoJugadorRepositorio {
             TypedQuery<ContratoEquipoJugadorEntidad> query = entityManager.createQuery(sql, ContratoEquipoJugadorEntidad.class);
             return query.getResultList();
         } catch (Exception exception) {
-            throw new Exception("Error al intentar extraer contratos de jugadores");
+            new PanelDeError(exception.getCause().getCause().getCause().getMessage());
         } finally {
             entityManager.close();
         }
+        return new ArrayList<>();
     }
 
 

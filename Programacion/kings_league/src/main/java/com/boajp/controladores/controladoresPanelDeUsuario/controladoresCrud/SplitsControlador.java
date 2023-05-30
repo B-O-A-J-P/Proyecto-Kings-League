@@ -13,6 +13,7 @@ import jakarta.persistence.PersistenceException;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
+import java.sql.SQLException;
 
 public class SplitsControlador implements CrudControlador{
     private final PanelDeCrud panelDeCrud;
@@ -100,7 +101,7 @@ public class SplitsControlador implements CrudControlador{
                 dialog.getButtonOK().addActionListener( x -> {
                     try {
                         SplitEntidad split = splitsServicio.buscarSplit(Integer.parseInt((String) modelo.getValueAt(tabla.getSelectedRow(), 1)));
-                        TemporadaEntidad temporada = temporadasServicio.getTemporada(Integer.parseInt((String)modelo.getValueAt(tabla.getSelectedRow(), 0)));
+                        TemporadaEntidad temporada = temporadasServicio.getTemporada(Integer.parseInt((String)dialog.getComboBox().getItemAt(dialog.getComboBox().getSelectedIndex())));
                         split.setTemporada(temporada);
                         split.setFechaInicio(FechaUtilidades.stringToFecha(dialog.getFechaDeInicioTf().getText()));
                         split.setFechaFin(FechaUtilidades.stringToFecha(dialog.getFechaFinTf().getText()));
@@ -113,6 +114,9 @@ public class SplitsControlador implements CrudControlador{
                         dialog.getButtonCancel().setText("Modificar");
                         dialog.deshabilitarCampos();
                         dialog.getButtonOK().setVisible(false);
+                    } catch (PersistenceException ex) {
+                        SQLException sqlException = (SQLException) ex.getCause().getCause().getCause();
+                        new PanelDeError(sqlException.getMessage());
                     } catch (Exception ex) {
                         throw new RuntimeException(ex);
                     }

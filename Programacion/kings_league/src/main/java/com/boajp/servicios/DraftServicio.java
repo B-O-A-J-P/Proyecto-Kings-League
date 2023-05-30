@@ -16,7 +16,7 @@ public class DraftServicio {
         return new DraftEntidad().getAtributos();
     }
 
-    public String[][] getFilas() throws Exception {
+    public String[][] getFilas() {
         List<DraftEntidad> lista = draftRepositorio.seleccionarTodosLosDrafts();
         String[][] filas = new String[lista.size()][lista.get(0).getAtributos().length];
         for ( int x = 0; x < filas.length; x++ ) {

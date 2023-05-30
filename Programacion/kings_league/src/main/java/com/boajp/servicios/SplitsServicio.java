@@ -11,23 +11,23 @@ public class SplitsServicio {
         splitRepositorio = new SplitRepositorio();
     }
 
-    public void anadirSplit(SplitEntidad splitEntidad) throws Exception {
+    public void anadirSplit(SplitEntidad splitEntidad) {
         splitRepositorio.insertar(splitEntidad);
     }
 
-    public void eliminarSplit(SplitEntidad splitEntidad) throws Exception {
+    public void eliminarSplit(SplitEntidad splitEntidad) {
         splitRepositorio.eliminar(splitEntidad);
     }
 
-    public void modificarSplit(SplitEntidad splitEntidad) throws Exception {
+    public void modificarSplit(SplitEntidad splitEntidad)  {
         splitRepositorio.modificar(splitEntidad);
     }
 
-    public SplitEntidad buscarSplit(int codigo) throws Exception{
+    public SplitEntidad buscarSplit(int codigo) {
         return splitRepositorio.buscarSplit(codigo);
     }
 
-    public String[][] getFilasSplits() throws Exception{
+    public String[][] getFilasSplits() {
         List<SplitEntidad> splits = splitRepositorio.buscarSplits();
         String[][] filas = new String[splits.size()][splits.get(0).getAtributos().length];
         for ( int x = 0; x < splits.size(); x++ ) {
@@ -36,7 +36,7 @@ public class SplitsServicio {
         return filas;
     }
 
-    public String[] getCodigos() throws Exception {
+    public String[] getCodigos() {
         List<SplitEntidad> lista = splitRepositorio.buscarSplits();
         String[] codigos = new String[lista.size()];
         for ( int x = 0; x < lista.size(); x++ ) {

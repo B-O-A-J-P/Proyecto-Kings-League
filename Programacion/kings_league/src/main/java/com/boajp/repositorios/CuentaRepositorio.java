@@ -2,6 +2,7 @@ package com.boajp.repositorios;
 
 import com.boajp.excepciones.UsuarioNoEncontradoExcepcion;
 import com.boajp.modelo.CuentaEntidad;
+import com.boajp.vistas.componentes.PanelDeError;
 import jakarta.persistence.*;
 
 public class CuentaRepositorio {
@@ -11,22 +12,22 @@ public class CuentaRepositorio {
         entityManagerFactory = AdministradorPersistencia.getEntityManagerFactory();
     }
 
-    public void insertar(CuentaEntidad cuenta) throws Exception {
+    public void insertar(CuentaEntidad cuenta) {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         EntityTransaction transaction = entityManager.getTransaction();
         try {
             transaction.begin();
             entityManager.persist(cuenta);
             transaction.commit();
-        } catch (Exception e) {
+        } catch (Exception exception) {
             transaction.rollback();
-            throw e;
+            new PanelDeError(exception.getCause().getCause().getCause().getMessage());
         } finally {
             entityManager.close();
         }
     }
 
-    public void modificar(CuentaEntidad cuentaEntidad) throws Exception {
+    public void modificar(CuentaEntidad cuentaEntidad) {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         EntityTransaction transaction = entityManager.getTransaction();
         try {
@@ -37,22 +38,23 @@ public class CuentaRepositorio {
             oldCuenta.setContrasena(cuentaEntidad.getContrasena());
             entityManager.persist(oldCuenta);
             transaction.commit();
-        }catch (Exception e) {
+        }catch (Exception exception) {
             transaction.rollback();
-            throw e;
+            new PanelDeError(exception.getCause().getCause().getCause().getMessage());
         } finally {
             entityManager.close();
         }
     }
 
-    public CuentaEntidad buscarCuenta(String usuario) throws Exception {
+    public CuentaEntidad buscarCuenta(String usuario) {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         try {
             String sql = "SELECT c FROM CuentaEntidad c WHERE c.nombreDeUsuario = :usuario";
             TypedQuery<CuentaEntidad> resultado = entityManager.createQuery(sql, CuentaEntidad.class);
             resultado.setParameter("usuario", usuario);
             return resultado.getSingleResult();
-        } catch (NoResultException e) {
+        } catch (NoResultException exception) {
+            new PanelDeError(exception.getCause().getCause().getCause().getMessage());
             return null;
         } catch (Exception exception) {
             throw new UsuarioNoEncontradoExcepcion();

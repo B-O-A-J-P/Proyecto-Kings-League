@@ -1,8 +1,10 @@
 package com.boajp.repositorios;
 
 import com.boajp.modelo.JornadaEntidad;
+import com.boajp.vistas.componentes.PanelDeError;
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class JornadaRepositorio {
@@ -13,7 +15,7 @@ public class JornadaRepositorio {
         entityManagerFactory = AdministradorPersistencia.getEntityManagerFactory();
     }
 
-    public void insertar(JornadaEntidad jornada) throws Exception {
+    public void insertar(JornadaEntidad jornada) {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         EntityTransaction transaction = entityManager.getTransaction();
         try {
@@ -22,13 +24,13 @@ public class JornadaRepositorio {
             transaction.commit();
         } catch (Exception exception) {
             transaction.rollback();
-            throw new Exception("Error al intentar insertar jornada");
+            new PanelDeError(exception.getCause().getCause().getCause().getMessage());
         } finally {
             entityManager.close();
         }
     }
 
-    public void eliminar(JornadaEntidad jornada) throws Exception {
+    public void eliminar(JornadaEntidad jornada) {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         EntityTransaction transaction = entityManager.getTransaction();
         try {
@@ -39,13 +41,13 @@ public class JornadaRepositorio {
             transaction.commit();
         } catch (Exception exception) {
             transaction.rollback();
-            throw new Exception("Error al intentar eliminar jornada");
+            new PanelDeError(exception.getCause().getCause().getCause().getMessage());
         } finally {
             entityManager.close();
         }
     }
 
-    public void modificar(JornadaEntidad jornada) throws Exception {
+    public void modificar(JornadaEntidad jornada) {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         EntityTransaction transaction = entityManager.getTransaction();
         try {
@@ -60,26 +62,27 @@ public class JornadaRepositorio {
             transaction.commit();
         } catch (Exception exception) {
             transaction.rollback();
-            throw new Exception("Error al intentar modificar jornada");
+            new PanelDeError(exception.getCause().getCause().getCause().getMessage());
         } finally {
             entityManager.close();
         }
     }
 
-    public List<JornadaEntidad> buscarTodasJornadas() throws Exception {
+    public List<JornadaEntidad> buscarTodasJornadas() {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         try {
             String jpql = "SELECT j FROM JornadaEntidad j JOIN FETCH j.split";
             TypedQuery<JornadaEntidad> query = entityManager.createQuery(jpql, JornadaEntidad.class);
             return query.getResultList();
         } catch (Exception exception) {
-            throw new Exception("Error al intentar extraer jornadas.", exception);
+            new PanelDeError(exception.getCause().getCause().getCause().getMessage());
         } finally {
             entityManager.close();
         }
+        return new ArrayList<>();
     }
 
-    public JornadaEntidad buscarJornada(int codigo) throws Exception {
+    public JornadaEntidad buscarJornada(int codigo) {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         try {
             String jpql = "SELECT j FROM JornadaEntidad j JOIN FETCH j.split WHERE j.codJornada = :codigo";
@@ -87,13 +90,14 @@ public class JornadaRepositorio {
             query.setParameter("codigo", codigo);
             return query.getSingleResult();
         } catch (Exception exception) {
-            throw new Exception("Error al intentar extraer jornadas.", exception);
+            new PanelDeError(exception.getCause().getCause().getCause().getMessage());
         } finally {
             entityManager.close();
         }
+        return null;
     }
 
-    public JornadaEntidad buscarUltimaJornada() throws Exception {
+    public JornadaEntidad buscarUltimaJornada() {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         try {
             String query = "SELECT j FROM JornadaEntidad j WHERE j.codJornada = (SELECT MAX(m.codJornada) FROM JornadaEntidad m)";
@@ -102,9 +106,10 @@ public class JornadaRepositorio {
         } catch (NoResultException e) {
             return null;
         } catch (Exception exception) {
-            throw new Exception("Error al intentar extraer jornadas.", exception);
+            new PanelDeError(exception.getCause().getCause().getCause().getMessage());
         } finally {
            entityManager.close();
         }
+        return null;
     }
 }

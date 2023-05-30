@@ -1,8 +1,10 @@
 package com.boajp.repositorios;
 
 import com.boajp.modelo.ClasificacionEntidad;
+import com.boajp.vistas.componentes.PanelDeError;
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ClasificacionRepositorio {
@@ -13,22 +15,22 @@ public class ClasificacionRepositorio {
         entityManagerFactory = AdministradorPersistencia.getEntityManagerFactory();
     }
 
-    public void insertar(ClasificacionEntidad clasificacion) throws Exception {
+    public void insertar(ClasificacionEntidad clasificacion) {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         EntityTransaction transaction = entityManager.getTransaction();
         try {
             transaction.begin();
             entityManager.persist(clasificacion);
             transaction.commit();
-        } catch (Exception e) {
+        } catch (Exception exception) {
             transaction.rollback();
-            throw new Exception("Error al intentar insertar la clasificación");
+            new PanelDeError(exception.getCause().getCause().getCause().getMessage());
         } finally {
             entityManager.close();
         }
     }
 
-    public void eliminar(ClasificacionEntidad clasificacion) throws Exception {
+    public void eliminar(ClasificacionEntidad clasificacion) {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         EntityTransaction transaction = entityManager.getTransaction();
         try {
@@ -38,15 +40,15 @@ public class ClasificacionRepositorio {
                 entityManager.remove(c);
             }
             transaction.commit();
-        } catch (Exception e) {
+        } catch (Exception exception) {
             transaction.rollback();
-            throw new Exception("Error al intentar eliminar la clasificación");
+            new PanelDeError(exception.getCause().getCause().getCause().getMessage());
         } finally {
             entityManager.close();
         }
     }
 
-    public void modificar(ClasificacionEntidad clasificacion) throws Exception {
+    public void modificar(ClasificacionEntidad clasificacion) {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         EntityTransaction transaction = entityManager.getTransaction();
         try {
@@ -59,43 +61,43 @@ public class ClasificacionRepositorio {
                 entityManager.persist(c);
             }
             transaction.commit();
-        } catch (Exception e) {
+        } catch (Exception exception) {
             transaction.rollback();
-            throw new Exception("Error al intentar modificar la clasificación");
+            new PanelDeError(exception.getCause().getCause().getCause().getMessage());
         } finally {
             entityManager.close();
         }
     }
 
-    public List<ClasificacionEntidad> seleccionarTodasLasClasificaciones() throws Exception{
+    public List<ClasificacionEntidad> seleccionarTodasLasClasificaciones() {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         try {
             String sql = "SELECT c FROM ClasificacionEntidad c JOIN FETCH c.equipo JOIN FETCH c.split";
             TypedQuery<ClasificacionEntidad> resultado = entityManager.createQuery(sql, ClasificacionEntidad.class);
             return  resultado.getResultList();
         } catch (Exception exception) {
-            throw new Exception("Error al intentar extraer clasificaciones.", exception);
+            new PanelDeError(exception.getCause().getCause().getCause().getMessage());
         } finally {
             entityManager.close();
         }
+        return new ArrayList<>();
     }
 
 
-    public List<ClasificacionEntidad> buscarUltimaClasificacion() throws Exception {
+    public List<ClasificacionEntidad> buscarUltimaClasificacion() {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         try {
             String query = "SELECT c FROM ClasificacionEntidad c WHERE c.split.codSplit = (SELECT MAX(ce.split.codSplit) FROM ClasificacionEntidad ce ) ORDER BY c.posicion ASC";
             TypedQuery<ClasificacionEntidad> resultado = entityManager.createQuery(query, ClasificacionEntidad.class);
             return resultado.getResultList();
-        } catch (NoResultException e) {
+        } catch (NoResultException exception) {
             return null;
         } catch (Exception exception) {
-            throw new Exception("Error al intentar extraer clasificaciones.", exception);
+            new PanelDeError(exception.getCause().getCause().getCause().getMessage());
         } finally {
             entityManager.close();
         }
+        return new ArrayList<>();
     }
-
-
 }
 

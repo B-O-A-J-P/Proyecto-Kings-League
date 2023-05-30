@@ -13,11 +13,11 @@ public class PartidoServicio {
         partidosRepositorio = new PartidosRepositorio();
     }
 
-    public List<PartidoEntidad> buscarTodosPartidos() throws Exception {
+    public List<PartidoEntidad> buscarTodosPartidos() {
         return partidosRepositorio.buscarTodosLosPartidos();
     }
 
-    public String[][] getFilas() throws Exception {
+    public String[][] getFilas() {
         List<PartidoEntidad> partidoEntidadList = partidosRepositorio.buscarTodosLosPartidos();
         String[][] filas = new String[partidoEntidadList.size()][partidoEntidadList.get(0).getAtributos().length];
         for ( int x = 0; x < partidoEntidadList.size(); x++ ) {

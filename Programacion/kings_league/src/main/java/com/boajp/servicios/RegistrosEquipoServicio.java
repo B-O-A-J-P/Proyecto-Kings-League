@@ -16,7 +16,7 @@ public class RegistrosEquipoServicio {
         return new RegistroEquipoEntidad().getAtributos();
     }
 
-    public String[][] getFilas() throws Exception {
+    public String[][] getFilas() {
         List<RegistroEquipoEntidad> lista = registroEquipoRepositorio.buscarTodosRegistrosDeEquipo();
         String[][] filas = new String[lista.size()][lista.get(0).getAtributos().length];
         for ( int x = 0; x < filas.length; x++ ) {

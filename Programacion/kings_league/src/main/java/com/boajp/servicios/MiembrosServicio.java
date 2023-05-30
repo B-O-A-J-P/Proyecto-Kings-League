@@ -16,7 +16,7 @@ public class MiembrosServicio {
         return new MiembroEntidad().getAtributos();
     }
 
-    public String[][] getFilas() throws Exception {
+    public String[][] getFilas() {
         List<MiembroEntidad> lista = miembroRepositorio.seleccionarTodosLosMiembros();
         String[][] filas = new String[lista.size()][lista.get(0).getAtributos().length];
         for (int x = 0; x < filas.length; x++) {

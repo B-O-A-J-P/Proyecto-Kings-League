@@ -19,20 +19,20 @@ public class JugadoresServicio {
         jugadorRepositorio = new JugadorRepositorio();
     }
 
-    public void anadirJugador(String nombre, String apellido, String dni, String pie, Integer altura) throws Exception{
+    public void anadirJugador(String nombre, String apellido, String dni, String pie, Integer altura) {
         JugadorEntidad jugadorEntidad = new JugadorEntidad(nombre, apellido, dni, pie, altura);
         jugadorRepositorio.insertar(jugadorEntidad);
     }
 
-    public JugadorEntidad buscar(int codigoJugador) throws Exception{
+    public JugadorEntidad buscar(int codigoJugador) {
         return jugadorRepositorio.buscar(codigoJugador);
     }
 
-    public void modificar(JugadorEntidad jugador) throws Exception{
+    public void modificar(JugadorEntidad jugador) {
         jugadorRepositorio.modificar(jugador);
     }
 
-    public void eliminar(int codigoJugador) throws Exception{
+    public void eliminar(int codigoJugador) {
         jugadorRepositorio.eliminar(codigoJugador);
     }
 
@@ -40,7 +40,7 @@ public class JugadoresServicio {
         return new JugadorEntidad().getAtributos();
     }
 
-    public String[][] getFilas() throws Exception{
+    public String[][] getFilas() {
         List<JugadorEntidad> jugadorEntidadList = jugadorRepositorio.seleccionarTodosLosJugadores();
         String[][] filas = new String[jugadorEntidadList.size()][jugadorEntidadList.get(0).getAtributos().length];
         for ( int x = 0; x < filas.length; x++ ) {
