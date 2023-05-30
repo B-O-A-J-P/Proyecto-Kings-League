@@ -12,6 +12,22 @@ public class MiembrosServicio {
         miembroRepositorio = new MiembroRepositorio();
     }
 
+    public void insertar(MiembroEntidad miembro) {
+        miembroRepositorio.insertar(miembro);
+    }
+
+    public MiembroEntidad buscar(int codigo) {
+        return miembroRepositorio.buscar(codigo);
+    }
+
+    public void modificar(MiembroEntidad miembro) {
+        miembroRepositorio.modificar(miembro);
+    }
+
+    public void eliminar(int codigo) {
+        miembroRepositorio.eliminar(codigo);
+    }
+
     public String[] getColumnas() {
         return new MiembroEntidad().getAtributos();
     }

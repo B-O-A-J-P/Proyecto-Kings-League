@@ -12,6 +12,11 @@ public class FechaUtilidades {
         return fecha.format(formatter);
     }
 
+    public static String fechaToString(LocalDateTime fecha) {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
+        return fecha.format(formatter);
+    }
+
     public static String fechaHoraToString(LocalDateTime fechaHora) {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
         return fechaHora.format(formatter);
@@ -20,6 +25,11 @@ public class FechaUtilidades {
     public static LocalDate stringToFecha(String fecha) {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         return LocalDate.parse(fecha, formatter);
+    }
+
+    public static LocalDateTime stringToFechaHora(String fecha) {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
+        return LocalDateTime.parse(fecha, formatter);
     }
 
     public static LocalDateTime dateToLocalDateTime(LocalDate fecha, String hora) {

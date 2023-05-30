@@ -17,8 +17,24 @@ public class PartidoServicio {
         partidosRepositorio.insertar(partidoEntidad);
     }
 
+    public PartidoEntidad buscar(int codigo) {
+        return partidosRepositorio.buscar(codigo);
+    }
+
     public List<PartidoEntidad> buscarTodosPartidos() {
         return partidosRepositorio.buscarTodosLosPartidos();
+    }
+
+    public void modificar(PartidoEntidad partido) {
+        partidosRepositorio.modificar(partido);
+    }
+
+    public void eliminar(PartidoEntidad partido) {
+        partidosRepositorio.eliminar(partido);
+    }
+
+    public void eliminar(int codigo) {
+        partidosRepositorio.eliminar(codigo);
     }
 
     public String[][] getFilas() {

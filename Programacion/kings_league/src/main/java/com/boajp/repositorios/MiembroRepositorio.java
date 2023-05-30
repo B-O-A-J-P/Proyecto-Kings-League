@@ -1,5 +1,6 @@
 package com.boajp.repositorios;
 
+import com.boajp.modelo.AgendaEntidad;
 import com.boajp.modelo.MiembroEntidad;
 import com.boajp.vistas.componentes.PanelDeError;
 import jakarta.persistence.EntityManager;
@@ -51,17 +52,40 @@ public class MiembroRepositorio {
         }
     }
 
-    public void modificar(MiembroEntidad miembro) {
+    public void eliminar(int codigo) {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         EntityTransaction transaction = entityManager.getTransaction();
         try {
             transaction.begin();
-            MiembroEntidad m = entityManager.find(MiembroEntidad.class, miembro.getCodMiembro());
+            MiembroEntidad m = entityManager.find(MiembroEntidad.class, codigo);
             if (m != null) {
-                m.setNombre(miembro.getNombre());
-                m.setApellido(miembro.getApellido());
-                entityManager.persist(m);
+                entityManager.remove(m);
             }
+            transaction.commit();
+        } catch (Exception exception) {
+            transaction.rollback();
+            new PanelDeError(exception.getCause().getCause().getCause().getMessage());
+        } finally {
+            entityManager.close();
+        }
+    }
+
+    public void modificar(MiembroEntidad miembro) {
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        EntityTransaction transaction = entityManager.getTransaction();
+        try {
+            AgendaEntidad agenda = null;
+
+            MiembroEntidad m = entityManager.find(MiembroEntidad.class, miembro.getCodMiembro());
+            m.setNombre(miembro.getNombre());
+            m.setApellido(miembro.getApellido());
+            m.setDni(miembro.getDni());
+            if (miembro.getAgenda() != null) {
+                agenda = entityManager.find(AgendaEntidad.class, miembro.getAgenda().getCodAgenda());
+                m.setAgenda(agenda);
+            }
+            transaction.begin();
+            entityManager.merge(m);
             transaction.commit();
         } catch (Exception exception) {
             transaction.rollback();
@@ -83,10 +107,10 @@ public class MiembroRepositorio {
         return new ArrayList<>();
     }
 
-    public MiembroEntidad seleccionarMiembroPorId(int id) {
+    public MiembroEntidad buscar(int codigo) {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         try {
-            return entityManager.find(MiembroEntidad.class, id);
+            return entityManager.find(MiembroEntidad.class, codigo);
         } catch (Exception exception) {
             new PanelDeError(exception.getCause().getCause().getCause().getMessage());
         } finally {

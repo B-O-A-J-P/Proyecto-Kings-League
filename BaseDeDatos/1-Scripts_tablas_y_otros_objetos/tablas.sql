@@ -147,7 +147,7 @@ CREATE TABLE miembros (
     dni VARCHAR(9) NOT NULL UNIQUE,
     nombre VARCHAR2(50) NOT NULL,
     apellido VARCHAR2(50) NOT NULL,
-    cod_agenda NUMBER(8, 0) NOT NULL,
+    cod_agenda NUMBER(8, 0),
     CONSTRAINT mie_cod_pk PRIMARY KEY (cod_miembro),
     CONSTRAINT mie_age_fk FOREIGN KEY (cod_agenda) REFERENCES agendas ON DELETE CASCADE
 );

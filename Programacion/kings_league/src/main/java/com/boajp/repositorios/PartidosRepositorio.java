@@ -34,8 +34,60 @@ public class PartidosRepositorio {
         } catch (Exception exception) {
             transaction.rollback();
             new PanelDeError(exception.getCause().getCause().getCause().getMessage());
+        } finally {
+            entityManager.close();
         }
-        finally {
+    }
+
+    public void eliminar(PartidoEntidad partidoEntidad) {
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        EntityTransaction transaction = entityManager.getTransaction();
+        try {
+            transaction.begin();
+            entityManager.remove(partidoEntidad);
+            transaction.commit();
+        } catch (Exception exception) {
+            transaction.rollback();
+            new PanelDeError(exception.getCause().getCause().getCause().getMessage());
+        } finally {
+            entityManager.close();
+        }
+    }
+
+    public void eliminar(int codigo) {
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        EntityTransaction transaction = entityManager.getTransaction();
+        try {
+            PartidoEntidad partido = entityManager.find(PartidoEntidad.class, codigo);
+            if (partido != null) {
+                transaction.begin();
+                entityManager.remove(partido);
+                transaction.commit();
+            }
+        } catch (Exception exception) {
+            transaction.rollback();
+            new PanelDeError(exception.getCause().getCause().getCause().getMessage());
+        } finally {
+            entityManager.close();
+        }
+    }
+
+    public void modificar(PartidoEntidad partido) {
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        EntityTransaction transaction = entityManager.getTransaction();
+        try {
+            JornadaEntidad jornada = entityManager.find(JornadaEntidad.class, partido.getJornada().getCodJornada());
+            EquipoEntidad equipoUno = entityManager.find(EquipoEntidad.class, partido.getEquipoUno().getCodEquipo());
+            EquipoEntidad equipoDos = entityManager.find(EquipoEntidad.class, partido.getEquipoDos().getCodEquipo());
+            transaction.begin();
+            partido.setJornada(jornada);
+            partido.setEquipoUno(equipoUno);
+            partido.setEquipoDos(equipoDos);
+            entityManager.merge(partido);
+            transaction.commit();
+        } catch (Exception exception) {
+            new PanelDeError(exception.getCause().getCause().getCause().getMessage());
+        } finally {
             entityManager.close();
         }
     }
@@ -70,6 +122,22 @@ public class PartidosRepositorio {
             entityManager.close();
         }
         return new ArrayList<>();
+    }
+
+    public PartidoEntidad buscar(int codigo) {
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        try {
+            String sql = "SELECT p FROM PartidoEntidad p JOIN FETCH p.jornada JOIN FETCH p.equipoUno JOIN FETCH p.equipoDos WHERE p.codPartido = :codigo";
+            TypedQuery<PartidoEntidad> resultado = entityManager.createQuery(sql, PartidoEntidad.class);
+            resultado.setParameter("codigo", codigo);
+            return resultado.getSingleResult();
+        } catch (Exception exception) {
+            new PanelDeError(exception.getCause().getCause().getCause().getMessage());
+        }
+        finally {
+            entityManager.close();
+        }
+        return null;
     }
 
 }
