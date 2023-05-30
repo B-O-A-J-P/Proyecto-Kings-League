@@ -78,7 +78,7 @@ public class SplitRepositorio {
             s.setNombre(split.getNombre());
             s.setFechaFin(split.getFechaFin());
             s.setFechaInicio(split.getFechaInicio());
-            s.setTemporada(split.getTemporada());
+            //s.setTemporada(split.getTemporada());
             s.setListaJornadas(split.getListaJornadas());
             s.setTablaClasificaciones(split.getTablaClasificaciones());
             entityManager.persist(s);

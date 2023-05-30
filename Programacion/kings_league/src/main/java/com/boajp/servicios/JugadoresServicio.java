@@ -24,6 +24,18 @@ public class JugadoresServicio {
         jugadorRepositorio.insertar(jugadorEntidad);
     }
 
+    public JugadorEntidad buscar(int codigoJugador) throws Exception{
+        return jugadorRepositorio.buscar(codigoJugador);
+    }
+
+    public void modificar(JugadorEntidad jugador) throws Exception{
+        jugadorRepositorio.modificar(jugador);
+    }
+
+    public void eliminar(int codigoJugador) throws Exception{
+        jugadorRepositorio.eliminar(codigoJugador);
+    }
+
     public String[] getColumnas() {
         return new JugadorEntidad().getAtributos();
     }

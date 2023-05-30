@@ -48,6 +48,24 @@ public class JugadorRepositorio {
         }
     }
 
+    public void eliminar(int codigoJugador) throws Exception {
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        EntityTransaction transaction = entityManager.getTransaction();
+        try {
+            transaction.begin();
+            JugadorEntidad j = entityManager.find(JugadorEntidad.class, codigoJugador);
+            if (j != null) {
+                entityManager.remove(j);
+            }
+            transaction.commit();
+        } catch (Exception e) {
+            transaction.rollback();
+            throw new Exception("Error al intentar eliminar el jugador");
+        } finally {
+            entityManager.close();
+        }
+    }
+
     public void modificar(JugadorEntidad jugador) throws Exception {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         EntityTransaction transaction = entityManager.getTransaction();
@@ -59,11 +77,9 @@ public class JugadorRepositorio {
                 j.setApellido(jugador.getApellido());
                 j.setPie(jugador.getPie());
                 j.setAltura(jugador.getAltura());
-                j.setAgenda(jugador.getAgenda());
                 j.setContratos(jugador.getContratos());
                 j.setRegistrosDeTemporadas(jugador.getRegistrosDeTemporadas());
-                entityManager.persist(j);
-
+                entityManager.merge(j);
             }
             transaction.commit();
         } catch (Exception e) {
@@ -83,7 +99,7 @@ public class JugadorRepositorio {
         }
     }
 
-    public JugadorEntidad buscarJugador(int id) throws Exception{
+    public JugadorEntidad buscar(int id) throws Exception{
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         try {
             return entityManager.find(JugadorEntidad.class, id);
