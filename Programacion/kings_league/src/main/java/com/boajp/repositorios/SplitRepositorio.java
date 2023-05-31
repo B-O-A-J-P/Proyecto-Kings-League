@@ -3,10 +3,12 @@ package com.boajp.repositorios;
 import com.boajp.modelo.SplitEntidad;
 import com.boajp.modelo.TemporadaEntidad;
 import com.boajp.servicios.TemporadasServicio;
+import com.boajp.vistas.componentes.PanelDeError;
 import jakarta.persistence.*;
 
 import java.sql.SQLException;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 public class SplitRepositorio {
@@ -17,23 +19,24 @@ public class SplitRepositorio {
         entityManagerFactory = AdministradorPersistencia.getEntityManagerFactory();
     }
 
-    public void insertar (SplitEntidad split) throws Exception{
+    public void insertar (SplitEntidad split) {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         EntityTransaction transaction = entityManager.getTransaction();
         try {
+            TemporadaEntidad temporada = entityManager.find(TemporadaEntidad.class, split.getTemporada().getCodTemporada());
+            split.setTemporada(temporada);
             transaction.begin();
             entityManager.merge(split);
             transaction.commit();
         } catch (Exception exception) {
             transaction.rollback();
-            System.out.println(exception.getMessage());
-            throw exception;
+            new PanelDeError(exception.getCause().getCause().getCause().getMessage());
         } finally {
             entityManager.close();
         }
     }
 
-    public void eliminar (SplitEntidad split) throws Exception {
+    public void eliminar (SplitEntidad split) {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         EntityTransaction transaction = entityManager.getTransaction();
         try {
@@ -45,13 +48,13 @@ public class SplitRepositorio {
             transaction.commit();
         }catch (Exception exception){
             transaction.rollback();
-            throw new Exception("Error al intentar eliminar el split");
+            new PanelDeError(exception.getCause().getCause().getCause().getMessage());
         } finally {
             entityManager.close();
         }
     }
 
-    public void eliminar (int codigo) throws Exception {
+    public void eliminar (int codigo) {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         EntityTransaction transaction = entityManager.getTransaction();
         SplitEntidad s = entityManager.find(SplitEntidad.class, codigo);
@@ -63,35 +66,36 @@ public class SplitRepositorio {
             transaction.commit();
         }catch (Exception exception){
             transaction.rollback();
-            throw new Exception("Error al intentar eliminar el split");
+            new PanelDeError(exception.getCause().getCause().getCause().getMessage());
         } finally {
             entityManager.close();
         }
     }
 
-    public void modificar (SplitEntidad split) throws Exception {
+    public void modificar (SplitEntidad split) {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         EntityTransaction transaction = entityManager.getTransaction ();
         try {
             transaction.begin();
             SplitEntidad s = entityManager.find(SplitEntidad.class, split.getCodSplit());
+            TemporadaEntidad temporada = entityManager.find(TemporadaEntidad.class, split.getTemporada().getCodTemporada());
             s.setNombre(split.getNombre());
             s.setFechaFin(split.getFechaFin());
             s.setFechaInicio(split.getFechaInicio());
-            s.setTemporada(split.getTemporada());
+            s.setTemporada(temporada);
             s.setListaJornadas(split.getListaJornadas());
             s.setTablaClasificaciones(split.getTablaClasificaciones());
-            entityManager.persist(s);
+            entityManager.merge(s);
             transaction.commit();
         }catch (Exception exception){
             transaction.rollback();
-            throw new Exception("Error al intentar modificar el split");
+            new PanelDeError(exception.getCause().getCause().getCause().getMessage());
         } finally {
             entityManager.close();
         }
     }
 
-    public SplitEntidad buscarSplit(int codigo) throws Exception {
+    public SplitEntidad buscarSplit(int codigo) {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         try {
             String jpql = "SELECT s FROM SplitEntidad s WHERE s.codSplit = :codigo";
@@ -99,23 +103,25 @@ public class SplitRepositorio {
             query.setParameter("codigo", codigo);
             return query.getSingleResult();
         } catch (Exception exception) {
-            throw new Exception("Error al intentar extraer temporadas.", exception);
+            new PanelDeError(exception.getCause().getCause().getCause().getMessage());
         } finally {
             entityManager.close();
         }
+        return null;
     }
 
-    public List<SplitEntidad> buscarSplits() throws Exception {
+    public List<SplitEntidad> buscarSplits(){
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         try {
             String jpql = "SELECT s FROM SplitEntidad s";
             TypedQuery<SplitEntidad> query = entityManager.createQuery(jpql, SplitEntidad.class);
             return query.getResultList();
         } catch (Exception exception) {
-            throw new Exception("Error al intentar extraer temporadas.", exception);
+            new PanelDeError(exception.getCause().getCause().getCause().getMessage());
         } finally {
             entityManager.close();
         }
+        return new ArrayList<>();
     }
 
 }

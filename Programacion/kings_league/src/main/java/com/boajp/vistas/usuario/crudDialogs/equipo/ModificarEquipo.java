@@ -1,24 +1,24 @@
 package com.boajp.vistas.usuario.crudDialogs.equipo;
 
 import javax.swing.*;
-import java.awt.event.*;
 
 public class ModificarEquipo extends JDialog {
     private JPanel contentPane;
     private JButton bAceptar;
     private JButton bModificar;
     private JTextField tfNombre;
-    private JTextField tfLogo;
+    private JTextField presupuestoTf;
+    private String copiaNombre;
+    private String copiaPresupuesto;
 
-    private static String copiaNombre;
-    private static String copiaLogo;
-
-    public ModificarEquipo(String nombre, String logo) {
+    public ModificarEquipo(String nombre, String presupuesto) {
         copiaNombre = nombre;
-        copiaLogo = logo;
+        copiaPresupuesto = presupuesto;
 
         tfNombre.setText(nombre);
-        tfLogo.setText(logo);
+        presupuestoTf.setText(presupuesto);
+
+        desabilitarCampos();
 
         setContentPane(contentPane);
         setSize(400,400);
@@ -28,25 +28,23 @@ public class ModificarEquipo extends JDialog {
     }
 
     public void desabilitarCampos() {
-        tfNombre.setEditable(false);
-        tfLogo.setEditable(false);
+        tfNombre.setEnabled(false);
+        presupuestoTf.setEnabled(false);
     }
     public void habilitarCampos() {
-        tfNombre.setEditable(true);
-        tfLogo.setEditable(true);
+        tfNombre.setEnabled(true);
+        presupuestoTf.setEnabled(true);
     }
 
     public void restablecerValoresPorDefecto() {
         tfNombre.setText(copiaNombre);
-        tfLogo.setText(copiaLogo);
+        presupuestoTf.setText(copiaPresupuesto);
     }
 
     public void establecerValoresPorDefecto() {
         copiaNombre = tfNombre.getText();
-        copiaLogo = tfLogo.getText();
+        copiaPresupuesto = presupuestoTf.getText();
     }
-
-
 
     public JButton getbAceptar() {
         return bAceptar;
@@ -60,15 +58,28 @@ public class ModificarEquipo extends JDialog {
         return tfNombre;
     }
 
-    public JTextField getTfLogo() {
-        return tfLogo;
+    public void setbAceptar(JButton bAceptar) {
+        this.bAceptar = bAceptar;
     }
 
-    public static String getCopiaNombre() {
+    public void setbModificar(JButton bModificar) {
+        this.bModificar = bModificar;
+    }
+
+    public void setTfNombre(JTextField tfNombre) {
+        this.tfNombre = tfNombre;
+    }
+
+    public int getPresupuestoTf() {
+        return Integer.parseInt(presupuestoTf.getText());
+    }
+
+    public String getCopiaNombre() {
         return copiaNombre;
     }
 
-    public static String getCopiaLogo() {
-        return copiaLogo;
+    public void setCopiaNombre(String copiaNombre) {
+        this.copiaNombre = copiaNombre;
     }
+
 }

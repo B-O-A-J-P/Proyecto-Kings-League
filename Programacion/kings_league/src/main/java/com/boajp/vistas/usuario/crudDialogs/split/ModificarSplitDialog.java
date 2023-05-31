@@ -8,7 +8,7 @@ public class ModificarSplitDialog extends JDialog {
     private JButton buttonCancel;
     private JTextField fechaDeInicioTf;
     private JTextField fechaFinTf;
-    private JComboBox comboBox;
+    private JComboBox<String> comboBox;
     private JTextField nombreTf;
     private String copiaNombre;
     private String copiaFechaInicio;

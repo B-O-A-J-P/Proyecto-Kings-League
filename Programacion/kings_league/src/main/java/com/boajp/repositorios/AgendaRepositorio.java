@@ -1,8 +1,10 @@
 package com.boajp.repositorios;
 
 import com.boajp.modelo.AgendaEntidad;
+import com.boajp.vistas.componentes.PanelDeError;
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class AgendaRepositorio {
@@ -12,7 +14,7 @@ public class AgendaRepositorio {
         entityManagerFactory = AdministradorPersistencia.getEntityManagerFactory();
     }
 
-    public void insertar (AgendaEntidad agenda) throws Exception {
+    public void insertar (AgendaEntidad agenda) {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         EntityTransaction transaction = entityManager.getTransaction ();
         try {
@@ -21,13 +23,13 @@ public class AgendaRepositorio {
             transaction.commit();
         }catch (Exception exception){
             transaction.rollback();
-            throw new Exception("Error al intentar insertar la agenda");
+            new PanelDeError(exception.getCause().getCause().getCause().getMessage());
         } finally {
             entityManager.close();
         }
     }
 
-    public void eliminar (AgendaEntidad agenda) throws Exception {
+    public void eliminar (AgendaEntidad agenda) {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         EntityTransaction transaction = entityManager.getTransaction();
         try {
@@ -39,13 +41,13 @@ public class AgendaRepositorio {
             transaction.commit();
         }catch (Exception exception){
             transaction.rollback();
-            throw new Exception("Error al intentar eliminar la agenda");
+            new PanelDeError(exception.getCause().getCause().getCause().getMessage());
         } finally {
             entityManager.close();
         }
     }
 
-    public void modificar (AgendaEntidad agenda) throws Exception {
+    public void modificar (AgendaEntidad agenda) {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         EntityTransaction transaction = entityManager.getTransaction();
         try {
@@ -56,22 +58,23 @@ public class AgendaRepositorio {
             entityManager.persist(a);
         }catch (Exception exception){
             transaction.rollback();
-            throw new Exception("Error al intentar modificar la agenda");
+            new PanelDeError(exception.getCause().getCause().getCause().getMessage());
         } finally {
             entityManager.close();
         }
     }
 
-    public  List<AgendaEntidad> seleccionarTodosLasAgendas() throws Exception{
+    public List<AgendaEntidad> seleccionarTodosLasAgendas() {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         try {
             String sql = "SELECT a FROM AgendaEntidad a";
             TypedQuery<AgendaEntidad> resultado = entityManager.createQuery(sql, AgendaEntidad.class);
             return resultado.getResultList();
         } catch (Exception exception){
-            throw new Exception("Error al intentar extraer agendas");
+            new PanelDeError(exception.getCause().getCause().getCause().getMessage());
         } finally {
             entityManager.close();
         }
+        return new ArrayList<>();
     }
 }

@@ -1,8 +1,10 @@
 package com.boajp.repositorios;
 
 import com.boajp.modelo.TemporadaEntidad;
+import com.boajp.vistas.componentes.PanelDeError;
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class TemporadaRepositorio {
@@ -13,7 +15,7 @@ public class TemporadaRepositorio {
         this.entityManagerFactory = AdministradorPersistencia.getEntityManagerFactory();
     }
 
-    public void insertar(TemporadaEntidad temporada) throws Exception{
+    public void insertar(TemporadaEntidad temporada) {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         EntityTransaction transaction = entityManager.getTransaction();
         try {
@@ -22,13 +24,13 @@ public class TemporadaRepositorio {
             transaction.commit();
         } catch (Exception exception){
             transaction.rollback();
-            throw new Exception("Error al intentar insertar temporada");
+            new PanelDeError(exception.getCause().getCause().getCause().getMessage());
         } finally {
             entityManager.close();
         }
     }
 
-    public void eliminar(TemporadaEntidad temporada) throws Exception{
+    public void eliminar(TemporadaEntidad temporada) {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         EntityTransaction transaction = entityManager.getTransaction();
         try {
@@ -39,13 +41,13 @@ public class TemporadaRepositorio {
             transaction.commit();
         } catch (Exception exception){
             transaction.rollback();
-            throw new Exception("Error al intentar eliminar temporada");
+            new PanelDeError(exception.getCause().getCause().getCause().getMessage());
         } finally {
             entityManager.close();
         }
     }
 
-    public void eliminar(int codigo) throws Exception{
+    public void eliminar(int codigo) {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         EntityTransaction transaction = entityManager.getTransaction();
         try {
@@ -56,13 +58,13 @@ public class TemporadaRepositorio {
             transaction.commit();
         } catch (Exception exception){
             transaction.rollback();
-            throw new Exception("Error al intentar eliminar temporada");
+            new PanelDeError(exception.getCause().getCause().getCause().getMessage());
         } finally {
             entityManager.close();
         }
     }
 
-    public void eliminar(int[] codigos) throws Exception {
+    public void eliminar(int[] codigos) {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         EntityTransaction transaction = entityManager.getTransaction();
         try {
@@ -75,13 +77,13 @@ public class TemporadaRepositorio {
             transaction.commit();
         } catch (Exception exception){
             transaction.rollback();
-            throw new Exception("Error al intentar eliminar temporada");
+            new PanelDeError(exception.getCause().getCause().getCause().getMessage());
         } finally {
             entityManager.close();
         }
     }
 
-    public void modificar(TemporadaEntidad temporada) throws Exception{
+    public void modificar(TemporadaEntidad temporada) {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         EntityTransaction transaction = entityManager.getTransaction();
         try {
@@ -97,13 +99,13 @@ public class TemporadaRepositorio {
             transaction.commit();
         } catch (Exception exception) {
             transaction.rollback();
-            throw new Exception("Error al intentar modificar temporada");
+            new PanelDeError(exception.getCause().getCause().getCause().getMessage());
         } finally {
             entityManager.close();
         }
     }
 
-    public TemporadaEntidad buscarTemporada(int codigo) throws Exception {
+    public TemporadaEntidad buscarTemporada(int codigo) {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         try {
             String jpql = "SELECT t FROM TemporadaEntidad t WHERE t.codTemporada = :codigo";
@@ -111,23 +113,25 @@ public class TemporadaRepositorio {
             query.setParameter("codigo", codigo);
             return query.getSingleResult();
         } catch (Exception exception) {
-            throw new Exception("Error al intentar extraer temporadas.", exception);
+            new PanelDeError(exception.getCause().getCause().getCause().getMessage());
         } finally {
             entityManager.close();
         }
+        return null;
     }
 
-    public List<TemporadaEntidad> buscarTodasTemporadas() throws Exception {
+    public List<TemporadaEntidad> buscarTodasTemporadas() {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         try {
             String jpql = "SELECT t FROM TemporadaEntidad t";
             TypedQuery<TemporadaEntidad> query = entityManager.createQuery(jpql, TemporadaEntidad.class);
             return query.getResultList();
         } catch (Exception exception) {
-            throw new Exception("Error al intentar extraer temporadas.", exception);
+            new PanelDeError(exception.getCause().getCause().getCause().getMessage());
         } finally {
             entityManager.close();
         }
+        return new ArrayList<>();
     }
 
 }

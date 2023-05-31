@@ -1,12 +1,14 @@
 package com.boajp.controladores.controladoresPanelDeUsuario;
 
+import com.boajp.controladores.Controlador;
+import com.boajp.vistas.Ventana;
 import com.boajp.vistas.usuario.BarraDeNavegacion;
 
 public class PanelUsuarioBarraDeNavegacionControlador {
     private BarraDeNavegacion barraDeNavegacion;
     private PanelUsuarioControlador panelUsuarioControlador;
     public PanelUsuarioBarraDeNavegacionControlador(PanelUsuarioControlador panelDeUsuarioControlador) {
-        barraDeNavegacion = new BarraDeNavegacion();
+        barraDeNavegacion = new BarraDeNavegacion(Controlador.getUsuario().getCodDePermisos());
         this.panelUsuarioControlador = panelDeUsuarioControlador;
         anadirlistenerPerfil();
         anadirListenerTemporadas();

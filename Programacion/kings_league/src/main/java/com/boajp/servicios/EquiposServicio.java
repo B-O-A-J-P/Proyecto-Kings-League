@@ -40,7 +40,7 @@ public class EquiposServicio {
         return cartasEquipos;
     }
 
-    public ArrayList<CartaAbstracta> crearCartasDeMiembros() throws Exception{
+    public ArrayList<CartaAbstracta> crearCartasDeMiembros() {
         ArrayList<CartaAbstracta> cartasMiembros = new ArrayList<>();
         List<ContratoEquipoJugadorEntidad> contratoEquipoJugadorEntidadList = contratoEquipoJugadorRepositorio.buscarContratosVigentes();
         List<ContratoEquipoMiembroEntidad> contratoEquipoMiembroEntidadList = contratoEquipoMiembroRepositorio.buscarContratosVigentes();
@@ -64,8 +64,8 @@ public class EquiposServicio {
         return cartasMiembros;
     }
 
-    public String[][] getFilas() throws Exception{
-        List<EquipoEntidad> equipoEntidadList = equipoRepositorio.buscarEquipoParticipantes();
+    public String[][] getFilas() {
+        List<EquipoEntidad> equipoEntidadList = equipoRepositorio.seleccionarTodosLosEquipos();
         String[][] filas = new String[equipoEntidadList.size()][equipoEntidadList.get(0).getAtributos().length];
         for ( int x = 0; x< equipoEntidadList.size();x++){
             filas[x] = equipoEntidadList.get(x).toArray();
@@ -77,23 +77,32 @@ public class EquiposServicio {
         return new EquipoEntidad().getAtributos();
     }
 
-    public EquipoEntidad getEquipo(int codigo)throws Exception{
+    public EquipoEntidad getEquipo(int codigo) {
         return equipoRepositorio.buscarEquipo(codigo);
     }
 
-    public void crearEquipo(String nombre, byte[] logo)throws Exception{
+    public void crearEquipo(String nombre, int presupuesto) {
         EquipoEntidad e = new EquipoEntidad();
         e.setNombre(nombre);
-        e.setLogo(logo);
+        e.setPresupuesto(presupuesto);
         equipoRepositorio.insertar(e);
     }
 
-    public void modificarEquipo(EquipoEntidad equipo)throws Exception{
+    public void modificarEquipo(EquipoEntidad equipo) {
         equipoRepositorio.modificar(equipo);
     }
 
-    public void eliminarEquipo(int cod) throws Exception {
+    public void eliminarEquipo(int cod) {
         equipoRepositorio.eliminar(cod);
+    }
+
+    public String[] getCodigos() {
+        List<EquipoEntidad> lista = equipoRepositorio.seleccionarTodosLosEquipos();
+        String[] codigos = new String[lista.size()];
+        for ( int x = 0; x < codigos.length; x++) {
+            codigos[x] = String.valueOf(lista.get(x).getCodEquipo());
+        }
+        return codigos;
     }
 
 }

@@ -16,7 +16,7 @@ public class AgendaServicio {
         return new AgendaEntidad().getAtributos();
     }
 
-    public String[][] getFilas() throws Exception {
+    public String[][] getFilas() {
         List<AgendaEntidad> lista = agendaRepositorio.seleccionarTodosLasAgendas();
         String[][] filas = new String[lista.size()][lista.get(0).getAtributos().length];
         for ( int x = 0; x < filas.length; x++ ) {

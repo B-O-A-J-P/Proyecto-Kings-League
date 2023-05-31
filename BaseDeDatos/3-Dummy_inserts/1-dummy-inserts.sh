@@ -64,6 +64,8 @@ done
 echo "INSERT INTO splits (cod_temporada, nombre, fecha_inicio, fecha_fin) VALUES (0, 'Split 1', TO_DATE('01/07/2024', 'DD/MM/YYYY'), TO_DATE('31/07/2024', 'DD/MM/YYYY'));" >> $file;
 echo "INSERT INTO splits (cod_temporada, nombre, fecha_inicio, fecha_fin) VALUES (0, 'Split 2', TO_DATE('01/07/2024', 'DD/MM/YYYY'), TO_DATE('31/07/2024', 'DD/MM/YYYY'));" >> $file;
 echo "insert into permisos values(default, 't', 't', 't', 't', 't', 't');" >> $file;
+echo "insert into permisos values(default, 'f', 'f', 'f', 'f', 'f', 'f');" >> $file;
+echo "insert into cuentas values(default, 0, 'admin', 'asd123', 'admin@email.com');" >> $file;
 echo "COMMIT;" >> $file;
 
 

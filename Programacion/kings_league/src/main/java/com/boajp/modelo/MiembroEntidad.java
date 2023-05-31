@@ -14,7 +14,7 @@ public class MiembroEntidad extends Persona{
     @OneToMany(mappedBy = "miembro")
     private Collection<ContratoEquipoMiembroEntidad> contratos;
     @ManyToOne
-    @JoinColumn(name = "COD_AGENDA", referencedColumnName = "COD_AGENDA", nullable = false)
+    @JoinColumn(name = "COD_AGENDA", referencedColumnName = "COD_AGENDA")
     private AgendaEntidad agenda;
 
     public MiembroEntidad() {

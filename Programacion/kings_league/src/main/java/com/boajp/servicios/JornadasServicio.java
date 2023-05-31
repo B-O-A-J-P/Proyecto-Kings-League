@@ -13,27 +13,36 @@ public class JornadasServicio {
         jornadaRepositorio = new JornadaRepositorio();
     }
 
-    public JornadaEntidad buscarJornada(int codigo) throws Exception{
+    public JornadaEntidad buscarJornada(int codigo) {
         return jornadaRepositorio.buscarJornada(codigo);
     }
 
-    public void insertarJornada(JornadaEntidad jornadaEntidad) throws Exception{
+    public void insertarJornada(JornadaEntidad jornadaEntidad) {
         jornadaRepositorio.insertar(jornadaEntidad);
     }
 
-    public void eliminarJornada(JornadaEntidad jornadaEntidad) throws Exception {
+    public void eliminarJornada(JornadaEntidad jornadaEntidad) {
         jornadaRepositorio.eliminar(jornadaEntidad);
     }
 
-    public void modificarJornada(JornadaEntidad jornadaEntidad) throws Exception {
+    public void modificarJornada(JornadaEntidad jornadaEntidad) {
         jornadaRepositorio.modificar(jornadaEntidad);
     }
 
-    public List<JornadaEntidad> getTodasJornadas() throws Exception{
+    public List<JornadaEntidad> getTodasJornadas() {
         return jornadaRepositorio.buscarTodasJornadas();
     }
 
-    public String[][] getFilas() throws Exception{
+    public String[] getCodigos() {
+        List<JornadaEntidad> lista = jornadaRepositorio.buscarTodasJornadas();
+        String[] codigos = new String[lista.size()];
+        for ( int x = 0; x < codigos.length; x++) {
+            codigos[x] = String.valueOf(lista.get(x).getCodJornada());
+        }
+        return codigos;
+    }
+
+    public String[][] getFilas() {
         List<JornadaEntidad> listaDeJornadas = jornadaRepositorio.buscarTodasJornadas();
         String[][] filas = new String[listaDeJornadas.size()][listaDeJornadas.get(0).getAtributos().length];
         for ( int x = 0; x < listaDeJornadas.size(); x++ ) {

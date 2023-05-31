@@ -1,8 +1,10 @@
 package com.boajp.repositorios;
 
 import com.boajp.modelo.DraftEntidad;
+import com.boajp.vistas.componentes.PanelDeError;
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class DraftRepositorio {
@@ -13,7 +15,7 @@ public class DraftRepositorio {
         entityManagerFactory = AdministradorPersistencia.getEntityManagerFactory();
     }
 
-    public void insertar (DraftEntidad draft) throws Exception {
+    public void insertar (DraftEntidad draft) {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         EntityTransaction transaction = entityManager.getTransaction();
         try {
@@ -22,13 +24,13 @@ public class DraftRepositorio {
             transaction.commit();
         }catch (Exception exception){
             transaction.rollback();
-            throw new Exception("Error al intentar insertar el draft");
+            new PanelDeError(exception.getCause().getCause().getCause().getMessage());
         } finally {
             entityManager.close();
         }
     }
 
-    public void eliminar (DraftEntidad draft) throws Exception {
+    public void eliminar (DraftEntidad draft) {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         EntityTransaction transaction = entityManager.getTransaction ();
         try {
@@ -40,13 +42,13 @@ public class DraftRepositorio {
             transaction.commit();
         }catch (Exception exception){
             transaction.rollback();
-            throw new Exception("Error al intentar eliminar el draft");
+            new PanelDeError(exception.getCause().getCause().getCause().getMessage());
         } finally {
             entityManager.close();
         }
     }
 
-    public void modificar (DraftEntidad draft) throws Exception {
+    public void modificar (DraftEntidad draft) {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         EntityTransaction transaction = entityManager.getTransaction ();
         try {
@@ -60,22 +62,23 @@ public class DraftRepositorio {
             transaction.commit();
         } catch (Exception exception){
             transaction.rollback();
-            throw new Exception("Error al intentar modificar el split");
+            new PanelDeError(exception.getCause().getCause().getCause().getMessage());
         } finally {
             entityManager.close();
         }
     }
 
-    public List<DraftEntidad> seleccionarTodosLosDrafts() throws Exception{
+    public List<DraftEntidad> seleccionarTodosLosDrafts() {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         try {
             String sql = "SELECT d FROM DraftEntidad d JOIN FETCH d.registroJugador.jugador";
             TypedQuery<DraftEntidad> resultado = entityManager.createQuery(sql, DraftEntidad.class);
             return resultado.getResultList();
         } catch (Exception exception) {
-            throw new Exception("Error al intentar extraer el split");
+            new PanelDeError(exception.getCause().getCause().getCause().getMessage());
         } finally {
             entityManager.close();
         }
+        return new ArrayList<>();
     }
 }

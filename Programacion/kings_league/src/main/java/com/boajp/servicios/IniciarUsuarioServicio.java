@@ -15,7 +15,7 @@ public class IniciarUsuarioServicio {
         if ( Controlador.getUsuario() != null )
             usuario = Controlador.getUsuario();
     }
-    public void encontrarUsuario(String nombreDeUsuario) throws Exception{
+    public void encontrarUsuario(String nombreDeUsuario) {
         this.usuario = cuentaRepositorio.buscarCuenta(nombreDeUsuario);
         if (usuario == null)
             throw new UsuarioNoEncontradoExcepcion();

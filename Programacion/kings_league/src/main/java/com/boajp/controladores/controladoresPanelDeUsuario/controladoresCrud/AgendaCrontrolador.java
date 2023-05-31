@@ -22,7 +22,7 @@ public class AgendaCrontrolador implements CrudControlador{
     }
 
     @Override
-    public void anadirListenerAceptar() {
+    public void anadirListenerInsertar() {
 
     }
 

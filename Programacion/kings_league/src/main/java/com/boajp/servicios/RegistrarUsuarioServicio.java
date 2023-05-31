@@ -10,9 +10,9 @@ public class RegistrarUsuarioServicio {
         cuentaRepositorio = new CuentaRepositorio();
     }
 
-    public void registrarUsuario(String usuario, String email, char[] contrasena) throws Exception{
+    public void registrarUsuario(String usuario, String email, char[] contrasena) {
         CuentaRepositorio cuentaRepositorio = new CuentaRepositorio();
-        CuentaEntidad cuentaEntidad = new CuentaEntidad(usuario, new String(contrasena), email,0);
+        CuentaEntidad cuentaEntidad = new CuentaEntidad(usuario, new String(contrasena), email,1);
         cuentaRepositorio.insertar(cuentaEntidad);
     }
 }

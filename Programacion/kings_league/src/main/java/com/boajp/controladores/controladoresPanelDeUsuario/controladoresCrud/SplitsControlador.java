@@ -13,6 +13,7 @@ import jakarta.persistence.PersistenceException;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
+import java.sql.SQLException;
 
 public class SplitsControlador implements CrudControlador{
     private final PanelDeCrud panelDeCrud;
@@ -32,12 +33,12 @@ public class SplitsControlador implements CrudControlador{
             new PanelDeError(exception.getMessage());
         }
         this.panelDeCrud = panelDeCrud;
-        anadirListenerAceptar();
+        anadirListenerInsertar();
         anadirListenerModificar();
         anadirListenerEliminar();
     }
     @Override
-    public void anadirListenerAceptar() {
+    public void anadirListenerInsertar() {
         panelDeCrud.getCrearBoton().addActionListener( e -> {
             try {
                 var dialog = new AnadirSplitDialog(temporadasServicio.getCodigos());
@@ -75,11 +76,12 @@ public class SplitsControlador implements CrudControlador{
                 String[] codigosDeTemporada = temporadasServicio.getCodigos();
                 DefaultTableModel modelo = panelDeCrud.getModelo();
                 JTable tabla = panelDeCrud.getTabla();
+                SplitEntidad split = splitsServicio.buscarSplit(Integer.parseInt((String) modelo.getValueAt(tabla.getSelectedRow(), 1)));
                 ModificarSplitDialog dialog = new ModificarSplitDialog(
-                        (String) modelo.getValueAt(tabla.getSelectedRow(), 2),
-                        (String) modelo.getValueAt(tabla.getSelectedRow(), 3),
-                        (String) modelo.getValueAt(tabla.getSelectedRow(), 4),
-                        (String) modelo.getValueAt(tabla.getSelectedRow(), 0),
+                        split.getNombre(),
+                        FechaUtilidades.fechaToString(split.getFechaInicio()),
+                        FechaUtilidades.fechaToString(split.getFechaFin()),
+                        String.valueOf(split.getCodSplit()),
                         codigosDeTemporada
                 );
 
@@ -98,24 +100,20 @@ public class SplitsControlador implements CrudControlador{
                 });
 
                 dialog.getButtonOK().addActionListener( x -> {
-                    try {
-                        SplitEntidad split = splitsServicio.buscarSplit(Integer.parseInt((String) modelo.getValueAt(tabla.getSelectedRow(), 1)));
-                        TemporadaEntidad temporada = temporadasServicio.getTemporada(Integer.parseInt((String)modelo.getValueAt(tabla.getSelectedRow(), 0)));
-                        split.setTemporada(temporada);
-                        split.setFechaInicio(FechaUtilidades.stringToFecha(dialog.getFechaDeInicioTf().getText()));
-                        split.setFechaFin(FechaUtilidades.stringToFecha(dialog.getFechaFinTf().getText()));
-                        split.setNombre(dialog.getNombreTf().getText());
-                        splitsServicio.modificarSplit(split);
+                    TemporadaEntidad temporada = temporadasServicio.getTemporada(Integer.parseInt((String)dialog.getComboBox().getItemAt(dialog.getComboBox().getSelectedIndex())));
+                    split.setTemporada(temporada);
+                    split.setFechaInicio(FechaUtilidades.stringToFecha(dialog.getFechaDeInicioTf().getText()));
+                    split.setFechaFin(FechaUtilidades.stringToFecha(dialog.getFechaFinTf().getText()));
+                    split.setNombre(dialog.getNombreTf().getText());
+                    splitsServicio.modificarSplit(split);
 
-                        panelDeCrud.actualizarModelo(splitsServicio.getFilasSplits(), splitsServicio.getColumnas());
+                    panelDeCrud.actualizarModelo(splitsServicio.getFilasSplits(), splitsServicio.getColumnas());
 
-                        dialog.getButtonCancel().setActionCommand("bloqueado");
-                        dialog.getButtonCancel().setText("Modificar");
-                        dialog.deshabilitarCampos();
-                        dialog.getButtonOK().setVisible(false);
-                    } catch (Exception ex) {
-                        throw new RuntimeException(ex);
-                    }
+                    dialog.getButtonCancel().setActionCommand("bloqueado");
+                    dialog.getButtonCancel().setText("Modificar");
+                    dialog.establecerValoresPorDefecto();
+                    dialog.deshabilitarCampos();
+                    dialog.getButtonOK().setVisible(false);
                 });
 
                 dialog.setVisible(true);

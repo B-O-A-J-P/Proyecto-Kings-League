@@ -8,14 +8,10 @@ public class AnadirEquipo extends JDialog {
     private JButton bAceptar;
     private JButton bCancelar;
     private JTextField tfNombre;
-    private JTextField tfLogo;
+    private JTextField presupuestoTf;
 
     public AnadirEquipo() {
-        setContentPane(contentPane);
-        setSize(400,400);
-        setLocationRelativeTo(null);
-        setModal(true);
-        getRootPane().setDefaultButton(bAceptar);
+
 
         bAceptar.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -43,6 +39,13 @@ public class AnadirEquipo extends JDialog {
                 onCancel();
             }
         }, KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0), JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT);
+
+        setContentPane(contentPane);
+        setModal(true);
+        getRootPane().setDefaultButton(bAceptar);
+        setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+        pack();
+        setLocationRelativeTo(null);
     }
 
     private void onOK() {
@@ -55,10 +58,18 @@ public class AnadirEquipo extends JDialog {
         dispose();
     }
 
-    @Override
-    public JPanel getContentPane() {
-        return contentPane;
+    public void setbAceptar(JButton bAceptar) {
+        this.bAceptar = bAceptar;
     }
+
+    public void setbCancelar(JButton bCancelar) {
+        this.bCancelar = bCancelar;
+    }
+
+    public void setTfNombre(JTextField tfNombre) {
+        this.tfNombre = tfNombre;
+    }
+
 
     public JButton getbAceptar() {
         return bAceptar;
@@ -72,8 +83,7 @@ public class AnadirEquipo extends JDialog {
         return tfNombre.getText();
     }
 
-    public byte[] getTfLogo() {
-        byte[] logo = tfLogo.getText().getBytes();
-        return logo;
+    public int getPresupuestoTf() {
+        return Integer.parseInt(presupuestoTf.getText());
     }
 }

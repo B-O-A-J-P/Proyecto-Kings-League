@@ -49,8 +49,8 @@ CREATE TABLE jornadas(
 CREATE TABLE equipos(
     cod_equipo NUMBER(6, 0) GENERATED ALWAYS AS IDENTITY INCREMENT BY 1 START WITH 0 MINVALUE 0 NOCYCLE NOT NULL ENABLE,
     nombre VARCHAR2(50) NOT NULL,
-    logo BLOB NOT NULL, 
-    presupuesto NUMBER(12, 2) DEFAULT 200000000,
+    logo BLOB, 
+    presupuesto NUMBER(12, 2) default 200000000,
     CONSTRAINT equ_cod_pk PRIMARY KEY (cod_equipo)
 );
 
@@ -147,7 +147,7 @@ CREATE TABLE miembros (
     dni VARCHAR(9) NOT NULL UNIQUE,
     nombre VARCHAR2(50) NOT NULL,
     apellido VARCHAR2(50) NOT NULL,
-    cod_agenda NUMBER(8, 0) NOT NULL,
+    cod_agenda NUMBER(8, 0),
     CONSTRAINT mie_cod_pk PRIMARY KEY (cod_miembro),
     CONSTRAINT mie_age_fk FOREIGN KEY (cod_agenda) REFERENCES agendas ON DELETE CASCADE
 );
@@ -201,6 +201,5 @@ CREATE TABLE Cuentas (
     CONSTRAINT cue_cue_pk PRIMARY KEY(cod_cuenta),
     CONSTRAINT cod_perfil FOREIGN KEY(cod_perfil) REFERENCES permisos ON DELETE CASCADE,
     CONSTRAINT cue_usu_uq UNIQUE (usuario),
-    CONSTRAINT cue_con_uq UNIQUE (contrasena),
     CONSTRAINT cue_ema_uq UNIQUE (email)
 );

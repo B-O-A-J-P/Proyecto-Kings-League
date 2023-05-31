@@ -21,6 +21,7 @@ drop trigger control_splits;
 
 create or replace trigger control_splits
 before insert or update on splits
+for each row
 declare
     v_cod_temporada temporadas.cod_temporada%type;
 begin
@@ -31,7 +32,7 @@ begin
         raise_application_error(-20001, 'No se puede insertars splits en una temporada finalizada.');
     end if;
 end;
-
+/
 --------------------------------------------------------------------------------
 
 create or replace trigger min_equipos
@@ -40,8 +41,8 @@ declare
     v_numero_equipos number;
 begin
  
-    select count(*) from registros_equipos
-    where cod_temporada = (select max(cod_temporada) into v_cod_temporada from temporadas);
+    select count(*) into v_numero_equipos from registros_equipos
+    where cod_temporada = :NEW.cod_temporada;
     
     if v_numero_equipos < 12
     then 
@@ -325,18 +326,32 @@ END check_registro_jugador_fecha_inscripcion;
 /
 --------------------------------------------------------------------------------
 
-CREATE OR REPLACE TRIGGER equipo_duplicado
-BEFORE INSERT or update ON equipos
-FOR EACH ROW
-    DECLARE v_num_equi INT;
-BEGIN
 
+CREATE OR REPLACE TRIGGER equipo_duplicado
+FOR INSERT OR UPDATE ON equipos
+COMPOUND TRIGGER
+
+    v_nombre_equipo equipos.nombre%TYPE;
+    
+  BEFORE EACH ROW IS
+  BEGIN
+    v_nombre_equipo := :NEW.nombre;
+  END BEFORE EACH ROW;
+
+  AFTER STATEMENT IS
+  v_num_equi NUMBER;
+  BEGIN
+  
     SELECT COUNT(*) into v_num_equi 
     FROM equipos
-     WHERE lower(nombre) = lower(:NEW.nombre);
-    IF v_num_equi > 0 THEN
+    WHERE lower(nombre) = lower(v_nombre_equipo);
+     
+    IF v_num_equi > 1 THEN
         RAISE_APPLICATION_ERROR(-20001, 'Ya existe un equipo con ese nombre.');
     END IF;
+    
+  END AFTER STATEMENT;
+
 END equipo_duplicado;
 /
 --------------------------------------------------------------------------------

@@ -1,7 +1,6 @@
 package com.boajp.vistas.usuario.crudDialogs.jugador;
 
 import javax.swing.*;
-import java.awt.event.*;
 
 public class ModificarJugador extends JDialog {
     private JPanel contentPane;
@@ -10,56 +9,172 @@ public class ModificarJugador extends JDialog {
     private JTextField nombreTf;
     private JTextField apellidoTf;
     private JTextField dniTf;
-    private JComboBox pieCb;
+    private JComboBox<String> pieCb;
     private JSpinner alturaSp;
+    private String copiaNombre;
+    private String copiaApellido;
+    private String copiaDni;
+    private String copiaPie;
+    private int copiaAltura;
 
-    public ModificarJugador() {
+    public ModificarJugador(String nombre, String apellido, String dni, String pie, int altura) {
+        deshabilitarCampos();
+        copiaNombre = nombre;
+        copiaApellido = apellido;
+        copiaDni = dni;
+        copiaPie = pie;
+        copiaAltura = altura;
+
+        nombreTf.setText(nombre);
+        apellidoTf.setText(apellido);
+        dniTf.setText(dni);
+        DefaultComboBoxModel<String> modelo = new DefaultComboBoxModel<>(new String[]{"izquierdo", "derecho"});
+        pieCb.setModel(modelo);
+
+        if (pie.equalsIgnoreCase("izquierdo"))
+            pieCb.setSelectedIndex(0);
+        else
+            pieCb.setSelectedIndex(1);
+
+        alturaSp.setValue(altura);
+
         setContentPane(contentPane);
         setModal(true);
         getRootPane().setDefaultButton(buttonOK);
+        setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+        pack();
+        setLocationRelativeTo(null);
 
-        buttonOK.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                onOK();
-            }
-        });
-
-        buttonCancel.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                onCancel();
-            }
-        });
-
-        // call onCancel() when cross is clicked
-        setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
-        addWindowListener(new WindowAdapter() {
-            public void windowClosing(WindowEvent e) {
-                onCancel();
-            }
-        });
-
-        // call onCancel() on ESCAPE
-        contentPane.registerKeyboardAction(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                onCancel();
-            }
-        }, KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0), JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT);
     }
 
-    private void onOK() {
-        // add your code here
-        dispose();
+    public void deshabilitarCampos() {
+        nombreTf.setEnabled(false);
+        apellidoTf.setEnabled(false);
+        dniTf.setEnabled(false);
+        pieCb.setEnabled(false);
+        alturaSp.setEnabled(false);
     }
 
-    private void onCancel() {
-        // add your code here if necessary
-        dispose();
+    public void habilitarCampos() {
+        nombreTf.setEnabled(true);
+        apellidoTf.setEnabled(true);
+        dniTf.setEnabled(true);
+        pieCb.setEnabled(true);
+        alturaSp.setEnabled(true);
     }
 
-    public static void main(String[] args) {
-        ModificarJugador dialog = new ModificarJugador();
-        dialog.pack();
-        dialog.setVisible(true);
-        System.exit(0);
+    public void restablecerValoresPorDefecto() {
+        nombreTf.setText(copiaNombre);
+        apellidoTf.setText(copiaApellido);
+        dniTf.setText(copiaDni);
+        if (copiaPie.equalsIgnoreCase("izquierdo"))
+            pieCb.setSelectedIndex(0);
+        else
+            pieCb.setSelectedIndex(1);
+        alturaSp.setValue(copiaAltura);
+    }
+
+    public void establecerValoresPorDefecto() {
+        copiaNombre = nombreTf.getText();
+        copiaApellido = apellidoTf.getText();
+        copiaDni = dniTf.getText();
+        copiaPie = pieCb.getItemAt(pieCb.getSelectedIndex());
+        copiaAltura = (Integer) alturaSp.getValue();
+    }
+
+    public JButton getButtonOK() {
+        return buttonOK;
+    }
+
+    public void setButtonOK(JButton buttonOK) {
+        this.buttonOK = buttonOK;
+    }
+
+    public JButton getButtonCancel() {
+        return buttonCancel;
+    }
+
+    public void setButtonCancel(JButton buttonCancel) {
+        this.buttonCancel = buttonCancel;
+    }
+
+    public JTextField getNombreTf() {
+        return nombreTf;
+    }
+
+    public void setNombreTf(JTextField nombreTf) {
+        this.nombreTf = nombreTf;
+    }
+
+    public JTextField getApellidoTf() {
+        return apellidoTf;
+    }
+
+    public void setApellidoTf(JTextField apellidoTf) {
+        this.apellidoTf = apellidoTf;
+    }
+
+    public JTextField getDniTf() {
+        return dniTf;
+    }
+
+    public void setDniTf(JTextField dniTf) {
+        this.dniTf = dniTf;
+    }
+
+    public JComboBox<String> getPieCb() {
+        return pieCb;
+    }
+
+    public void setPieCb(JComboBox<String> pieCb) {
+        this.pieCb = pieCb;
+    }
+
+    public JSpinner getAlturaSp() {
+        return alturaSp;
+    }
+
+    public void setAlturaSp(JSpinner alturaSp) {
+        this.alturaSp = alturaSp;
+    }
+
+    public String getCopiaNombre() {
+        return copiaNombre;
+    }
+
+    public void setCopiaNombre(String copiaNombre) {
+        this.copiaNombre = copiaNombre;
+    }
+
+    public String getCopiaApellido() {
+        return copiaApellido;
+    }
+
+    public void setCopiaApellido(String copiaApellido) {
+        this.copiaApellido = copiaApellido;
+    }
+
+    public String getCopiaDni() {
+        return copiaDni;
+    }
+
+    public void setCopiaDni(String copiaDni) {
+        this.copiaDni = copiaDni;
+    }
+
+    public String getCopiaPie() {
+        return copiaPie;
+    }
+
+    public void setCopiaPie(String copiaPie) {
+        this.copiaPie = copiaPie;
+    }
+
+    public int getCopiaAltura() {
+        return copiaAltura;
+    }
+
+    public void setCopiaAltura(int copiaAltura) {
+        this.copiaAltura = copiaAltura;
     }
 }

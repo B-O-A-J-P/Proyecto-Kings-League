@@ -12,39 +12,39 @@ public class TemporadasServicio {
         temporadaRepositorio = new TemporadaRepositorio();
     }
 
-    public void modificarTemporada(TemporadaEntidad temporada) throws Exception{
+    public void modificarTemporada(TemporadaEntidad temporada) {
         temporadaRepositorio.modificar(temporada);
     }
 
-    public List<TemporadaEntidad> getTodasTemporadas() throws Exception{
+    public List<TemporadaEntidad> getTodasTemporadas() {
         return temporadaRepositorio.buscarTodasTemporadas();
     }
 
-    public TemporadaEntidad getTemporada(int codigo) throws Exception {
+    public TemporadaEntidad getTemporada(int codigo) {
         return temporadaRepositorio.buscarTemporada(codigo);
     }
 
-    public void anadirTemporada(int ano, LocalDate fechaInicioInscripcion, LocalDate fechaFinInscripcion) throws Exception{
+    public void anadirTemporada(int ano, LocalDate fechaInicioInscripcion, LocalDate fechaFinInscripcion) {
         temporadaRepositorio.insertar(new TemporadaEntidad((short) ano, fechaInicioInscripcion, fechaFinInscripcion));
     }
 
-    public void anadirTemporada(TemporadaEntidad temporadaEntidad) throws Exception{
+    public void anadirTemporada(TemporadaEntidad temporadaEntidad) {
         temporadaRepositorio.insertar(temporadaEntidad);
     }
 
-    public void eliminarTemporada(TemporadaEntidad temporadaEntidad) throws Exception{
+    public void eliminarTemporada(TemporadaEntidad temporadaEntidad) {
         temporadaRepositorio.eliminar(temporadaEntidad);
     }
 
-    public void eliminarTemporada(int cod) throws Exception{
+    public void eliminarTemporada(int cod) {
         temporadaRepositorio.eliminar(cod);
     }
 
-    public void eliminarTemporada(int[] codigos) throws Exception{
+    public void eliminarTemporada(int[] codigos) {
         temporadaRepositorio.eliminar(codigos);
     }
 
-    public String[] getCodigos() throws Exception {
+    public String[] getCodigos() {
         List<TemporadaEntidad> temporadaEntidadList = temporadaRepositorio.buscarTodasTemporadas();
         String[] codigos = new String[temporadaEntidadList.size()];
         for ( int x = 0; x < temporadaEntidadList.size(); x++ ) {
@@ -53,7 +53,7 @@ public class TemporadasServicio {
         return codigos;
     }
 
-    public String[][] getFilas() throws Exception{
+    public String[][] getFilas() {
         List<TemporadaEntidad> temporadaEntidadList = temporadaRepositorio.buscarTodasTemporadas();
         String[][] filas = new String[temporadaEntidadList.size()][temporadaEntidadList.get(0).getAtributos().length];
         for ( int x = 0; x < temporadaEntidadList.size(); x++ ) {

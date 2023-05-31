@@ -1,95 +1,112 @@
 package com.boajp.repositorios;
 
 import com.boajp.modelo.EquipoEntidad;
-import com.boajp.modelo.TemporadaEntidad;
+import com.boajp.vistas.componentes.PanelDeError;
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class EquipoRepositorio {
 
-    private final EntityManagerFactory emf;
-    private final EntityManager em;
+    private final EntityManagerFactory entityManagerFactory;
 
     public EquipoRepositorio() {
-        emf = Persistence.createEntityManagerFactory("default"); //Cambiar "default" por el nombre de su unidad de persistencia
-        em = emf.createEntityManager();
+        entityManagerFactory = Persistence.createEntityManagerFactory("default");
     }
 
-    public void insertar(EquipoEntidad equipo) throws Exception {
-        EntityTransaction transaction = em.getTransaction();
+    public void insertar(EquipoEntidad equipo) {
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        EntityTransaction transaction = entityManager.getTransaction();
         try {
             transaction.begin();
-            em.persist(equipo);
+            entityManager.persist(equipo);
             transaction.commit();
-        } catch (Exception e) {
+        } catch (Exception exception) {
             transaction.rollback();
-            throw new Exception("Error al intentar insertar el equipo");
+            new PanelDeError(exception.getCause().getCause().getCause().getMessage());
+        } finally {
+            entityManager.close();
         }
     }
 
-    public void eliminar(int codigo) throws Exception {
-        EntityTransaction transaction = em.getTransaction();
-        EquipoEntidad e = em.find(EquipoEntidad.class, codigo);
+    public void eliminar(int codigo) {
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        EntityTransaction transaction = entityManager.getTransaction();
+        EquipoEntidad equipo = entityManager.find(EquipoEntidad.class, codigo);
         try {
             transaction.begin();
-            if (e != null) {
-                em.remove(e);
+            if (equipo != null) {
             }
+            entityManager.remove(equipo);
             transaction.commit();
-        } catch (Exception ex) {
+        } catch (Exception exception) {
             transaction.rollback();
-            throw new Exception("Error al intentar eliminar el equipo");
+            new PanelDeError(exception.getCause().getCause().getCause().getMessage());
+        } finally {
+            entityManager.close();
         }
     }
 
-    public void modificar(EquipoEntidad equipo) throws Exception {
-        EntityTransaction transaction = em.getTransaction();
-        EquipoEntidad e = em.find(EquipoEntidad.class, equipo.getCodEquipo());
+    public void modificar(EquipoEntidad equipo) {
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        EntityTransaction transaction = entityManager.getTransaction();
         try {
             transaction.begin();
-            if (e != null) {
-                e.setNombre(equipo.getNombre());
-                e.setLogo(equipo.getLogo());
-                e.setPresupuesto(equipo.getPresupuesto());
-                em.persist(e);
-                transaction.commit();
+            EquipoEntidad exception = entityManager.find(EquipoEntidad.class, equipo.getCodEquipo());
+            if (exception != null) {
+                exception.setNombre(equipo.getNombre());
+//                exception.setLogo(equipo.getLogo());
+                exception.setPresupuesto(equipo.getPresupuesto());
             }
-        } catch (Exception ex) {
+            entityManager.persist(exception);
+            transaction.commit();
+        } catch (Exception exception) {
             transaction.rollback();
-            throw new Exception("Error al intentar modificar el equipo");
+            new PanelDeError(exception.getCause().getCause().getCause().getMessage());
+        } finally {
+            entityManager.close();
         }
     }
 
     public List<EquipoEntidad> seleccionarTodosLosEquipos() {
-        return em.createQuery("SELECT e FROM EquipoEntidad e", EquipoEntidad.class)
-                .getResultList();
-    }
-
-    public EquipoEntidad seleccionarEquipoPorId(int id) {
-        return em.find(EquipoEntidad.class, id);
-    }
-
-    public List<EquipoEntidad> buscarEquipoParticipantes() throws Exception{
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
         try {
-            String sql = "SELECT e FROM EquipoEntidad e WHERE e.codEquipo IN (SELECT re.equipo.codEquipo FROM RegistroEquipoEntidad re WHERE re.temporada.codTemporada = (SELECT MAX(t.codTemporada) FROM TemporadaEntidad t))";
-            TypedQuery<EquipoEntidad> resultado = em.createQuery(sql, EquipoEntidad.class);
+            return entityManager.createQuery("SELECT exception FROM EquipoEntidad exception", EquipoEntidad.class)
+                    .getResultList();
+        } catch (Exception exception) {
+            new PanelDeError(exception.getCause().getCause().getCause().getMessage());
+        } finally {
+            entityManager.close();
+        }
+        return new ArrayList<>();
+    }
+
+
+    public List<EquipoEntidad> buscarEquipoParticipantes() {
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        try {
+            String sql = "SELECT exception FROM EquipoEntidad exception WHERE exception.codEquipo IN (SELECT re.equipo.codEquipo FROM RegistroEquipoEntidad re WHERE re.temporada.codTemporada = (SELECT MAX(t.codTemporada) FROM TemporadaEntidad t))";
+            TypedQuery<EquipoEntidad> resultado = entityManager.createQuery(sql, EquipoEntidad.class);
             return resultado.getResultList();
         }catch (Exception exception) {
-            throw new Exception("Error al intentar extraer equipos");
+            new PanelDeError(exception.getCause().getCause().getCause().getMessage());
         }
+        return new ArrayList<>();
     }
 
-    public EquipoEntidad buscarEquipo(int codigo)throws Exception{
+    public EquipoEntidad buscarEquipo(int codigo) {
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
         try {
-            String jpql = "SELECT e FROM EquipoEntidad e WHERE e.codEquipo = :codigo";
-            TypedQuery<EquipoEntidad> query = em.createQuery(jpql, EquipoEntidad.class);
+            String jpql = "SELECT exception FROM EquipoEntidad exception WHERE exception.codEquipo = :codigo";
+            TypedQuery<EquipoEntidad> query = entityManager.createQuery(jpql, EquipoEntidad.class);
             query.setParameter("codigo", codigo);
-            System.out.println(query.getSingleResult().getCodEquipo() + " " + query.getSingleResult().getLogo());
             return query.getSingleResult();
         }catch (Exception exception){
-            throw new Exception("Error al intentar extraer equipo", exception);
+            new PanelDeError(exception.getCause().getCause().getCause().getMessage());
+        } finally {
+            entityManager.close();
         }
+        return null;
     }
-
 }
