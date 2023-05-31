@@ -1,29 +1,30 @@
 package com.boajp.vistas.usuario.crudDialogs.contratoJugador;
 
+import com.boajp.utilidades.FechaUtilidades;
+
 import javax.swing.*;
 import java.awt.event.*;
+import java.time.LocalDate;
 
 public class AnadirContratoJugador extends JDialog {
     private JPanel contentPane;
     private JButton buttonOK;
     private JButton buttonCancel;
-    private JComboBox codigoEquipoCb;
-    private JComboBox codigoJugadorCb;
+    private JComboBox<String> codigoEquipoCb;
+    private JComboBox<String> codigoJugadorCb;
     private JTextField salarioTf;
     private JTextField clausulaTf;
     private JTextField fechaInicioTf;
     private JTextField fechaFinTf;
+    private DefaultComboBoxModel<String> codigoEquiposModelo;
+    private DefaultComboBoxModel<String> codigoJugadoresModelo;
 
-    public AnadirContratoJugador() {
-        setContentPane(contentPane);
-        setModal(true);
-        getRootPane().setDefaultButton(buttonOK);
+    public AnadirContratoJugador(String[] codigoEquipos, String[] codigoJugadores) {
+        codigoEquiposModelo = new DefaultComboBoxModel<>(codigoEquipos);
+        codigoJugadoresModelo = new DefaultComboBoxModel<>(codigoJugadores);
 
-        buttonOK.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                onOK();
-            }
-        });
+        codigoEquipoCb.setModel(codigoEquiposModelo);
+        codigoJugadorCb.setModel(codigoJugadoresModelo);
 
         buttonCancel.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -45,22 +46,48 @@ public class AnadirContratoJugador extends JDialog {
                 onCancel();
             }
         }, KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0), JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT);
+        setContentPane(contentPane);
+        setModal(true);
+        getRootPane().setDefaultButton(buttonOK);
+        setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+        pack();
+        setLocationRelativeTo(null);
     }
 
-    private void onOK() {
-        // add your code here
-        dispose();
+    public JButton getButtonOK() {
+        return buttonOK;
+    }
+
+    public JButton getButtonCancel() {
+        return buttonCancel;
+    }
+
+    public int getCodigoEquipoCb() {
+        return Integer.parseInt(codigoEquipoCb.getItemAt(codigoEquipoCb.getSelectedIndex()));
+    }
+
+    public int getCodigoJugadorCb() {
+        return Integer.parseInt(codigoJugadorCb.getItemAt(codigoJugadorCb.getSelectedIndex()));
+    }
+
+    public int getSalarioTf() {
+        return Integer.parseInt(salarioTf.getText());
+    }
+
+    public int getClausulaTf() {
+        return Integer.parseInt(clausulaTf.getText());
+    }
+
+    public LocalDate getFechaInicioTf() {
+        return FechaUtilidades.stringToFecha(fechaInicioTf.getText());
+    }
+
+    public LocalDate getFechaFinTf() {
+        return FechaUtilidades.stringToFecha(fechaFinTf.getText());
     }
 
     private void onCancel() {
         // add your code here if necessary
         dispose();
-    }
-
-    public static void main(String[] args) {
-        AnadirContratoJugador dialog = new AnadirContratoJugador();
-        dialog.pack();
-        dialog.setVisible(true);
-        System.exit(0);
     }
 }

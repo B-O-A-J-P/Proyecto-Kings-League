@@ -69,4 +69,13 @@ public class JugadoresServicio {
 
         return (ArrayList<CartaAbstracta>) cartasDeJugadores;
     }
+
+    public String[] getCodigos() {
+        List<JugadorEntidad> lista = jugadorRepositorio.seleccionarTodosLosJugadores();
+        String[] codigos = new String[lista.size()];
+        for (int x = 0; x < codigos.length; x++) {
+            codigos[x] = String.valueOf(lista.get(x).getCodJugador());
+        }
+        return codigos;
+    }
 }

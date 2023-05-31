@@ -1,8 +1,11 @@
 package com.boajp.servicios;
 
 import com.boajp.modelo.ContratoEquipoJugadorEntidad;
+import com.boajp.modelo.EquipoEntidad;
+import com.boajp.modelo.JugadorEntidad;
 import com.boajp.repositorios.ContratoEquipoJugadorRepositorio;
 
+import java.time.LocalDate;
 import java.util.List;
 
 public class ContratosEquiposJugadoresServicio {
@@ -23,5 +26,24 @@ public class ContratosEquiposJugadoresServicio {
             filas[x] = lista.get(x).toArray();
         }
         return filas;
+    }
+
+    public void insertar(ContratoEquipoJugadorEntidad contrato) {
+        contratoEquipoJugadorRepositorio.insertar(contrato);
+    }
+    public ContratoEquipoJugadorEntidad buscar(EquipoEntidad equipo, JugadorEntidad jugador, LocalDate fecha) {
+        return contratoEquipoJugadorRepositorio.buscar(equipo, jugador, fecha);
+    }
+
+    public void modificar(ContratoEquipoJugadorEntidad contrato) {
+        contratoEquipoJugadorRepositorio.modificar(contrato);
+    }
+
+    public void eliminar(ContratoEquipoJugadorEntidad contrato) {
+        contratoEquipoJugadorRepositorio.eliminar(contrato);
+    }
+
+    public void eliminar(int codigoEquipo, int codigoJugador, LocalDate fecha) {
+        contratoEquipoJugadorRepositorio.eliminar(codigoEquipo, codigoJugador, fecha);
     }
 }
