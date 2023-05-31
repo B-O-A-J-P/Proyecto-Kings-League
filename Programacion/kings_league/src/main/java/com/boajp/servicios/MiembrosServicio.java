@@ -1,5 +1,7 @@
 package com.boajp.servicios;
 
+import com.boajp.controladores.controladoresPanelDeUsuario.controladoresCrud.ContratosEquiposMiembrosControlador;
+import com.boajp.modelo.ContratoEquipoMiembroEntidad;
 import com.boajp.modelo.MiembroEntidad;
 import com.boajp.repositorios.MiembroRepositorio;
 
@@ -39,6 +41,15 @@ public class MiembrosServicio {
             filas[x] = lista.get(x).toArray();
         }
         return filas;
+    }
+
+    public String[] getCodigos() {
+        List<MiembroEntidad> lista = miembroRepositorio.seleccionarTodosLosMiembros();
+        String[] codigos = new String[lista.size()];
+        for (int x = 0; x < codigos.length; x++) {
+            codigos[x] = String.valueOf(lista.get(x).getCodMiembro());
+        }
+        return codigos;
     }
 
 }

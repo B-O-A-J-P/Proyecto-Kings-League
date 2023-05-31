@@ -81,9 +81,10 @@ public class EquiposServicio {
         return equipoRepositorio.buscarEquipo(codigo);
     }
 
-    public void crearEquipo(String nombre) {
+    public void crearEquipo(String nombre, int presupuesto) {
         EquipoEntidad e = new EquipoEntidad();
         e.setNombre(nombre);
+        e.setPresupuesto(presupuesto);
         equipoRepositorio.insertar(e);
     }
 

@@ -1,6 +1,8 @@
 package com.boajp.repositorios;
 
+import com.boajp.modelo.EquipoEntidad;
 import com.boajp.modelo.RegistroEquipoEntidad;
+import com.boajp.modelo.TemporadaEntidad;
 import com.boajp.vistas.componentes.PanelDeError;
 import jakarta.persistence.*;
 
@@ -18,7 +20,11 @@ public class RegistroEquipoRepositorio {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         EntityTransaction transaction = entityManager.getTransaction();
         try {
+            TemporadaEntidad temporada = entityManager.find(TemporadaEntidad.class, registroEquipo.getTemporada().getCodTemporada());
+            EquipoEntidad equipo = entityManager.find(EquipoEntidad.class, registroEquipo.getEquipo().getCodEquipo());
             transaction.begin();
+            registroEquipo.setEquipo(equipo);
+            registroEquipo.setTemporada(temporada);
             entityManager.persist(registroEquipo);
             transaction.commit();
         }catch (Exception exception){
@@ -73,6 +79,22 @@ public class RegistroEquipoRepositorio {
             entityManager.close();
         }
         return new ArrayList<>();
+    }
+
+    public RegistroEquipoEntidad buscar(int codigoTemporada, int codigoEquipo) {
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        try {
+            String sql = "SELECT re FROM RegistroEquipoEntidad re JOIN FETCH re.temporada JOIN FETCH re.equipo WHERE re.equipo.codEquipo = :codigoEquipo AND re.temporada.codTemporada = :codigoTemporada";
+            TypedQuery<RegistroEquipoEntidad> resultado = entityManager.createQuery(sql, RegistroEquipoEntidad.class);
+            resultado.setParameter("codigoTemporada", codigoTemporada);
+            resultado.setParameter("codigoEquipo", codigoEquipo);
+            return resultado.getSingleResult();
+        } catch (Exception exception) {
+            new PanelDeError(exception.getCause().getCause().getCause().getMessage());
+        } finally {
+            entityManager.close();
+        }
+        return null;
     }
 
     public List<RegistroEquipoEntidad> buscarEquiposParticipantesUltimaTemporada() {

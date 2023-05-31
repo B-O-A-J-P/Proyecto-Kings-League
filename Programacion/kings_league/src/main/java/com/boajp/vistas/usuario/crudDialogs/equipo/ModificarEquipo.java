@@ -7,12 +7,16 @@ public class ModificarEquipo extends JDialog {
     private JButton bAceptar;
     private JButton bModificar;
     private JTextField tfNombre;
+    private JTextField presupuestoTf;
     private String copiaNombre;
+    private String copiaPresupuesto;
 
     public ModificarEquipo(String nombre, String presupuesto) {
         copiaNombre = nombre;
+        copiaPresupuesto = presupuesto;
 
         tfNombre.setText(nombre);
+        presupuestoTf.setText(presupuesto);
 
         desabilitarCampos();
 
@@ -24,18 +28,22 @@ public class ModificarEquipo extends JDialog {
     }
 
     public void desabilitarCampos() {
-        tfNombre.setEditable(false);
+        tfNombre.setEnabled(false);
+        presupuestoTf.setEnabled(false);
     }
     public void habilitarCampos() {
-        tfNombre.setEditable(true);
+        tfNombre.setEnabled(true);
+        presupuestoTf.setEnabled(true);
     }
 
     public void restablecerValoresPorDefecto() {
         tfNombre.setText(copiaNombre);
+        presupuestoTf.setText(copiaPresupuesto);
     }
 
     public void establecerValoresPorDefecto() {
         copiaNombre = tfNombre.getText();
+        copiaPresupuesto = presupuestoTf.getText();
     }
 
     public JButton getbAceptar() {
@@ -62,6 +70,9 @@ public class ModificarEquipo extends JDialog {
         this.tfNombre = tfNombre;
     }
 
+    public int getPresupuestoTf() {
+        return Integer.parseInt(presupuestoTf.getText());
+    }
 
     public String getCopiaNombre() {
         return copiaNombre;

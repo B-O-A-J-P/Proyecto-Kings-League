@@ -12,7 +12,7 @@ public class RegistrarUsuarioServicio {
 
     public void registrarUsuario(String usuario, String email, char[] contrasena) {
         CuentaRepositorio cuentaRepositorio = new CuentaRepositorio();
-        CuentaEntidad cuentaEntidad = new CuentaEntidad(usuario, new String(contrasena), email,0);
+        CuentaEntidad cuentaEntidad = new CuentaEntidad(usuario, new String(contrasena), email,1);
         cuentaRepositorio.insertar(cuentaEntidad);
     }
 }

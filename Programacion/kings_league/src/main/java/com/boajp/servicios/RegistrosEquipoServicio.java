@@ -24,4 +24,16 @@ public class RegistrosEquipoServicio {
         }
         return filas;
     }
+
+    public void insertar(RegistroEquipoEntidad registroEquipo) {
+        registroEquipoRepositorio.insertar(registroEquipo);
+    }
+
+    public RegistroEquipoEntidad buscar(int codigoTemporada, int codigoEquipo) {
+        return registroEquipoRepositorio.buscar(codigoTemporada, codigoEquipo);
+    }
+
+    public void eliminar(RegistroEquipoEntidad registro) {
+        registroEquipoRepositorio.eliminar(registro);
+    }
 }

@@ -1,9 +1,12 @@
 package com.boajp.repositorios;
 
 import com.boajp.modelo.ContratoEquipoMiembroEntidad;
+import com.boajp.modelo.EquipoEntidad;
+import com.boajp.modelo.MiembroEntidad;
 import com.boajp.vistas.componentes.PanelDeError;
 import jakarta.persistence.*;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,7 +22,11 @@ public class ContratoEquipoMiembroRepositorio {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         EntityTransaction transaction = entityManager.getTransaction();
         try {
+            EquipoEntidad equipo = entityManager.find(EquipoEntidad.class, contrato.getEquipo().getCodEquipo());
+            MiembroEntidad miembro = entityManager.find(MiembroEntidad.class, contrato.getMiembro().getCodMiembro());
             transaction.begin();
+            contrato.setEquipo(equipo);
+            contrato.setMiembro(miembro);
             entityManager.persist(contrato);
             transaction.commit();
         } catch (Exception exception) {
@@ -41,6 +48,26 @@ public class ContratoEquipoMiembroRepositorio {
             }
             transaction.commit();
         } catch (Exception exception) {
+            transaction.rollback();
+            new PanelDeError(exception.getCause().getCause().getCause().getMessage());
+        } finally {
+            entityManager.close();
+        }
+    }
+
+    public void eliminar (int codigoEquipo, int codigoMiembro, LocalDate fecha) {
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        EntityTransaction transaction = entityManager.getTransaction ();
+        try {
+            transaction.begin();
+            String sql = "SELECT c FROM ContratoEquipoMiembroEntidad c WHERE c.equipo.codEquipo = :codigoEquipo AND c.miembro.codMiembro = :codigoMiembro AND c.fechaEntrada = :fecha";
+            TypedQuery<ContratoEquipoMiembroEntidad> resultado = entityManager.createQuery(sql, ContratoEquipoMiembroEntidad.class);
+            resultado.setParameter("codigoEquipo", codigoEquipo);
+            resultado.setParameter("codigoMiembro", codigoMiembro);
+            resultado.setParameter("fecha", fecha);
+            entityManager.remove(resultado.getSingleResult());
+            transaction.commit();
+        }catch (Exception exception){
             transaction.rollback();
             new PanelDeError(exception.getCause().getCause().getCause().getMessage());
         } finally {

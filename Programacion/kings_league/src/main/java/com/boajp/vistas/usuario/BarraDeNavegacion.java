@@ -4,10 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 
 public class BarraDeNavegacion {
-    private JButton perfilBoton;
-    private JButton temporadasBoton;
-    private JButton splitsBoton;
-    private JButton equiposBoton;
+
     private JPanel panel;
     private JButton jugadoresBoton;
     private JButton jornadasBoton;
@@ -20,12 +17,27 @@ public class BarraDeNavegacion {
     private JButton draftButton;
     private JButton agendasButton;
     private JButton clasificacionesButton;
-    private JScrollPane scrollPane;
+    private JButton perfilBoton;
+    private JButton temporadasBoton;
+    private JButton splitsBoton;
+    private JButton equiposBoton;
+    private JButton[] botones = {jugadoresBoton, jornadasBoton, partidosButton, miembrosButton, contratosDeEquipoJugadoresButton, contratosDeEquipoMiembrosButton, registrosDeEquiposButton, registrosDeJugadoresButton, draftButton, agendasButton, clasificacionesButton, temporadasBoton, splitsBoton, equiposBoton};
 
-    public BarraDeNavegacion() {
+    private JScrollPane scrollPane;
+    private JPanel panelBotones;
+
+    public BarraDeNavegacion(int codigoCuenta) {
         scrollPane.getVerticalScrollBar().setUnitIncrement(40);
         scrollPane.getVerticalScrollBar().setBlockIncrement(40);
+
+        if (codigoCuenta > 0) {
+            for (JButton boton: botones) {
+                panelBotones.remove(boton);
+            }
+        }
+
     }
+
 
 
     public JButton getClasificacionesButton() {

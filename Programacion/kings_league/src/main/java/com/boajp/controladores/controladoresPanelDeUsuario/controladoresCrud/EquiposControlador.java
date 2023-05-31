@@ -37,7 +37,8 @@ public class EquiposControlador implements CrudControlador{
             dialog.getbAceptar().addActionListener( x -> {
                 try {
                     equiposServicio.crearEquipo(
-                            dialog.getTfNombre()
+                            dialog.getTfNombre(),
+                            dialog.getPresupuestoTf()
                     );
                     JOptionPane.showMessageDialog(null, "Se ha registado el equipo.");
                     panelDeCrud.actualizarModelo(equiposServicio.getFilas(), equiposServicio.getColumnas());
@@ -83,6 +84,7 @@ public class EquiposControlador implements CrudControlador{
                 EquipoEntidad finalEquipo = equipo;
                 dialog.getbAceptar().addActionListener(x -> {
                     finalEquipo.setNombre(dialog.getTfNombre().getText());
+                    finalEquipo.setPresupuesto(dialog.getPresupuestoTf());
                     try {
                         equiposServicio.modificarEquipo(finalEquipo);
                         panelDeCrud.actualizarModelo(
