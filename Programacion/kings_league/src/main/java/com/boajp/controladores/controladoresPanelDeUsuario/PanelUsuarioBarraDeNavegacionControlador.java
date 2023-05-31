@@ -25,6 +25,7 @@ public class PanelUsuarioBarraDeNavegacionControlador {
         anadirListenerDraft();
         anadirListenerAgendas();
         anadirListenerClasificaciones();
+        anadirListenerCerrarSesion();
     }
     public void anadirlistenerPerfil() {
         barraDeNavegacion.getPerfilBoton().addActionListener( e -> {
@@ -113,6 +114,15 @@ public class PanelUsuarioBarraDeNavegacionControlador {
     public void anadirListenerClasificaciones() {
         barraDeNavegacion.getClasificacionesButton().addActionListener( e -> {
             panelUsuarioControlador.mostrarPanelDeCrudClasificaciones();
+        });
+    }
+
+    public void anadirListenerCerrarSesion() {
+        barraDeNavegacion.getCerrarSesionBt().addActionListener( e -> {
+            Controlador.setUsuario(null);
+            Controlador.barraDeNavegacionControlador.getBarraDeNavegacion().getIniciarSesionBoton().setText("Iniciar sesión");
+            Controlador.barraDeNavegacionControlador.getBarraDeNavegacion().getIniciarSesionBoton().setActionCommand("iniciar");
+            Controlador.mostrarPanelDeInicio();
         });
     }
 

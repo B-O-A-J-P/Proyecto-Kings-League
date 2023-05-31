@@ -1,6 +1,7 @@
 package com.boajp.vistas.carta;
 
 import com.boajp.modelo.JugadorEntidad;
+import com.boajp.modelo.MiembroEntidad;
 import com.boajp.modelo.Persona;
 import com.boajp.utilidades.EstilosDeVistas;
 
@@ -31,9 +32,15 @@ public class MiembroCarta extends CartaAbstracta{
 
         Image image = new ImageIcon(Objects.requireNonNull(com.boajp.vistas.carta.MiembroCarta.class.getResource("/imagenes/perfil.png"))).getImage();
 
+        if (persona instanceof MiembroEntidad) {
+            MiembroEntidad miembro = (MiembroEntidad) persona;
+
+        }
+
         add(new JLabel(persona.getNombre() + " " + persona.getApellido(), JLabel.CENTER), constraintsTitulo);
         add(new JLabel(new ImageIcon(image), JLabel.CENTER), constraintsImagen);
         add(new JLabel("Características", JLabel.CENTER), constraintsCaracteristicas);
+
     }
 
     @Override
