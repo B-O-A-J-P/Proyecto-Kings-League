@@ -37,6 +37,7 @@ end;
 
 create or replace trigger min_equipos
 before insert or update on splits
+for each row
 declare
     v_numero_equipos number;
 begin

@@ -1,7 +1,6 @@
 package com.boajp.vistas.usuario;
 
 import javax.swing.*;
-import java.awt.*;
 
 public class BarraDeNavegacion {
 
@@ -25,6 +24,7 @@ public class BarraDeNavegacion {
 
     private JScrollPane scrollPane;
     private JPanel panelBotones;
+    private JButton cerrarSesionBt;
 
     public BarraDeNavegacion(int codigoCuenta) {
         scrollPane.getVerticalScrollBar().setUnitIncrement(40);
@@ -38,7 +38,9 @@ public class BarraDeNavegacion {
 
     }
 
-
+    public JButton getCerrarSesionBt() {
+        return cerrarSesionBt;
+    }
 
     public JButton getClasificacionesButton() {
         return clasificacionesButton;
